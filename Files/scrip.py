@@ -195,6 +195,23 @@ def save_to_file(directory, category_name, items_set):
         logging.error(f"Failed to write file {file_path}: {e}")
         return False, 0
 
+# 添加配置格式验证函数
+def is_config_format_valid(config_line):
+    """简单验证配置格式是否有效，不进行网络测试"""
+    # 检查基本格式是否正确
+    url_part = config_line.split('#')[0].strip()
+    
+    # 检查是否以支持的协议开头
+    supported_protocols = ['vmess://', 'vless://', 'ss://', 'ssr://', 'trojan://', 'tuic://', 'hysteria2://']
+    if not any(url_part.startswith(proto) for proto in supported_protocols):
+        return False
+        
+    # 检查长度是否合理
+    if len(url_part) < 20 or len(url_part) > MAX_CONFIG_LENGTH:
+        return False
+        
+    return True
+
 async def main():
     """Main entry point"""
     # Check input files existence
@@ -369,23 +386,6 @@ async def main():
                 
             save_to_file(OUTPUT_DIR, category, valid_configs)
     
-    # 添加配置格式验证函数
-    def is_config_format_valid(config_line):
-        """简单验证配置格式是否有效，不进行网络测试"""
-        # 检查基本格式是否正确
-        url_part = config_line.split('#')[0].strip()
-        
-        # 检查是否以支持的协议开头
-        supported_protocols = ['vmess://', 'vless://', 'ss://', 'ssr://', 'trojan://', 'tuic://', 'hysteria2://']
-        if not any(url_part.startswith(proto) for proto in supported_protocols):
-            return False
-            
-        # 检查长度是否合理
-        if len(url_part) < 20 or len(url_part) > MAX_CONFIG_LENGTH:
-            return False
-            
-        return True
-
     logging.info("--- Script Finished ---")
 
 if __name__ == "__main__":

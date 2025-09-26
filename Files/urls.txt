@@ -19,7 +19,6 @@ https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all
 https://raw.githubusercontent.com/miladtahanian/V2RayScrapeByCountry/refs/heads/main/output_configs/Tuic.txt
 https://raw.githubusercontent.com/Argh94/V2Ray-Vault/refs/heads/main/data/sub/protocols/hysteria2.txt
 https://raw.githubusercontent.com/10ium/V2ray-Config/refs/heads/main/Splitted-By-Protocol/hysteria2.txt
-https://raw.githubusercontent.com/iPsycho1/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 https://raw.githubusercontent.com/10ium/V2ray-Config/refs/heads/main/Splitted-By-Protocol/hysteria2.txt
 https://raw.githubusercontent.com/10ium/V2ray-Config/refs/heads/main/Splitted-By-Protocol/tuic.txt
 https://raw.githubusercontent.com/dream4network/telegram-configs-collector/refs/heads/main/protocols/hysteria

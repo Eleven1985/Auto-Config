@@ -1,1 +1,1 @@
-trojan://90f45c05-917f-3b1b-a582-899cfe4cf7b3@auto.wgnmdgfw.com:16327?allowInsecure=0&sni=eplcgame.com#%E5%8F%B0%E6%B9%BE%7C%40ripaojiedian
+trojan://90f45c05-917f-3b1b-a582-899cfe4cf7b3@auto.wgnmdgfw.com:16327?allowInsecure=0&sni=eplcgame.com#%F0%9F%87%A8%F0%9F%87%B3%20%E5%8F%B0%E6%B9%BE%7C%40stairnode

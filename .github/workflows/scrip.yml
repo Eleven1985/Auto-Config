@@ -3,7 +3,7 @@ name: V2Ray Auto Config
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0,45 * * * *"
+    - cron: "0 */8 * * *"  # Run every 8 hours
 
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
       - name: 📥 Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # دریافت کل تاریخچه مخزن
+          fetch-depth: 0  # Fetch complete repository history
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
@@ -38,7 +38,7 @@ jobs:
 
       - name: 🕸️ Run scraping script
         run: |
-          python Files/scrip.py || { echo "Scraper failed, check logs"; exit 1; }  # استفاده از scrip.py
+          python Files/scrip.py || { echo "Scraper failed, check logs"; exit 1; }
 
       - name: 📂 Check directory contents
         run: |
@@ -63,7 +63,8 @@ jobs:
       - name: ⬆️ Commit and Push Changes
         run: |
           git add configs/ README.md || true
-          if git diff --staged --quiet; then
+          if git diff --staged --quiet;
+          then
             echo "No changes detected. Skipping commit."
           else
             echo "Changes detected. Committing..."

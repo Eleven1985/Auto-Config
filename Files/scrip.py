@@ -271,12 +271,12 @@ async def main():
     for category, items in final_all_protocols.items():
         # Test and deduplicate configurations
         if items:
-            valid_configs, _ = await deduplicate_and_test_configs(items)
+            valid_configs = await deduplicate_and_test_configs(items)
             save_to_file(OUTPUT_DIR, category, valid_configs)
     for category, items in final_configs_by_country.items():
         # Test and deduplicate configurations
         if items:
-            valid_configs, _ = await deduplicate_and_test_configs(items)
+            valid_configs = await deduplicate_and_test_configs(items)
             save_to_file(OUTPUT_DIR, category, valid_configs)
 
     logging.info("--- Script Finished ---")

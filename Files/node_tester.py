@@ -4,6 +4,8 @@ import re
 import logging
 import time
 import socket
+import os
+from logging.handlers import RotatingFileHandler
 from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, Set, Tuple, Optional
 import asyncio
@@ -219,3 +221,44 @@ if __name__ == "__main__":
         print(f"有效配置数量: {len(valid)}")
         
     asyncio.run(main())
+
+
+# 创建logs目录
+if not os.path.exists('logs'):
+    os.makedirs('logs')
+
+# Configure logging with file rotation
+logger = logging.getLogger('node_tester')
+logger.setLevel(logging.INFO)
+
+# 创建格式化器
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s')
+
+# 控制台处理器
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# 文件处理器 (带滚动功能)
+file_handler = RotatingFileHandler(
+    'logs/node_tester.log',
+    maxBytes=5*1024*1024,  # 5MB
+    backupCount=3,
+    encoding='utf-8'
+)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+# 错误日志单独记录
+error_handler = RotatingFileHandler(
+    'logs/node_tester_error.log',
+    maxBytes=5*1024*1024,
+    backupCount=3,
+    encoding='utf-8'
+)
+error_handler.setLevel(logging.ERROR)
+error_handler.setFormatter(formatter)
+logger.addHandler(error_handler)
+
+# 重命名logging为logger以便后续使用
+logging = logger

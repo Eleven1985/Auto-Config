@@ -3,6 +3,8 @@ import aiohttp
 import json
 import re
 import logging
+import os
+from logging.handlers import RotatingFileHandler
 from bs4 import BeautifulSoup
 import os
 import shutil
@@ -18,11 +20,45 @@ CONCURRENT_REQUESTS = 10
 MAX_CONFIG_LENGTH = 1500
 MIN_PERCENT25_COUNT = 15
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+# 创建logs目录
+if not os.path.exists('logs'):
+    os.makedirs('logs')
+
+# Configure logging with file rotation
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+# 创建格式化器
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s')
+
+# 控制台处理器
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# 文件处理器 (带滚动功能)
+file_handler = RotatingFileHandler(
+    'logs/scrip.log',
+    maxBytes=5*1024*1024,  # 5MB
+    backupCount=3,
+    encoding='utf-8'
 )
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+# 错误日志单独记录
+error_handler = RotatingFileHandler(
+    'logs/scrip_error.log',
+    maxBytes=5*1024*1024,
+    backupCount=3,
+    encoding='utf-8'
+)
+error_handler.setLevel(logging.ERROR)
+error_handler.setFormatter(formatter)
+logger.addHandler(error_handler)
+
+# 重命名logging为logger以便后续使用
+logging = logger
 
 # Define supported protocols
 PROTOCOL_CATEGORIES = [

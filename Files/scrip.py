@@ -165,6 +165,12 @@ def find_matches(text, categories_data):
                 logging.error(f"Regex error for '{pattern_str}' in category '{category}': {e}")
     return {k: v for k, v in matches.items() if v}
 
+# 配置参数 - 在文件顶部添加这些参数
+MAX_TEST_PER_CATEGORY = 300  # 每个分类最多测试的节点数
+ENABLE_SAMPLING = True       # 启用采样测试
+SAVE_WITHOUT_TESTING = False  # 是否直接保存不测试（最快但不保证有效性）
+
+# 修改 save_to_file 函数，优化排序性能
 def save_to_file(directory, category_name, items_set):
     """Save items to file"""
     if not items_set:
@@ -172,9 +178,16 @@ def save_to_file(directory, category_name, items_set):
     file_path = os.path.join(directory, f"{category_name}.txt")
     count = len(items_set)
     try:
+        # 对于大文件，不排序以提高性能
         with open(file_path, 'w', encoding='utf-8') as f:
-            for item in sorted(list(items_set)):
-                f.write(f"{item}\n")
+            # 对于小文件可以排序，大文件直接写入
+            if count < 1000:
+                for item in sorted(list(items_set)):
+                    f.write(f"{item}\n")
+            else:
+                # 不排序直接写入，大幅提升性能
+                for item in items_set:
+                    f.write(f"{item}\n")
         logging.info(f"Saved {count} items to {file_path}")
         return True, count
     except Exception as e:
@@ -303,17 +316,74 @@ async def main():
     # Import node tester
     from node_tester import deduplicate_and_test_configs
 
+    # 修改保存结果的部分
     # Save results to files
+    start_time = time.time()
+    category_count = len(final_all_protocols) + len(final_configs_by_country)
+    current_category = 0
+    
+    # 先保存协议分类
     for category, items in final_all_protocols.items():
-        # Test and deduplicate configurations
+        current_category += 1
         if items:
-            valid_configs = await deduplicate_and_test_configs(items)
+            logging.info(f"Processing category {category} ({current_category}/{category_count})")
+            
+            # 如果启用了直接保存不测试模式
+            if SAVE_WITHOUT_TESTING:
+                save_to_file(OUTPUT_DIR, category, items)
+                continue
+            
+            # 采样测试 - 如果节点数量过多
+            if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
+                # 随机采样部分节点进行测试
+                import random
+                sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
+                logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
+                valid_configs = await deduplicate_and_test_configs(sampled_items)
+                # 合并未测试但有效的节点（基于协议格式验证）
+                valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
+            else:
+                valid_configs = await deduplicate_and_test_configs(items)
+                
             save_to_file(OUTPUT_DIR, category, valid_configs)
+    
+    # 然后保存国家分类（同样应用上述优化）
     for category, items in final_configs_by_country.items():
-        # Test and deduplicate configurations
+        current_category += 1
         if items:
-            valid_configs = await deduplicate_and_test_configs(items)
+            logging.info(f"Processing country {category} ({current_category}/{category_count})")
+            
+            if SAVE_WITHOUT_TESTING:
+                save_to_file(OUTPUT_DIR, category, items)
+                continue
+                
+            if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
+                import random
+                sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
+                logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
+                valid_configs = await deduplicate_and_test_configs(sampled_items)
+                valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
+            else:
+                valid_configs = await deduplicate_and_test_configs(items)
+                
             save_to_file(OUTPUT_DIR, category, valid_configs)
+    
+    # 添加配置格式验证函数
+    def is_config_format_valid(config_line):
+        """简单验证配置格式是否有效，不进行网络测试"""
+        # 检查基本格式是否正确
+        url_part = config_line.split('#')[0].strip()
+        
+        # 检查是否以支持的协议开头
+        supported_protocols = ['vmess://', 'vless://', 'ss://', 'ssr://', 'trojan://', 'tuic://', 'hysteria2://']
+        if not any(url_part.startswith(proto) for proto in supported_protocols):
+            return False
+            
+        # 检查长度是否合理
+        if len(url_part) < 20 or len(url_part) > MAX_CONFIG_LENGTH:
+            return False
+            
+        return True
 
     logging.info("--- Script Finished ---")
 

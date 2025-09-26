@@ -156,21 +156,45 @@ class NodeTester:
         self.test_results[config_line] = result
         return result
 
+    # 进一步优化配置参数
+    TEST_TIMEOUT = 2  # 进一步降低超时时间(秒)
+    MAX_CONCURRENT_TESTS = 100  # 进一步增加并发测试数量
+    CONNECTION_RETRIES = 0  # 移除重试，加快测试速度
+    MIN_VALID_DELAY = 5  # 稍微提高最小有效延迟阈值(ms)
+    
     async def batch_test_configs(self, configs: Set[str]) -> Dict[str, Dict]:
-        """批量测试配置有效性"""
+        """批量测试配置有效性 - 优化版"""
         if not configs:
             return {}
         
         # 重置测试结果
         self.test_results.clear()
         
-        # 使用信号量限制并发测试
+        # 大幅提高并发量
         sem = asyncio.Semaphore(MAX_CONCURRENT_TESTS)
         
         async def bounded_test(config):
             async with sem:
-                return await self.test_config_validity(config)
-                
+                try:
+                    # 快速过滤无效格式配置
+                    url_part = config.split('#')[0].strip()
+                    if len(url_part) < 20:
+                        return {"config": config, "is_valid": False, "delay": 0}
+                    
+                    # 提取节点信息
+                    info = self.extract_node_info(config)
+                    if not info.get('host') or not info.get('port'):
+                        return {"config": config, "is_valid": False, "delay": 0}
+                        
+                    # 快速测试连接
+                    host = info['host']
+                    port = int(info['port'])
+                    is_valid, delay = await self.test_tcp_connectivity(host, port)
+                    
+                    return {"config": config, "is_valid": is_valid, "delay": delay}
+                except Exception:
+                    return {"config": config, "is_valid": False, "delay": 0}
+        
         # 并发测试所有配置
         tasks = [bounded_test(config) for config in configs]
         results = await asyncio.gather(*tasks)
@@ -179,6 +203,35 @@ class NodeTester:
         test_results_dict = {result['config']: result for result in results}
         
         return test_results_dict
+        
+    # 进一步简化 test_tcp_connectivity 方法
+    async def test_tcp_connectivity(self, host: str, port: int) -> Tuple[bool, float]:
+        """简化的TCP连接测试"""
+        start_time = time.time()
+        
+        try:
+            # 简化主机名解析逻辑，减少DNS查询时间
+            if not re.match(r'^\d+\.\d+\.\d+\.\d+$', host):
+                # 直接使用主机名而不解析IP，让操作系统处理DNS缓存
+                pass
+            
+            # 测试TCP连接，使用更短的超时时间
+            reader, writer = await asyncio.wait_for(
+                asyncio.open_connection(host, port),
+                timeout=TEST_TIMEOUT
+            )
+            
+            # 计算延迟
+            delay = (time.time() - start_time) * 1000
+            
+            # 关闭连接
+            writer.close()
+            await writer.wait_closed()
+            
+            return delay >= MIN_VALID_DELAY, delay
+            
+        except Exception:
+            return False, 0
 
     def get_valid_configs(self, test_results: Dict[str, Dict]) -> Set[str]:
         """获取有效的配置"""

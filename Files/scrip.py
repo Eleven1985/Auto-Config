@@ -4,6 +4,7 @@ import json
 import re
 import logging
 import os
+import time  # 添加time模块导入
 from logging.handlers import RotatingFileHandler
 from bs4 import BeautifulSoup
 import os

@@ -10,7 +10,7 @@ from datetime import datetime
 import pytz
 import base64
 from urllib.parse import parse_qs, unquote
-import jdatetime  
+import asyncio  # 添加缺失的asyncio导入
 
 URLS_FILE = 'Files/urls.txt'
 KEYWORDS_FILE = 'Files/key.json'
@@ -146,19 +146,19 @@ def save_to_file(directory, category_name, items_set):
         logging.error(f"Failed to write file {file_path}: {e}")
         return False, 0
 
-def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, github_repo_path="Argh94/V2RayAutoConfig", github_branch="main"):
-    tz = pytz.timezone('Asia/Tehran')
+def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, github_repo_path="Eleven1985/vless", github_branch="main"):
+    # 使用中国时区和中文日期格式
+    tz = pytz.timezone('Asia/Shanghai')
     now = datetime.now(tz)
-    jalali_date = jdatetime.datetime.fromgregorian(datetime=now)
-    time_str = jalali_date.strftime("%H:%M")
-    date_str = jalali_date.strftime("%d-%m-%Y")
-    timestamp = f"آخرین به‌روزرسانی: {time_str} {date_str}"
+    time_str = now.strftime("%H:%M")
+    date_str = now.strftime("%Y-%m-%d")
+    timestamp = f"最后更新: {date_str} {time_str}"
 
     raw_github_base_url = f"https://raw.githubusercontent.com/{github_repo_path}/refs/heads/{github_branch}/{OUTPUT_DIR}"
 
     total_configs = sum(protocol_counts.values())
 
-    md_content = f"""# 🚀 V2Ray AutoConfig
+    md_content = f"""# 🚀 V2Ray 自动配置
 
 <p align="center">
   <img src="https://img.shields.io/github/license/{github_repo_path}?style=flat-square&color=blue" alt="License" />
@@ -167,29 +167,29 @@ def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, g
   <img src="https://img.shields.io/github/last-commit/{github_repo_path}?style=flat-square" alt="Last Commit" />
   <br>
   <img src="https://img.shields.io/github/issues/{github_repo_path}?style=flat-square" alt="GitHub Issues" />
-  <img src="https://img.shields.io/badge/Configs-{total_configs}-blue?style=flat-square" alt="Total Configs" />
+  <img src="https://img.shields.io/badge/配置总数-{total_configs}-blue?style=flat-square" alt="Total Configs" />
   <img src="https://img.shields.io/github/stars/{github_repo_path}?style=social" alt="GitHub Stars" />
   <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat-square" alt="Project Status" />
-  <img src="https://img.shields.io/badge/language-فارسی%20%26%20English-007EC6?style=flat-square" alt="Language" />
+  <img src="https://img.shields.io/badge/language-中文%20%26%20English-007EC6?style=flat-square" alt="Language" />
 </p>
 
 ## {timestamp}
 
 ---
 
-## 📖 درباره پروژه
-این پروژه به‌صورت خودکار کانفیگ‌های VPN (پروتکل‌های مختلف مانند V2Ray، Trojan و Shadowsocks) را از منابع مختلف جمع‌آوری و دسته‌بندی می‌کند. هدف ما ارائه کانفیگ‌های به‌روز و قابل اعتماد برای کاربران است.
+## 📖 关于项目
+本项目自动从不同来源收集和分类VPN配置（如V2Ray、Trojan和Shadowsocks等不同协议）。我们的目标是为用户提供更新和可靠的配置。
 
-> **نکته:** کانفیگ‌هایی که بیش از حد طولانی یا حاوی کاراکترهای غیرضروری (مانند تعداد زیاد `%25`) باشند، برای اطمینان از کیفیت، فیلتر می‌شوند.
+> **注意：** 对于过长或包含不必要字符（如大量`%25`）的配置，为确保质量，将进行过滤。
 
 ---
 
-## 📁 کانفیگ‌های پروتکل‌ها
-{f'در حال حاضر {total_configs} کانفیگ در دسترس است.' if total_configs else 'هیچ کانفیگ پروتکلی یافت نشد.'}
+## 📁 协议配置
+{f'目前有{total_configs}个配置可用。' if total_configs else '未找到任何协议配置。'}
 
 <div align="center">
 
-| پروتکل | تعداد | لینک دانلود |
+| 协议 | 数量 | 下载链接 |
 |:-------:|:-----:|:------------:|
 """
     if protocol_counts:
@@ -202,18 +202,18 @@ def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, g
     md_content += "</div>\n\n---\n\n"
 
     md_content += f"""
-## 🌍 کانفیگ‌های کشورها
-{f'کانفیگ‌ها بر اساس نام کشورها دسته‌بندی شده‌اند.' if country_counts else 'هیچ کانفیگ مرتبط با کشوری یافت نشد.'}
+## 🌍 国家配置
+{f'配置按国家名称分类。' if country_counts else '未找到任何国家相关配置。'}
 
 <div align="center">
 
-| کشور | تعداد | لینک دانلود |
+| 国家 | 数量 | 下载链接 |
 |:----:|:-----:|:------------:|
 """
     if country_counts:
         for country_category_name, count in sorted(country_counts.items()):
             flag_image_markdown = ""
-            persian_name_str = ""
+            chinese_name_str = ""
             iso_code_original_case = ""
 
             if country_category_name in all_keywords_data:
@@ -228,23 +228,27 @@ def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, g
                     if iso_code_lowercase_for_url:
                         flag_image_url = f"https://flagcdn.com/w20/{iso_code_lowercase_for_url}.png"
                         flag_image_markdown = f'<img src="{flag_image_url}" width="20" alt="{country_category_name} flag"> '
+                    # 查找中文名称
                     for item in keywords_list:
                         if isinstance(item, str):
                             if iso_code_original_case and item == iso_code_original_case:
                                 continue
-                            if item.lower() == country_category_name.lower() and not is_persian_like(item):
+                            if item.lower() == country_category_name.lower():
                                 continue
                             if len(item) in [2, 3] and item.isupper() and item.isalpha() and item != iso_code_original_case:
                                 continue
-                            if is_persian_like(item):
-                                persian_name_str = item
-                                break
+                            # 假设中文名称是列表中除了英文、缩写和表情符号之外的文本
+                            if len(item) > 2:
+                                # 简单判断是否为中文：包含中文汉字
+                                if any('\u4e00' <= char <= '\u9fff' for char in item):
+                                    chinese_name_str = item
+                                    break
             display_parts = []
             if flag_image_markdown:
                 display_parts.append(flag_image_markdown)
             display_parts.append(country_category_name)
-            if persian_name_str:
-                display_parts.append(f"({persian_name_str})")
+            if chinese_name_str:
+                display_parts.append(f"({chinese_name_str})" if chinese_name_str != country_category_name else "")
             country_display_text = " ".join(display_parts)
             file_link = f"{raw_github_base_url}/{country_category_name}.txt"
             md_content += f"| {country_display_text} | {count} | [`{country_category_name}.txt`]({file_link}) |\n"
@@ -254,30 +258,30 @@ def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, g
     md_content += "</div>\n\n---\n\n"
 
     md_content += """
-## 🛠️ نحوه استفاده
-1. **دانلود کانفیگ‌ها**: از جدول‌های بالا، فایل موردنظر خود (بر اساس پروتکل یا کشور) را دانلود کنید.
-2. **کلاینت‌های پیشنهادی**:
-   - **V2Ray**: [v2rayNG](https://github.com/2dust/v2rayNG) (اندروید)، [Hiddify](https://github.com/hiddify/hiddify-app/releases) (مک)، [V2RayN](https://github.com/2dust/v2rayN/releases) (ویندوز)
-   - **NekoRey_pro**: [NekoRey](https://github.com/Mahdi-zarei/nekoray/releases) (مک)، [Karing](https://github.com/KaringX/karing/releases)
-   - **sing-box**: [Sing-Box](https://github.com/SagerNet/sing-box/releases)
-3. فایل کانفیگ را در کلاینت خود وارد کنید و اتصال را تست کنید.
+## 🛠️ 使用方法
+1. **下载配置：** 从上面的表格中下载您需要的文件（根据协议或国家）。
+2. **推荐客户端：**
+   - **V2Ray：** [v2rayNG](https://github.com/2dust/v2rayNG) (安卓)，[Hiddify](https://github.com/hiddify/hiddify-app/releases) (Mac)，[V2RayN](https://github.com/2dust/v2rayN/releases) (Windows)
+   - **NekoRey_pro：** [NekoRey](https://github.com/Mahdi-zarei/nekoray/releases) (Mac)，[Karing](https://github.com/KaringX/karing/releases)
+   - **sing-box：** [Sing-Box](https://github.com/SagerNet/sing-box/releases)
+3. 在您的客户端中导入配置文件并测试连接。
 
-> **توصیه**: برای بهترین عملکرد، کانفیگ‌ها را به‌صورت دوره‌ای بررسی و به‌روزرسانی کنید.
-
----
-
-## 🤝 مشارکت
-اگر مایل به مشارکت در پروژه هستید، می‌توانید:
-- منابع جدید برای جمع‌آوری کانفیگ‌ها پیشنهاد دهید (فایل `urls.txt`).
-- الگوهای جدید برای پروتکل‌ها یا کشورها اضافه کنید (فایل `key.json`).
-- با ارسال Pull Request یا Issue در [گیت‌هاب](https://github.com/Argh94/V2RayAutoConfig) به بهبود پروژه کمک کنید.
+> **建议：** 为获得最佳性能，请定期检查和更新配置。
 
 ---
 
-## 📢 توجه
-- این پروژه صرفاً برای اهداف آموزشی و تحقیقاتی ارائه شده است.
-- لطفاً از کانفیگ‌ها به‌صورت مسئولانه و مطابق با قوانین کشور خود استفاده کنید.
-- برای گزارش مشکلات یا پیشنهادات، از بخش [Issues](https://github.com/Argh94/V2RayAutoConfig/issues) استفاده کنید.
+## 🤝 贡献
+如果您想参与项目，可以：
+- 推荐新的配置收集来源（在`urls.txt`文件中）。
+- 添加新的协议或国家模式（在`key.json`文件中）。
+- 通过在[GitHub](https://github.com/Eleven1985/vless)上提交Pull Request或Issue来帮助改进项目。
+
+---
+
+## 📢 注意事项
+- 本项目仅用于学习和研究目的。
+- 请根据您所在国家的法律负责任地使用配置。
+- 如需报告问题或提出建议，请使用[Issues](https://github.com/Eleven1985/vless/issues)部分。
 """
 
     try:
@@ -286,6 +290,7 @@ def generate_simple_readme(protocol_counts, country_counts, all_keywords_data, g
         logging.info(f"Successfully generated {README_FILE}")
     except Exception as e:
         logging.error(f"Failed to write {README_FILE}: {e}")
+        raise  # 重新抛出异常以便更容易调试
 
 async def main():
     if not os.path.exists(URLS_FILE) or not os.path.exists(KEYWORDS_FILE):
@@ -405,7 +410,7 @@ async def main():
             country_counts[category] = count
 
     generate_simple_readme(protocol_counts, country_counts, categories_data,
-                          github_repo_path="Argh94/V2RayAutoConfig",
+                          github_repo_path="Eleven1985/vless",
                           github_branch="main")
 
     logging.info("--- Script Finished ---")

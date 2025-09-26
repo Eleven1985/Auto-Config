@@ -62,13 +62,13 @@ jobs:
 
       - name: ⬆️ Commit and Push Changes
         run: |
-          git add configs/ README.md || true
+          git add configs/ || true
           if git diff --staged --quiet;
           then
             echo "No changes detected. Skipping commit."
           else
             echo "Changes detected. Committing..."
-            git commit -m "docs: Update README and config files 🤖 [skip ci]"
+            git commit -m "Update config files 🚀"
             echo "Pulling remote changes with rebase..."
             git fetch origin
             git pull --rebase origin main || { echo "Rebase failed, aborting..."; git rebase --abort; exit 1; }

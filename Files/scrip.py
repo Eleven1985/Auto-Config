@@ -252,16 +252,32 @@ async def main():
                 break  # Found a match, break out of the loop
 
     # Prepare output directory
-    if os.path.exists(OUTPUT_DIR):
-        shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    logging.info(f"Saving files to directory: {OUTPUT_DIR}")
+    # Clear existing files in configs directory
+    for filename in os.listdir(OUTPUT_DIR):
+        if filename != '.gitkeep':  # Preserve .gitkeep file
+            file_path = os.path.join(OUTPUT_DIR, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                logging.error(f"Failed to delete {file_path}: {e}")
+    logging.info(f"Preparing to save files to directory: {OUTPUT_DIR}")
+
+    # Import node tester
+    from node_tester import deduplicate_and_test_configs
 
     # Save results to files
     for category, items in final_all_protocols.items():
-        save_to_file(OUTPUT_DIR, category, items)
+        # Test and deduplicate configurations
+        if items:
+            valid_configs, _ = await deduplicate_and_test_configs(items)
+            save_to_file(OUTPUT_DIR, category, valid_configs)
     for category, items in final_configs_by_country.items():
-        save_to_file(OUTPUT_DIR, category, items)
+        # Test and deduplicate configurations
+        if items:
+            valid_configs, _ = await deduplicate_and_test_configs(items)
+            save_to_file(OUTPUT_DIR, category, valid_configs)
 
     logging.info("--- Script Finished ---")
 

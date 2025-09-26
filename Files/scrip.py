@@ -5,21 +5,24 @@ import re
 import logging
 import os
 import time  # 添加time模块导入
-from logging.handlers import RotatingFileHandler
-from bs4 import BeautifulSoup
-import os
 import shutil
 import base64
 from urllib.parse import parse_qs, unquote
 import asyncio
+from logging.handlers import RotatingFileHandler
+from bs4 import BeautifulSoup
 
+# 配置参数 - 集中管理
 URLS_FILE = 'Files/urls.txt'
 KEYWORDS_FILE = 'Files/key.json'
 OUTPUT_DIR = 'configs'
-REQUEST_TIMEOUT = 15
-CONCURRENT_REQUESTS = 10
+REQUEST_TIMEOUT = 10  # 降低请求超时时间
+CONCURRENT_REQUESTS = 15  # 增加并发请求数
 MAX_CONFIG_LENGTH = 1500
 MIN_PERCENT25_COUNT = 15
+MAX_TEST_PER_CATEGORY = 200  # 降低每个分类测试的节点数
+ENABLE_SAMPLING = True       # 启用采样测试
+SAVE_WITHOUT_TESTING = False  # 是否直接保存不测试（最快但不保证有效性）
 
 # 创建logs目录
 if not os.path.exists('logs'):
@@ -126,6 +129,22 @@ def should_filter_config(config):
         return True
     return False
 
+def is_config_format_valid(config_line):
+    """简单验证配置格式是否有效，不进行网络测试"""
+    # 检查基本格式是否正确
+    url_part = config_line.split('#')[0].strip()
+    
+    # 检查是否以支持的协议开头
+    supported_protocols = ['vmess://', 'vless://', 'ss://', 'ssr://', 'trojan://', 'tuic://', 'hysteria2://']
+    if not any(url_part.startswith(proto) for proto in supported_protocols):
+        return False
+        
+    # 检查长度是否合理
+    if len(url_part) < 20 or len(url_part) > MAX_CONFIG_LENGTH:
+        return False
+        
+    return True
+
 async def fetch_url(session, url):
     """Fetch content from URL asynchronously"""
     try:
@@ -166,54 +185,52 @@ def find_matches(text, categories_data):
                 logging.error(f"Regex error for '{pattern_str}' in category '{category}': {e}")
     return {k: v for k, v in matches.items() if v}
 
-# 配置参数 - 在文件顶部添加这些参数
-MAX_TEST_PER_CATEGORY = 300  # 每个分类最多测试的节点数
-ENABLE_SAMPLING = True       # 启用采样测试
-SAVE_WITHOUT_TESTING = False  # 是否直接保存不测试（最快但不保证有效性）
-
-# 修改 save_to_file 函数，优化排序性能
 def save_to_file(directory, category_name, items_set):
-    """Save items to file"""
+    """Save items to file - 优化版"""
     if not items_set:
         return False, 0
     file_path = os.path.join(directory, f"{category_name}.txt")
     count = len(items_set)
     try:
-        # 对于大文件，不排序以提高性能
+        # 对于所有文件都不排序，直接写入，大幅提升性能
         with open(file_path, 'w', encoding='utf-8') as f:
-            # 对于小文件可以排序，大文件直接写入
-            if count < 1000:
-                for item in sorted(list(items_set)):
-                    f.write(f"{item}\n")
-            else:
-                # 不排序直接写入，大幅提升性能
-                for item in items_set:
-                    f.write(f"{item}\n")
+            for item in items_set:
+                f.write(f"{item}\n")
         logging.info(f"Saved {count} items to {file_path}")
         return True, count
     except Exception as e:
         logging.error(f"Failed to write file {file_path}: {e}")
         return False, 0
 
-# 添加配置格式验证函数
-def is_config_format_valid(config_line):
-    """简单验证配置格式是否有效，不进行网络测试"""
-    # 检查基本格式是否正确
-    url_part = config_line.split('#')[0].strip()
+async def process_category(category, items, is_country=False):
+    """处理单个分类的配置，合并重复逻辑"""
+    category_type = "country" if is_country else "category"
+    logging.info(f"Processing {category_type} {category}")
     
-    # 检查是否以支持的协议开头
-    supported_protocols = ['vmess://', 'vless://', 'ss://', 'ssr://', 'trojan://', 'tuic://', 'hysteria2://']
-    if not any(url_part.startswith(proto) for proto in supported_protocols):
-        return False
+    if SAVE_WITHOUT_TESTING:
+        return save_to_file(OUTPUT_DIR, category, items)
         
-    # 检查长度是否合理
-    if len(url_part) < 20 or len(url_part) > MAX_CONFIG_LENGTH:
-        return False
+    # 导入节点测试器（在函数内部导入以避免循环依赖）
+    from node_tester import deduplicate_and_test_configs
+    
+    # 采样测试 - 如果节点数量过多
+    if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
+        # 随机采样部分节点进行测试
+        import random
+        sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
+        logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
+        valid_configs = await deduplicate_and_test_configs(sampled_items)
+        # 合并未测试但有效的节点（基于协议格式验证）
+        valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
+    else:
+        valid_configs = await deduplicate_and_test_configs(items)
         
-    return True
+    return save_to_file(OUTPUT_DIR, category, valid_configs)
 
 async def main():
     """Main entry point"""
+    start_time = time.time()
+    
     # Check input files existence
     if not os.path.exists(URLS_FILE) or not os.path.exists(KEYWORDS_FILE):
         logging.critical("Input files not found.")
@@ -331,62 +348,17 @@ async def main():
                 logging.error(f"Failed to delete {file_path}: {e}")
     logging.info(f"Preparing to save files to directory: {OUTPUT_DIR}")
 
-    # Import node tester
-    from node_tester import deduplicate_and_test_configs
-
-    # 修改保存结果的部分
-    # Save results to files
-    start_time = time.time()
-    category_count = len(final_all_protocols) + len(final_configs_by_country)
-    current_category = 0
-    
     # 先保存协议分类
     for category, items in final_all_protocols.items():
-        current_category += 1
         if items:
-            logging.info(f"Processing category {category} ({current_category}/{category_count})")
-            
-            # 如果启用了直接保存不测试模式
-            if SAVE_WITHOUT_TESTING:
-                save_to_file(OUTPUT_DIR, category, items)
-                continue
-            
-            # 采样测试 - 如果节点数量过多
-            if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
-                # 随机采样部分节点进行测试
-                import random
-                sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
-                logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
-                valid_configs = await deduplicate_and_test_configs(sampled_items)
-                # 合并未测试但有效的节点（基于协议格式验证）
-                valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
-            else:
-                valid_configs = await deduplicate_and_test_configs(items)
-                
-            save_to_file(OUTPUT_DIR, category, valid_configs)
+            await process_category(category, items)
     
-    # 然后保存国家分类（同样应用上述优化）
+    # 然后保存国家分类
     for category, items in final_configs_by_country.items():
-        current_category += 1
         if items:
-            logging.info(f"Processing country {category} ({current_category}/{category_count})")
-            
-            if SAVE_WITHOUT_TESTING:
-                save_to_file(OUTPUT_DIR, category, items)
-                continue
-                
-            if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
-                import random
-                sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
-                logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
-                valid_configs = await deduplicate_and_test_configs(sampled_items)
-                valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
-            else:
-                valid_configs = await deduplicate_and_test_configs(items)
-                
-            save_to_file(OUTPUT_DIR, category, valid_configs)
+            await process_category(category, items, is_country=True)
     
-    logging.info("--- Script Finished ---")
+    logging.info(f"--- Script Finished in {time.time() - start_time:.2f} seconds ---")
 
 if __name__ == "__main__":
     asyncio.run(main())

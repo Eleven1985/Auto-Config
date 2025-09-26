@@ -6,15 +6,17 @@ import time
 from urllib.parse import urlparse
 import socket
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict, Set, Tuple, Optional
+from typing import Dict, Set, Tuple, Optional, List
+import asyncio
 
-# 配置参数
-test_timeout = 5  # 测试超时时间（秒）
-max_concurrent_tests = 20  # 最大并发测试数
-connection_retries = 1  # 连接重试次数
-test_url = "http://www.gstatic.com/generate_204"  # 用于测试的URL
+# Configuration parameters
+TEST_TIMEOUT = 5  # Test timeout in seconds
+MAX_CONCURRENT_TESTS = 20  # Maximum concurrent tests
+CONNECTION_RETRIES = 1  # Connection retry count
+MIN_VALID_DELAY = 1  # Minimum delay to consider a node valid (ms)
+TEST_URL = "http://www.gstatic.com/generate_204"  # URL for testing
 
-# 设置日志
+# Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
@@ -22,15 +24,16 @@ logging.basicConfig(
 
 class NodeTester:
     def __init__(self):
-        # 用于存储已测试的节点及其结果
+        """Initialize the node tester with required resources."""
+        # Store test results
         self.test_results = {}
-        # 用于存储节点的唯一标识，用于去重
+        # Store node identifiers for deduplication
         self.node_identifiers = set()
-        # 线程池用于执行一些阻塞操作
+        # Thread pool for blocking operations
         self.executor = ThreadPoolExecutor(max_workers=10)
 
     async def resolve_hostname(self, hostname: str) -> Optional[str]:
-        """解析主机名为IP地址"""
+        """Resolve hostname to IP address asynchronously."""
         try:
             loop = asyncio.get_event_loop()
             return await loop.run_in_executor(
@@ -43,24 +46,24 @@ class NodeTester:
             return None
 
     def extract_node_info(self, config_line: str) -> Dict[str, str]:
-        """从配置行提取节点信息用于去重和测试"""
-        # 提取URL部分（去掉注释部分）
+        """Extract node information for deduplication and testing"""
+        # Extract URL part (remove comments)
         url_part = config_line.split('#')[0].strip()
         
-        # 解析不同协议的配置
+        # Parse different protocol configurations
         protocol_info = {}
         
         if url_part.startswith('vmess://'):
-            # Vmess协议解析逻辑
+            # VMess protocol parsing
             protocol_info['protocol'] = 'vmess'
-            # 简单的主机名和端口提取
+            # Simple extraction of hostname and port
             match = re.search(r'@([^:]+):(\d+)', url_part)
             if match:
                 protocol_info['host'] = match.group(1)
                 protocol_info['port'] = match.group(2)
                 
         elif url_part.startswith('vless://'):
-            # Vless协议解析逻辑
+            # VLESS protocol parsing
             protocol_info['protocol'] = 'vless'
             match = re.search(r'@([^:]+):(\d+)', url_part)
             if match:
@@ -68,73 +71,94 @@ class NodeTester:
                 protocol_info['port'] = match.group(2)
                 
         elif url_part.startswith('ss://') or url_part.startswith('ssr://'):
-            # Shadowsocks和ShadowsocksR协议解析
+            # Shadowsocks and ShadowsocksR protocol parsing
             protocol = 'ss' if url_part.startswith('ss://') else 'ssr'
             protocol_info['protocol'] = protocol
-            # 提取base64部分并解码以获取主机和端口
             match = re.search(r'@([^:]+):(\d+)', url_part)
             if match:
                 protocol_info['host'] = match.group(1)
                 protocol_info['port'] = match.group(2)
                 
         elif url_part.startswith('trojan://'):
-            # Trojan协议解析
+            # Trojan protocol parsing
             protocol_info['protocol'] = 'trojan'
             match = re.search(r'@([^:]+):(\d+)', url_part)
             if match:
                 protocol_info['host'] = match.group(1)
                 protocol_info['port'] = match.group(2)
                 
-        # 对于其他协议，可以添加相应的解析逻辑
-        
+        # Additional protocol parsing logic
+        elif url_part.startswith('tuic://'):
+            protocol_info['protocol'] = 'tuic'
+            match = re.search(r'@([^:]+):(\d+)', url_part)
+            if match:
+                protocol_info['host'] = match.group(1)
+                protocol_info['port'] = match.group(2)
+        elif url_part.startswith('hysteria2://'):
+            protocol_info['protocol'] = 'hysteria2'
+            match = re.search(r'@([^:]+):(\d+)', url_part)
+            if match:
+                protocol_info['host'] = match.group(1)
+                protocol_info['port'] = match.group(2)
+                
         return protocol_info
 
     def get_node_identifier(self, config_line: str) -> Optional[str]:
-        """生成节点的唯一标识符，用于去重"""
+        """Generate unique identifier for node deduplication"""
         info = self.extract_node_info(config_line)
         
-        # 如果无法提取关键信息，则使用配置行本身的哈希值
+        # If critical information cannot be extracted, use hash of the URL part
         if not info.get('host') or not info.get('port'):
-            # 去掉注释部分再计算哈希值，以避免相同节点因注释不同被视为不同节点
+            # Remove comments before calculating hash to avoid treating identical nodes as different
             url_part = config_line.split('#')[0].strip()
             return f"hash:{hash(url_part)}"
             
-        # 使用协议、主机和端口组合作为唯一标识
+        # Use protocol, host, and port combination as unique identifier
         return f"{info['protocol']}:{info['host']}:{info['port']}"
 
     async def test_tcp_connectivity(self, host: str, port: int) -> Tuple[bool, float]:
-        """测试TCP连接的连通性和延迟"""
-        start_time = time.time()
-        
-        try:
-            # 首先尝试解析主机名（如果是域名）
-            if not re.match(r'^\d+\.\d+\.\d+\.\d+$', host):
-                ip = await self.resolve_hostname(host)
-                if not ip:
+        """Test TCP connection connectivity and latency with retry logic"""
+        for attempt in range(CONNECTION_RETRIES):
+            start_time = time.time()
+            
+            try:
+                # Try to resolve hostname if it's not an IP address
+                if not re.match(r'^\d+\.\d+\.\d+\.\d+$', host):
+                    ip = await self.resolve_hostname(host)
+                    if not ip:
+                        if attempt == CONNECTION_RETRIES - 1:
+                            return False, 0
+                        continue
+                    host = ip
+                
+                # Test TCP connection asynchronously
+                reader, writer = await asyncio.wait_for(
+                    asyncio.open_connection(host, port),
+                    timeout=TEST_TIMEOUT
+                )
+                
+                # Calculate latency in milliseconds
+                delay = (time.time() - start_time) * 1000
+                
+                # Close connection
+                writer.close()
+                await writer.wait_closed()
+                
+                # Ensure we have a valid delay measurement
+                if delay >= MIN_VALID_DELAY:
+                    return True, delay
+                else:
                     return False, 0
-                host = ip
-            
-            # 使用异步TCP连接测试
-            reader, writer = await asyncio.wait_for(
-                asyncio.open_connection(host, port),
-                timeout=test_timeout
-            )
-            
-            # 计算延迟
-            delay = (time.time() - start_time) * 1000  # 转换为毫秒
-            
-            # 关闭连接
-            writer.close()
-            await writer.wait_closed()
-            
-            return True, delay
-            
-        except Exception as e:
-            logging.debug(f"TCP connection test failed for {host}:{port}: {e}")
-            return False, 0
+                    
+            except Exception as e:
+                logging.debug(f"TCP connection test failed for {host}:{port} (attempt {attempt+1}/{CONNECTION_RETRIES}): {e}")
+                if attempt == CONNECTION_RETRIES - 1:
+                    return False, 0
+        
+        return False, 0
 
     async def deduplicate_configs(self, configs: Set[str]) -> Set[str]:
-        """对配置进行去重"""
+        """Deduplicate configurations"""
         deduplicated = set()
         self.node_identifiers.clear()
         
@@ -148,8 +172,8 @@ class NodeTester:
         return deduplicated
 
     async def test_config_validity(self, config_line: str) -> Dict:
-        """测试单个配置的有效性"""
-        # 检查是否已经测试过
+        """Test validity of a single configuration"""
+        # Check if already tested
         if config_line in self.test_results:
             return self.test_results[config_line]
             
@@ -157,57 +181,64 @@ class NodeTester:
             'config': config_line,
             'is_valid': False,
             'delay': 0,
-            'status': '未测试',
+            'status': 'Untested',
             'error': None
         }
         
         try:
-            # 提取节点信息
+            # Extract node information
             info = self.extract_node_info(config_line)
             
             if not info.get('host') or not info.get('port'):
-                result['status'] = '无法解析'
-                result['error'] = '无法从配置中提取主机和端口'
+                result['status'] = 'Unparseable'
+                result['error'] = 'Unable to extract host and port from configuration'
                 self.test_results[config_line] = result
                 return result
                 
             host = info['host']
             port = int(info['port'])
             
-            # 测试TCP连接
+            # Test TCP connection
             is_valid, delay = await self.test_tcp_connectivity(host, port)
             
             result['is_valid'] = is_valid
             result['delay'] = delay
-            result['status'] = '有效' if is_valid else '无效'
+            result['status'] = 'Valid' if is_valid else 'Invalid'
             
         except Exception as e:
             logging.warning(f"Error testing config {config_line[:50]}...: {e}")
-            result['status'] = '测试错误'
+            result['status'] = 'Test Error'
             result['error'] = str(e)
             
         self.test_results[config_line] = result
         return result
 
     async def batch_test_configs(self, configs: Set[str]) -> Dict[str, Dict]:
-        """批量测试配置的有效性"""
+        """Batch test configuration validity"""
+        if not configs:
+            logging.info("No configurations to test.")
+            return {}
+        
         logging.info(f"Starting batch test for {len(configs)} configs")
         
-        # 使用信号量限制并发测试数
-        sem = asyncio.Semaphore(max_concurrent_tests)
+        # Reset test results for fresh test
+        self.test_results.clear()
+        
+        # Use semaphore to limit concurrent tests
+        sem = asyncio.Semaphore(MAX_CONCURRENT_TESTS)
         
         async def bounded_test(config):
             async with sem:
                 return await self.test_config_validity(config)
                 
-        # 并发测试所有配置
+        # Test all configurations concurrently
         tasks = [bounded_test(config) for config in configs]
         results = await asyncio.gather(*tasks)
         
-        # 将结果转换为字典格式
+        # Convert results to dictionary format
         test_results_dict = {result['config']: result for result in results}
         
-        # 统计结果
+        # Count results
         valid_count = sum(1 for result in results if result['is_valid'])
         
         logging.info(f"Batch test completed: {valid_count}/{len(configs)} configs are valid")
@@ -215,48 +246,48 @@ class NodeTester:
         return test_results_dict
 
     def get_valid_configs(self, test_results: Dict[str, Dict]) -> Set[str]:
-        """从测试结果中获取有效的配置"""
-        return {config for config, result in test_results.items() if result['is_valid']}
+        """Get valid configurations from test results with real delay"""
+        return {config for config, result in test_results.items() if result['is_valid'] and result['delay'] >= MIN_VALID_DELAY}
 
     def sort_configs_by_delay(self, test_results: Dict[str, Dict]) -> list:
-        """根据延迟对配置进行排序（延迟低的优先）"""
-        valid_results = [(config, result['delay']) for config, result in test_results.items() if result['is_valid']]
+        """Sort configurations by delay (lowest first)"""
+        valid_results = [(config, result['delay']) for config, result in test_results.items() if result['is_valid'] and result['delay'] >= MIN_VALID_DELAY]
         return sorted(valid_results, key=lambda x: x[1])
 
     async def process_configs(self, configs: Set[str]) -> Tuple[Set[str], Dict[str, Dict]]:
-        """处理配置：去重并测试有效性"""
-        # 首先去重
+        """Process configurations: deduplicate and test validity"""
+        # First deduplicate
         deduplicated = await self.deduplicate_configs(configs)
         
-        # 然后测试有效性
+        # Then test validity
         test_results = await self.batch_test_configs(deduplicated)
         
-        # 获取有效的配置
+        # Get valid configurations with real delay
         valid_configs = self.get_valid_configs(test_results)
         
         return valid_configs, test_results
 
-# 导出单例对象供外部使用
+# Export singleton for external use
 tester = NodeTester()
 
-# 辅助函数供主程序调用
+# Helper functions for main program
 async def deduplicate_and_test_configs(configs: Set[str]) -> Tuple[Set[str], Dict[str, Dict]]:
-    """对配置进行去重和测试有效性的辅助函数"""
+    """Helper function to deduplicate and test configurations"""
     return await tester.process_configs(configs)
 
 async def deduplicate_configs_only(configs: Set[str]) -> Set[str]:
-    """仅对配置进行去重的辅助函数"""
+    """Helper function to only deduplicate configurations"""
     return await tester.deduplicate_configs(configs)
 
 async def test_configs_only(configs: Set[str]) -> Dict[str, Dict]:
-    """仅测试配置有效性的辅助函数"""
+    """Helper function to only test configuration validity"""
     return await tester.batch_test_configs(configs)
 
-# 示例用法（如需要直接运行此模块进行测试）
+# Example usage (if running this module directly for testing)
 if __name__ == "__main__":
-    # 示例配置（实际使用时应替换为真实配置）
+    # Sample configurations (replace with real ones in actual use)
     sample_configs = {
-        # 这里只是示例，实际使用时应替换为真实配置
+        # These are just examples, replace with real configurations in actual use
         'vmess://example_config_1',
         'vless://example_config_2',
         'ss://example_config_3',
@@ -265,5 +296,9 @@ if __name__ == "__main__":
     async def main():
         valid, results = await deduplicate_and_test_configs(sample_configs)
         print(f"Valid configs count: {len(valid)}")
+        # Print valid configs sorted by delay
+        sorted_valid = tester.sort_configs_by_delay(results)
+        for config, delay in sorted_valid:
+            print(f"Valid config with delay {delay:.2f}ms: {config}")
         
     asyncio.run(main())

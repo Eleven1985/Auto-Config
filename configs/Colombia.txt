@@ -1,12 +1,2 @@
-ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw==@154.223.16.212:989#%F0%9F%87%A8%F0%9F%87%B4CO-154.223.16.212-4929
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprYVFIM2hHZGNQODBYRURJ@admin.c2.havij.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+admin.c2.havij.co-443+%7C+114.98ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1MTdUM0J2cFlhYWl1VzJj@series-a2-mec.samanehha.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+series-a2-mec.samanehha.co-443+%7C+151.11ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn@series-a2.samanehha.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+series-a2.samanehha.co-443+%7C+164.99ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@181.119.30.20:990#%F0%9F%87%A8%F0%9F%87%B4CO-181.119.30.20-0369
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn@series-a2.varzesh360.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+series-a2.varzesh360.co-443+%7C+162.72ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxeE8yY3FQYXpxakdmQ2Zk@admin.c1.webramz.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+admin.c1.webramz.co-443+%7C+92.65ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXc3R1U25sdTRpZUE5TTBM@admin.c2.webramz.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+admin.c2.webramz.co-443+%7C+159.66ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWV3NCeW1kQ3hRSTlRazht@admin.c4.havij.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+admin.c4.havij.co-443+%7C+120.45ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1MTdUM0J2cFlhYWl1VzJj@series-a2-mec.varzesh360.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+series-a2-mec.varzesh360.co-443+%7C+159.39ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2OU1VaWk3VkR3TXFoN0h6@admin.c4.webramz.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+admin.c4.webramz.co-443+%7C+156.06ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a1.samanehha.co:443#GB%F0%9F%87%AC%F0%9F%87%A7+%7C+series-a1.samanehha.co-443+%7C+182.95ms
+ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw@154.223.16.212:989#%F0%9F%87%A8%F0%9F%87%B4CO-154.223.16.212-6268
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@181.119.30.20:990#%F0%9F%87%A8%F0%9F%87%B4CO-181.119.30.20-6442

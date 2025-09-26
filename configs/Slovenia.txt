@@ -1,3 +1,2 @@
-ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw@192.71.244.150:989#%F0%9F%87%B8%F0%9F%87%AESI-192.71.244.150-4821
-vless://d666c84d-aacd-43c8-8188-a79f0063c749@tunnyl.ru:8443?type=tcp&security=reality&pbk=M_vyGgaMp6Unz28r-3jFP-VwRoY39Edhn_0bQPknqmc&fp=random&sni=yahoo.com&sid=08f6093b944bd385&spx=%2F&flow=xtls-rprx-vision#REALITY|SI🇸🇮
-ss://d666c84d-aacd-43c8-8188-a79f0063c749@tunnyl.ru:8443?type=tcp&security=reality&pbk=M_vyGgaMp6Unz28r-3jFP-VwRoY39Edhn_0bQPknqmc&fp=random&sni=yahoo.com&sid=08f6093b944bd385&spx=%2F&flow=xtls-rprx-vision#REALITY|SI🇸🇮
+ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw==@192.71.244.150:989#%F0%9F%87%B8%F0%9F%87%AESI-192.71.244.150-4878
+ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw@91.132.94.200:989#%F0%9F%87%B8%F0%9F%87%AESI-91.132.94.200-0350

@@ -1,7 +1,4 @@
 ss://3e7f67de-648e-4871-b51a-a225214d41ee@171.22.16.161:443?security=reality&encryption=none&pbk=TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw&headerType=none&fp=chrome&type=tcp&sni=www.starwars.com#%3E%3E%40v2rayngvpn%3A%3ACH
 vless://3e7f67de-648e-4871-b51a-a225214d41ee@171.22.16.161:443?security=reality&encryption=none&pbk=TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw&headerType=none&fp=chrome&type=tcp&sni=www.starwars.com#%3E%3E%40v2rayngvpn%3A%3ACH
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M%3D@156.146.62.162:443#%40v2FreeHub%20%7C%20Switzerland`
-vless://e857ff76-71a7-4999-af17-9bc06eff850e@141.227.138.120:24586?mode=gun&security=none&encryption=none&type=grpc&serviceName=ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON#👉🆔@v2ray_configs_pool📡🇨🇭®️Switzerland©️Zurich🅿️ping:60.55ms
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSOU1vOTlWTWZkbXBiWGRGbnZKNHdj@45.95.232.236:4248#👉🆔@v2ray_configs_pool📡🇨🇭®️Switzerland©️Zurich🅿️ping:38.68ms
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M%3D@156.146.62.161:443#%40v2FreeHub%20%7C%20Switzerland
-ss://e857ff76-71a7-4999-af17-9bc06eff850e@141.227.138.120:24586?mode=gun&security=none&encryption=none&type=grpc&serviceName=ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON#👉🆔@v2ray_configs_pool📡🇨🇭®️Switzerland©️Zurich🅿️ping:60.55ms
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M%3D@156.146.62.162:443#%40v2FreeHub%20%7C%20Switzerland`

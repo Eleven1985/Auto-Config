@@ -1,4 +1,6 @@
-ss://888a20e2-fc3f-4f52-973c-36a6386225b8@89.44.242.222:29500?encryption=none&security=none&type=tcp&headerType=none#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
+ss://888a20e2-fc3f-4f52-973c-36a6386225b8@89.44.242.222:29500?security=&encryption=none&headerType=none&type=tcp#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
+ss://44aded6c-a012-452b-8e13-04d5f15a659f@89.44.242.222:46822?security=&encryption=none&headerType=&type=tcp#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
+vless://44aded6c-a012-452b-8e13-04d5f15a659f@89.44.242.222:46822?security=&encryption=none&headerType=&type=tcp#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
+vless://888a20e2-fc3f-4f52-973c-36a6386225b8@89.44.242.222:29500?security=&encryption=none&headerType=none&type=tcp#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
 ss://4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b@89.44.242.222:29495/?type=tcp&encryption=none#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
-vless://888a20e2-fc3f-4f52-973c-36a6386225b8@89.44.242.222:29500?encryption=none&security=none&type=tcp&headerType=none#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD
 vless://4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b@89.44.242.222:29495/?type=tcp&encryption=none#%F0%9F%87%A8%F0%9F%87%B3_CN_%E4%B8%AD%E5%9B%BD

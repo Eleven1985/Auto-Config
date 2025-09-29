@@ -1,2 +1,0 @@
-vless://ae4afac6-4ea6-4b4a-8450-8226ad278c82@de2.hardgaming.xyz:57778?type=ws&security=tls&host=&sni=de2.hardgaming.xyz&path=%2F#bn
-ss://ae4afac6-4ea6-4b4a-8450-8226ad278c82@de2.hardgaming.xyz:57778?type=ws&security=tls&host=&sni=de2.hardgaming.xyz&path=%2F#bn

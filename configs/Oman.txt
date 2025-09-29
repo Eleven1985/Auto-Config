@@ -1,0 +1,2 @@
+ss://b41bfc57-24af-42c7-a791-89e7099958c5@ro.otunnel.icu:443?security=reality&encryption=none&pbk=_e4RpYgOhpfmdPLtqzEzSbEnl0a6moiCKtU9DXK0phI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.orange.ro&sid=bc60d5de#%F0%9F%87%B7%F0%9F%87%B4%20Romania%20%20%5Bvless%5D
+vless://b41bfc57-24af-42c7-a791-89e7099958c5@ro.otunnel.icu:443?security=reality&encryption=none&pbk=_e4RpYgOhpfmdPLtqzEzSbEnl0a6moiCKtU9DXK0phI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.orange.ro&sid=bc60d5de#%F0%9F%87%B7%F0%9F%87%B4%20Romania%20%20%5Bvless%5D

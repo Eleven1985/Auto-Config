@@ -1,2 +1,0 @@
-vless://776fefc4-d797-4f20-adca-d77f004fe2f2@arm-game1.faborus.com:3535?security=&encryption=none&host=google.com&headerType=http&type=tcp#%F0%9F%87%A6%F0%9F%87%B2%20Armenia%20Game%20-%201Gb%20%3D%202Gb
-ss://776fefc4-d797-4f20-adca-d77f004fe2f2@arm-game1.faborus.com:3535?security=&encryption=none&host=google.com&headerType=http&type=tcp#%F0%9F%87%A6%F0%9F%87%B2%20Armenia%20Game%20-%201Gb%20%3D%202Gb

@@ -1,7 +1,5 @@
-ss://0a6554b7-3897-4063-aef0-b5f3ba7efde1@178.239.126.163:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=main.m.taobao.com&fp=qq&security=reality&pbk=nSPKSGxXa4JujzZazaD548HYP9-oppMoao6tf_YI4VY&sid=86a715#👉🆔@v2ray_configs_pool📡🇯🇵®️Japan©️Akiruno
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M%3D@149.22.87.204:443#%3E%3E%40free4allVPN%3A%3AJP
-ss://cmM0LW1kNTplZmFuY2N5dW4@cn01.efan8867801.xyz:8766?plugin=obfs-local;obfs=http;obfs-host=202509242154338-Zr8tJCX9sq.download.microsoft.com#%E6%97%A5%E6%9C%AC%7C%40ripaojiedian
-trojan://253bc477d4e43c209f2d427272968280@153.121.51.29:1802?allowInsecure=0&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20%E6%97%A5%E6%9C%AC3%7C%40stairnode
 trojan://253bc477d4e43c209f2d427272968280@160.16.231.103:1331?allowInsecure=0&sni=www.nintendogames.net#%E6%97%A5%E6%9C%AC3%7C%40ripaojiedian
-vless://0a6554b7-3897-4063-aef0-b5f3ba7efde1@178.239.126.163:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=main.m.taobao.com&fp=qq&security=reality&pbk=nSPKSGxXa4JujzZazaD548HYP9-oppMoao6tf_YI4VY&sid=86a715#👉🆔@v2ray_configs_pool📡🇯🇵®️Japan©️Akiruno
 trojan://253bc477d4e43c209f2d427272968280@160.16.231.103:3160?allowInsecure=0&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20%E6%97%A5%E6%9C%AC2%7C%40stairnode
+trojan://253bc477d4e43c209f2d427272968280@153.121.51.29:1802?allowInsecure=0&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20%E6%97%A5%E6%9C%AC3%7C%40stairnode
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpOazlhc2dsRHpIemprdFZ6VGt2aGFB@arxfw2b78fi2q9hzylhn.freesocks.work:443#%E6%97%A5%E6%9C%AC%28yudou123.top%20%E7%8E%89%E8%B1%86%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29

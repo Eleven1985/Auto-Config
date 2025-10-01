@@ -1,2 +1,0 @@
-vless://6334a88c-853d-497c-a5b6-78900ad99ba3@alb2w.r1cx.ir:2086?security=none&type=httpupgrade&headerType=&path=&host=#%D8%B3%D8%B1%D9%88%D8%B1%20%D8%A2%D9%84%D8%A8%D8%A7%D9%86%DB%8C%20%F0%9F%87%A6%F0%9F%87%B1%20%7C%20%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%20%D8%B4%DA%A9%D9%86
-ss://6334a88c-853d-497c-a5b6-78900ad99ba3@alb2w.r1cx.ir:2086?security=none&type=httpupgrade&headerType=&path=&host=#%D8%B3%D8%B1%D9%88%D8%B1%20%D8%A2%D9%84%D8%A8%D8%A7%D9%86%DB%8C%20%F0%9F%87%A6%F0%9F%87%B1%20%7C%20%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%20%D8%B4%DA%A9%D9%86

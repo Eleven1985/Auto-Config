@@ -1,2 +1,0 @@
-vless://12345678-1234-1234-1234-123456789123@185.225.195.54:2096?encryption=none&security=tls&sni=sni.aizrf.com&type=ws&host=sni.aizrf.com&path=%2Fsnippets#%E9%98%BF%E8%81%94%E9%85%8B%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
-ss://12345678-1234-1234-1234-123456789123@185.225.195.54:2096?encryption=none&security=tls&sni=sni.aizrf.com&type=ws&host=sni.aizrf.com&path=%2Fsnippets#%E9%98%BF%E8%81%94%E9%85%8B%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29

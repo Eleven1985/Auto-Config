@@ -1,0 +1,2 @@
+trojan://8a1ab0df6abea549@125.227.86.45:443?security=tls&sni=TG.WangCai2&allowInsecure=1&type=grpc&authority=&serviceName=db&mode=gun#%E5%8F%B0%E6%B9%BE
+trojan://8a1ab0df6abea549@125.227.86.46:443?security=tls&sni=TG.WangCai2&allowInsecure=1&type=grpc&authority=&serviceName=db&mode=gun#%E5%8F%B0%E6%B9%BE

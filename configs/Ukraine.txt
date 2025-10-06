@@ -1,3 +1,1 @@
-vless://%40Geek_Spot@176.97.210.2:37589/?type=tcp&encryption=none#%F0%9F%87%BA%F0%9F%87%A6%20Ukraine%201```
-ss://%40Geek_Spot@176.97.210.2:37589/?type=tcp&encryption=none#%F0%9F%87%BA%F0%9F%87%A6%20Ukraine%201```
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@147.78.3.93:990#%3E%3E%40ShadowsocksM%3A%3AUA

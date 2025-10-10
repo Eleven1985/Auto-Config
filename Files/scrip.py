@@ -437,12 +437,11 @@ async def main():
                 for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
                     if en_name == matched_country:
                         country_name_zh = zh_name
+                        # 修复缩进错误 - 将配置添加的代码移到if条件内部
+                        config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+                        final_configs_by_country[matched_country].add(config_with_country)
+                        fallback_classified = True
                         break
-                
-                # 将中文国家名添加到配置中
-                config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
-                final_configs_by_country[matched_country].add(config_with_country)
-                fallback_classified = True
         
         if fallback_classified:
             classified_count = sum(len(configs) for configs in final_configs_by_country.values())
@@ -482,10 +481,11 @@ async def main():
                     for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
                         if en_name == matched_country:
                             country_name_zh = zh_name
+                            # 修复缩进错误 - 将配置添加的代码移到if条件内部
+                            config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+                            final_configs_by_country[matched_country].add(config_with_country)
+                            fallback_classified = True
                             break
-                        config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
-                        final_configs_by_country[matched_country].add(config_with_country)
-                        fallback_classified = True
 
     # 准备输出目录
     directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]

@@ -383,6 +383,7 @@ async def main():
     final_configs_by_country = {cat: set() for cat in country_names}
     final_all_protocols = {cat: set() for cat in PROTOCOL_CATEGORIES}
     all_valid_configs = set()  # 汇总所有有效节点
+    configs_with_country_info = []  # 存储带国家信息的节点，确保这里正确定义
 
     logging.info("Processing pages for config name association...")
     for url, text in fetched_pages:
@@ -400,11 +401,11 @@ async def main():
                     all_page_configs.add(config)
                     final_all_protocols[protocol_cat].add(config)
                     all_valid_configs.add(config)  # 添加到总汇总
-
+        
         # 保存所有配置用于后续的IP国家分类
         configs_with_country_info.extend(all_page_configs)
 
-    # 使用IP地址进行国家分类
+    # 移除旧的基于名称的国家分类逻辑，使用IP地址进行国家分类
     if configs_with_country_info:
         logging.info("Classifying nodes by IP geolocation...")
         from node_tester import tester

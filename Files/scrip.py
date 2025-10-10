@@ -126,7 +126,7 @@ COUNTRY_KEYWORDS = {
 
 # 直接在代码中定义协议模式
 PROTOCOL_PATTERNS = {
-    "Vmess": [r"vmess://[A-Za-z0-9+/=]+"],
+    "Vmess": [r"vmess://[A-Za-z0-9+/=]+"] ,
     "Vless": [r"vless://[A-Za-z0-9+/=?&.-]+"] ,
     "Trojan": [r"trojan://[A-Za-z0-9+/=?&.-]+"] ,
     "ShadowSocks": [r"ss://[A-Za-z0-9+/=?&.-]+"] ,
@@ -147,40 +147,9 @@ def decode_base64(data):
     except Exception:
         return None
 
-def get_vmess_name(vmess_link):
-    """Extract name from VMess link"""
-    if not vmess_link.startswith("vmess://"):
-        return None
-    try:
-        b64_part = vmess_link[8:]
-        decoded_str = decode_base64(b64_part)
-        if decoded_str:
-            vmess_json = json.loads(decoded_str)
-            return vmess_json.get('ps')
-    except Exception as e:
-        logging.warning(f"Failed to parse Vmess name from {vmess_link[:30]}...: {e}")
-    return None
+# 移除未使用的函数 get_vmess_name 和 get_ssr_name
 
-def get_ssr_name(ssr_link):
-    """Extract name from SSR link"""
-    if not ssr_link.startswith("ssr://"):
-        return None
-    try:
-        b64_part = ssr_link[6:]
-        decoded_str = decode_base64(b64_part)
-        if not decoded_str:
-            return None
-        parts = decoded_str.split('/?')
-        if len(parts) < 2:
-            return None
-        params_str = parts[1]
-        params = parse_qs(params_str)
-        if 'remarks' in params and params['remarks']:
-            remarks_b64 = params['remarks'][0]
-            return decode_base64(remarks_b64)
-    except Exception as e:
-        logging.warning(f"Failed to parse SSR name from {ssr_link[:30]}...: {e}")
-    return None
+# 保留过滤和验证函数
 
 def should_filter_config(config):
     """Filter out invalid or suspicious configs"""
@@ -334,7 +303,7 @@ async def process_category(category, items, is_country=False, output_dir=OUTPUT_
         return save_to_file(output_dir, category, items)
         
     # 导入节点测试器（在函数内部导入以避免循环依赖）
-    from node_tester import deduplicate_and_test_configs, tester
+    from node_tester import deduplicate_and_test_configs
     
     # 采样测试 - 如果节点数量过多
     if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
@@ -405,7 +374,7 @@ async def main():
         # 保存所有配置用于后续的IP国家分类
         configs_with_country_info.extend(all_page_configs)
 
-    # 移除旧的基于名称的国家分类逻辑，使用IP地址进行国家分类
+    # 使用IP地址进行国家分类
     if configs_with_country_info:
         logging.info("Classifying nodes by IP geolocation...")
         from node_tester import tester

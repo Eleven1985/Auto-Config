@@ -186,6 +186,69 @@ class NodeTester:
         valid_configs = self.get_valid_configs(test_results)
         
         return valid_configs
+    
+    async def resolve_hostname(self, hostname: str) -> Optional[str]:
+        """解析域名获取IP地址"""
+        try:
+            # 使用线程池执行DNS解析以避免阻塞事件循环
+            loop = asyncio.get_event_loop()
+            ip_address = await loop.run_in_executor(
+                self.executor,
+                lambda: socket.gethostbyname(hostname)
+            )
+            return ip_address
+        except Exception:
+            logging.warning(f"Failed to resolve hostname: {hostname}")
+            return None
+
+    async def get_country_by_ip(self, ip_address: str) -> Optional[str]:
+        """通过IP地址查询国家信息"""
+        # 检查缓存
+        if ip_address in self.geoip_cache:
+            return self.geoip_cache[ip_address]
+        
+        try:
+            # 使用ip-api.com免费API查询IP地理位置
+            import aiohttp
+            url = f"http://ip-api.com/json/{ip_address}?fields=countryCode"
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, timeout=GEOIP_TIMEOUT) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        country_code = data.get('countryCode')
+                        # 更新缓存并限制大小
+                        if country_code:
+                            if len(self.geoip_cache) >= GEOIP_CACHE_SIZE:
+                                # 简单的LRU缓存移除策略
+                                self.geoip_cache.pop(next(iter(self.geoip_cache)))
+                            self.geoip_cache[ip_address] = country_code
+                        return country_code
+        except Exception as e:
+            logging.warning(f"Failed to get country for IP {ip_address}: {e}")
+            return None
+    
+    async def get_node_country(self, config_line: str) -> Optional[str]:
+        """获取节点的国家信息"""
+        info = self.extract_node_info(config_line)
+        host = info.get('host')
+        
+        if not host:
+            return None
+        
+        # 判断是否为IP地址
+        try:
+            # 尝试直接解析为IP地址
+            socket.inet_aton(host)
+            ip_address = host
+        except socket.error:
+            # 如果不是IP地址，则解析域名
+            ip_address = await self.resolve_hostname(host)
+            if not ip_address:
+                return None
+        
+        # 查询IP所属国家
+        country_code = await self.get_country_by_ip(ip_address)
+        return country_code
 
 # 导出单例供外部使用
 tester = NodeTester()
@@ -209,65 +272,3 @@ if __name__ == "__main__":
         print(f"有效配置数量: {len(valid)}")
         
     asyncio.run(main())
-
-    async def resolve_hostname(self, hostname: str) -> Optional[str]:
-        """解析域名获取IP地址"""
-        try:
-            # 使用线程池执行DNS解析以避免阻塞事件循环
-            loop = asyncio.get_event_loop()
-            ip_address = await loop.run_in_executor(
-                self.executor,
-                lambda: socket.gethostbyname(hostname)
-            )
-            return ip_address
-        except Exception:
-            logging.warning(f"Failed to resolve hostname: {hostname}")
-            return None
-
-    async def get_country_by_ip(self, ip_address: str) -> Optional[str]:
-        """通过IP地址查询国家信息"""
-        # 检查缓存
-        if ip_address in self.geoip_cache:
-            return self.geoip_cache[ip_address]
-        
-        try:
-            # 使用ip-api.com免费API查询IP地理位置
-            url = f"http://ip-api.com/json/{ip_address}?fields=countryCode"
-            async with aiohttp.ClientSession() as session:
-                async with session.get(url, timeout=GEOIP_TIMEOUT) as response:
-                    if response.status == 200:
-                        data = await response.json()
-                        country_code = data.get('countryCode')
-                        # 更新缓存并限制大小
-                        if country_code:
-                            if len(self.geoip_cache) >= GEOIP_CACHE_SIZE:
-                                # 简单的LRU缓存移除策略
-                                self.geoip_cache.pop(next(iter(self.geoip_cache)))
-                            self.geoip_cache[ip_address] = country_code
-                        return country_code
-        except Exception as e:
-            logging.warning(f"Failed to get country for IP {ip_address}: {e}")
-            return None
-
-    async def get_node_country(self, config_line: str) -> Optional[str]:
-        """获取节点的国家信息"""
-        info = self.extract_node_info(config_line)
-        host = info.get('host')
-        
-        if not host:
-            return None
-        
-        # 判断是否为IP地址
-        try:
-            # 尝试直接解析为IP地址
-            socket.inet_aton(host)
-            ip_address = host
-        except socket.error:
-            # 如果不是IP地址，则解析域名
-            ip_address = await self.resolve_hostname(host)
-            if not ip_address:
-                return None
-        
-        # 查询IP所属国家
-        country_code = await self.get_country_by_ip(ip_address)
-        return country_code

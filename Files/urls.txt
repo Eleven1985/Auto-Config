@@ -13,3 +13,4 @@ https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2r
 https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/yudou66.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/blues.txt
 https://goclash.topmarco.tech/sb
+https://gcore.jsdelivr.net/gh/aews/jd/v20929.txt

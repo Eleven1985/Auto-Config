@@ -4,7 +4,7 @@ import asyncio
 import time
 import logging
 import aiohttp
-import sys
+import os
 
 # 配置参数
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,13 +27,13 @@ logging.basicConfig(
     ]
 )
 
-# 协议模式配置
+# 改进的协议模式配置 - 能捕获更完整的节点配置
 PROTOCOL_PATTERNS = {
-    'vmess': re.compile(r'vmess://[A-Za-z0-9+/=._~@-]+'),
-    'vless': re.compile(r'vless://[A-Za-z0-9+/=._~@-]+'),
-    'trojan': re.compile(r'trojan://[A-Za-z0-9+/=._~@-]+'),
-    'shadowsocks': re.compile(r'ss://[A-Za-z0-9+/=._~@-]+'),
-    'hysteria2': re.compile(r'hy2://[A-Za-z0-9+/=._~@-]+')
+    'vmess': re.compile(r'vmess://[^\s,]+'),
+    'vless': re.compile(r'vless://[^\s,]+'),
+    'trojan': re.compile(r'trojan://[^\s,]+'),
+    'shadowsocks': re.compile(r'ss://[^\s,]+'),
+    'hysteria2': re.compile(r'hy2://[^\s,]+')
 }
 
 # 协议分类映射
@@ -99,7 +99,6 @@ async def fetch_url(session, url, timeout=TIMEOUT):
         logging.error(f"Failed to fetch {url}: {e}")
         return url, ""
 
-# 查找匹配的协议配置
 def find_matches(text, patterns):
     """在文本中查找匹配的协议配置"""
     matches = {}
@@ -110,7 +109,6 @@ def find_matches(text, patterns):
             logging.info(f"Found {len(found)} {protocol} configurations")
     return matches
 
-# 保存配置项到文件
 def save_to_file(directory, filename, items):
     """保存配置项到文件"""
     try:
@@ -179,7 +177,6 @@ async def main():
             if protocol_cat in PROTOCOL_CATEGORIES:
                 category = PROTOCOL_CATEGORIES[protocol_cat]
                 for config in configs_found:
-                    # 直接使用原始配置，不进行额外验证
                     all_valid_configs.add(config)
                     final_all_protocols[category].add(config)
 
@@ -210,14 +207,13 @@ async def main():
                     country_name_zh = zh_name
                     break
             
-            # 将中文国家名添加到配置中（可选）
+            # 将中文国家名添加到配置中
             config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
             final_configs_by_country[matched_country].add(config_with_country)
 
     # 准备输出目录
     directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
     for directory in directories:
-        # 确保目录存在
         os.makedirs(directory, exist_ok=True)
         # 清理目录中的现有文件
         for filename in os.listdir(directory):
@@ -229,29 +225,24 @@ async def main():
                 logging.error(f"Failed to delete {file_path}: {e}")
     
     # 保存汇总节点到 summary 目录
-    logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
     if all_valid_configs:
         save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
         # 同时保存到根目录
         save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
     
     # 保存协议分类到 protocols 目录和根目录
-    logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
     for category, items in final_all_protocols.items():
         if items:
             save_to_file(PROTOCOLS_DIR, category, items)
             save_to_file(OUTPUT_DIR, category, items)
     
     # 保存国家分类到 countries 目录和根目录
-    logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
     country_files_count = 0
     for category, items in final_configs_by_country.items():
         if items:
             save_to_file(COUNTRIES_DIR, category, items)
             save_to_file(OUTPUT_DIR, category, items)
             country_files_count += 1
-        else:
-            logging.info(f"No items for country {category}")
     
     # 统计生成的国家文件数量
     logging.info(f"Generated {country_files_count} country files")
@@ -260,7 +251,6 @@ async def main():
     if country_files_count == 0:
         logging.warning("没有生成任何国家文件！请检查分类逻辑是否正常工作。")
         logging.info(f"Total valid configs: {len(all_valid_configs)}")
-        logging.info(f"Configured countries: {list(final_configs_by_country.keys())}")
         if all_valid_configs:
             # 输出一些配置样例用于调试
             sample_config = next(iter(all_valid_configs))

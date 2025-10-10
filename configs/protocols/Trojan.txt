@@ -1,26 +1,24 @@
-# Trojan - 23 items
-# Generated at 2025-10-10 07:32:47
+# Trojan - 21 items
+# Generated at 2025-10-10 07:44:36
 
-trojan://wb6368
-trojan://redfree8
-trojan://tg
+trojan://f282b878
+trojan://Pooria
 trojan://02XtoczO7V
 trojan://babacac
 trojan://hZ7JkYVAfB
-trojan://YwuvGJk36B
-trojan://telegram
-trojan://f282b878
-trojan://Pooria
-trojan://auto
+trojan://amclubs
+trojan://AXpQXM4vNh
+trojan://2ee85121
+trojan://utF6JLQd2x
+trojan://FiSo7J6vfS
+trojan://redfree8
+trojan://biOrJGlcfX
+trojan://wb6368
 trojan://253bc477d4e43c209f2d427272968280
 trojan://e4cbe8b8
 trojan://da86c6b5
-trojan://AXpQXM4vNh
-trojan://FiSo7J6vfS
-trojan://utF6JLQd2x
-trojan://f93d5ecc
-trojan://biOrJGlcfX
-trojan://iwangjie
 trojan://eG92F3gh09
-trojan://amclubs
-trojan://2ee85121
+trojan://f93d5ecc
+trojan://YwuvGJk36B
+trojan://telegram
+trojan://iwangjie

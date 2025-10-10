@@ -23,7 +23,8 @@ MAX_CONFIG_LENGTH = 1500
 MIN_PERCENT25_COUNT = 15
 MAX_TEST_PER_CATEGORY = 200  # 每个分类测试的节点数
 ENABLE_SAMPLING = True       # 启用采样测试
-SAVE_WITHOUT_TESTING = False  # 是否直接保存不测试（最快但不保证有效性）
+# 将SAVE_WITHOUT_TESTING从False改为True以取消测试
+SAVE_WITHOUT_TESTING = True  # 是否直接保存不测试（最快但不保证有效性）
 
 # 创建logs目录
 if not os.path.exists('logs'):
@@ -196,6 +197,8 @@ async def fetch_url(session, url):
     except Exception as e:
         logging.warning(f"Failed to fetch or process {url}: {e}")
         return url, None
+
+# 修复 find_matches 函数定义
 
 def find_matches(text, categories_data):
     """Find protocol matches in text content"""
@@ -480,7 +483,7 @@ async def main():
             except Exception as e:
                 logging.error(f"Failed to delete {file_path}: {e}")
     
-    # 保存总汇总节点到summary目录
+    # 保存汇总节点到 summary 目录
     logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
     if all_valid_configs:
         # 如果启用了测试，先测试汇总节点
@@ -490,19 +493,27 @@ async def main():
             save_to_file(SUMMARY_DIR, "all_nodes", valid_summary_configs)
         else:
             save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
+            # 由于 SAVE_WITHOUT_TESTING=True，同时保存到根目录一次即可
+            save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
     
-    # 保存协议分类到protocols目录
+    # 保存协议分类到 protocols 目录和根目录
     logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
     for category, items in final_all_protocols.items():
         if items:
             await process_category(category, items, output_dir=PROTOCOLS_DIR)
+            # 同样只保存一次到根目录
+            if SAVE_WITHOUT_TESTING:
+                save_to_file(OUTPUT_DIR, category, items)
     
-    # 保存国家分类到countries目录
+    # 保存国家分类到 countries 目录和根目录
     logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
     for category, items in final_configs_by_country.items():
         if items:
             await process_category(category, items, is_country=True, output_dir=COUNTRIES_DIR)
-    
+            # 同样只保存一次到根目录
+            if SAVE_WITHOUT_TESTING:
+                save_to_file(OUTPUT_DIR, category, items)
+
     # 同时保存一份到根目录（兼容性）
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR, exist_ok=True)

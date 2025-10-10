@@ -54,8 +54,10 @@ logging = logger
 TEST_TIMEOUT = 1.5  # 超时时间
 MAX_CONCURRENT_TESTS = 150  # 并发测试数量
 MIN_VALID_DELAY = 5  # 最小有效延迟阈值(ms)
-GEOIP_TIMEOUT = 2.0  # IP地理位置查询超时时间
-GEOIP_CACHE_SIZE = 500  # IP地理位置缓存大小
+
+# 添加缺失的GEOIP相关常量定义
+GEOIP_TIMEOUT = 3.0  # IP地理位置查询超时时间
+GEOIP_CACHE_SIZE = 1000  # IP地理位置缓存大小
 
 class NodeTester:
     def __init__(self):

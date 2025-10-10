@@ -3,7 +3,6 @@ import re
 import asyncio
 import time
 import logging
-from concurrent.futures import ThreadPoolExecutor
 import aiohttp
 import sys
 
@@ -15,10 +14,10 @@ PROTOCOLS_DIR = os.path.join(OUTPUT_DIR, 'protocols')
 COUNTRIES_DIR = os.path.join(OUTPUT_DIR, 'countries')
 URLS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'urls.txt')
 
-# 确保日志目录存在 - 移到配置日志之前
+# 确保日志目录存在
 os.makedirs(os.path.join(base_dir, 'logs'), exist_ok=True)
 
-# 配置日志 - 现在日志目录已经存在
+# 配置日志
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
@@ -65,7 +64,7 @@ COUNTRY_KEYWORDS = {
     'Italy': ['it', 'italy']
 }
 
-# 国家代码映射表（包含英文和中文名称）
+# 国家代码映射表
 COUNTRY_CODE_MAPPING = {
     'US': ('United States', '美国'),
     'CN': ('China', '中国'),
@@ -87,7 +86,6 @@ COUNTRY_CODE_MAPPING = {
 # 请求设置
 CONCURRENT_REQUESTS = 10
 TIMEOUT = 30
-SAVE_WITHOUT_TESTING = True
 
 async def fetch_url(session, url, timeout=TIMEOUT):
     """异步获取URL内容"""
@@ -100,31 +98,6 @@ async def fetch_url(session, url, timeout=TIMEOUT):
     except Exception as e:
         logging.error(f"Failed to fetch {url}: {e}")
         return url, ""
-
-# 添加一个辅助函数，用于检查配置是否应该被过滤
-def should_filter_config(config):
-    """检查配置是否应该被过滤"""
-    # 示例过滤逻辑：可以根据实际需求修改
-    filtered_patterns = [
-        # 添加需要过滤的模式
-    ]
-    for pattern in filtered_patterns:
-        if pattern in config:
-            return True
-    return False
-
-# 验证配置有效性的函数
-def is_valid_config(config):
-    """验证配置是否有效"""
-    # 基本验证：长度检查和协议格式检查
-    if not config or len(config) < 10:
-        return False
-    # 检查是否包含有效的协议前缀
-    valid_protocols = ['vmess://', 'vless://', 'trojan://', 'ss://', 'hy2://']
-    for protocol in valid_protocols:
-        if config.startswith(protocol):
-            return True
-    return False
 
 # 查找匹配的协议配置
 def find_matches(text, patterns):
@@ -165,32 +138,22 @@ def save_to_file(directory, filename, items):
         logging.error(f"Failed to save items to {os.path.join(directory, filename)}.txt: {e}")
         return False
 
-async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
-    """处理单个分类的配置，合并重复逻辑"""
-    category_type = "country" if is_country else "category"
-    logging.info(f"Processing {category_type} {category}")
-    
-    # 由于 SAVE_WITHOUT_TESTING=True，直接保存所有配置
-    result = save_to_file(output_dir, category, items)
-    
-    return result
-
 async def main():
     """Main entry point"""
     start_time = time.time()
     
-    # Check input files existence
+    # 检查输入文件是否存在
     if not os.path.exists(URLS_FILE):
         logging.critical("URLs file not found.")
         return
 
-    # Load input data
+    # 加载输入数据
     with open(URLS_FILE, 'r', encoding='utf-8') as f:
         urls = [line.strip() for line in f if line.strip()]
     
     logging.info(f"Loaded {len(urls)} URLs.")
 
-    # Fetch URLs concurrently with rate limiting
+    # 并发获取URL内容
     sem = asyncio.Semaphore(CONCURRENT_REQUESTS)
     async def fetch_with_sem(session, url):
         async with sem:
@@ -199,154 +162,57 @@ async def main():
     async with aiohttp.ClientSession() as session:
         fetched_pages = await asyncio.gather(*[fetch_with_sem(session, u) for u in urls])
 
-    # Initialize result structures
-    # 从COUNTRY_CODE_MAPPING获取所有国家，而不仅仅是COUNTRY_KEYWORDS中的
+    # 初始化结果结构
     country_names = [info[0] for info in COUNTRY_CODE_MAPPING.values()]
     final_configs_by_country = {cat: set() for cat in country_names}
     final_all_protocols = {cat: set() for cat in PROTOCOL_CATEGORIES.values()}
     all_valid_configs = set()  # 汇总所有有效节点
-    configs_with_country_info = []  # 存储带国家信息的节点
 
-    logging.info("Processing pages for config name association...")
+    logging.info("Processing pages for configs...")
     for url, text in fetched_pages:
         if not text:
             continue
 
-        # Find protocol matches and filter invalid configs
+        # 查找协议匹配
         page_protocol_matches = find_matches(text, PROTOCOL_PATTERNS)
-        all_page_configs = set()
         for protocol_cat, configs_found in page_protocol_matches.items():
             if protocol_cat in PROTOCOL_CATEGORIES:
                 category = PROTOCOL_CATEGORIES[protocol_cat]
                 for config in configs_found:
-                    if should_filter_config(config) or not is_valid_config(config):
-                        continue
-                    all_page_configs.add(config)
+                    # 直接使用原始配置，不进行额外验证
+                    all_valid_configs.add(config)
                     final_all_protocols[category].add(config)
-                    all_valid_configs.add(config)  # 添加到总汇总
-        
-        # 保存所有配置用于后续的IP国家分类
-        configs_with_country_info.extend(all_page_configs)
 
     logging.info(f"Total valid configs: {len(all_valid_configs)}")
 
-    # 使用IP地址进行国家分类
-    if configs_with_country_info:
-        logging.info(f"Classifying {len(configs_with_country_info)} nodes by IP geolocation...")
-        try:
-            from node_tester import tester
-            
-            # 创建并发任务来获取每个节点的国家信息
-            sem = asyncio.Semaphore(50)  # 限制并发IP查询数量
-            
-            async def get_country_with_sem(config):
-                async with sem:
-                    try:
-                        country_code = await tester.get_node_country(config)
-                        if country_code and country_code in COUNTRY_CODE_MAPPING:
-                            country_info = COUNTRY_CODE_MAPPING[country_code]
-                            country_name_en = country_info[0]  # 英文名称，用于文件名
-                            country_name_zh = country_info[1]  # 中文名称，用于文件内容
-                            
-                            # 如果国家名称在我们的列表中，则添加到相应的集合
-                            if country_name_en in final_configs_by_country:
-                                # 将中文国家名添加到配置中
-                                config_with_country = f"# {country_name_zh}\n{config}"
-                                final_configs_by_country[country_name_en].add(config_with_country)
-                                logging.debug(f"Config classified to {country_name_en}")
-                                return country_name_en
-                        else:
-                            logging.debug(f"No country found for config: {config[:30]}...")
-                    except Exception as e:
-                        logging.warning(f"Error getting country for config: {e}")
-                    return None
-            
-            # 并发获取所有节点的国家信息
-            tasks = [get_country_with_sem(config) for config in configs_with_country_info]
-            await asyncio.gather(*tasks)
-            
-            # 统计分类结果
-            classified_count = sum(len(configs) for configs in final_configs_by_country.values())
-            logging.info(f"Classified {classified_count} nodes by IP geolocation")
-        except Exception as e:
-            logging.error(f"Error during IP geolocation classification: {e}")
-
-    # 如果IP分类失败，回退到基于名称的分类方法
-    fallback_classified = False
-    current_classified = sum(len(configs) for configs in final_configs_by_country.values())
-    if current_classified == 0:
-        logging.info("No nodes classified by IP geolocation, falling back to name-based classification")
-        # 使用节点名称进行国家分类
-        for config in all_valid_configs:
-            # 尝试从配置中提取节点名称
-            name_part = config.split('#')
-            node_name = name_part[1].strip() if len(name_part) > 1 else ""
-            
-            # 检查节点名称是否包含国家关键词
-            matched_country = None
-            for country, keywords in COUNTRY_KEYWORDS.items():
-                for keyword in keywords:
-                    if keyword.lower() in node_name.lower() or keyword.lower() in config.lower():
-                        matched_country = country
-                        break
-                if matched_country:
+    # 使用基于名称的国家分类方法
+    logging.info("Classifying nodes by name keywords")
+    for config in all_valid_configs:
+        # 尝试从配置中提取节点名称
+        name_part = config.split('#')
+        node_name = name_part[1].strip() if len(name_part) > 1 else ""
+        
+        # 检查节点名称是否包含国家关键词
+        matched_country = None
+        for country, keywords in COUNTRY_KEYWORDS.items():
+            for keyword in keywords:
+                if keyword.lower() in node_name.lower() or keyword.lower() in config.lower():
+                    matched_country = country
+                    break
+            if matched_country:
+                break
+        
+        if matched_country and matched_country in final_configs_by_country:
+            # 获取中文国家名
+            country_name_zh = None
+            for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
+                if en_name == matched_country:
+                    country_name_zh = zh_name
                     break
             
-            if matched_country and matched_country in final_configs_by_country:
-                # 获取中文国家名
-                country_name_zh = None
-                # 查找对应的中文国家名
-                for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
-                    if en_name == matched_country:
-                        country_name_zh = zh_name
-                        # 将配置添加到国家分类
-                        config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
-                        final_configs_by_country[matched_country].add(config_with_country)
-                        fallback_classified = True
-                        break
-        
-        if fallback_classified:
-            classified_count = sum(len(configs) for configs in final_configs_by_country.values())
-            logging.info(f"Classified {classified_count} nodes by name-based fallback")
-    else:
-        # 如果通过IP分类到了一些节点，为剩余节点尝试基于名称的分类
-        remaining_configs = set()
-        for config in all_valid_configs:
-            found = False
-            for country_configs in final_configs_by_country.values():
-                for country_config in country_configs:
-                    if config in country_config or country_config.endswith(config):
-                        found = True
-                        break
-                if found:
-                    break
-            if not found:
-                remaining_configs.add(config)
-        
-        if remaining_configs:
-            logging.info(f"Classifying {len(remaining_configs)} remaining nodes by name")
-            for config in remaining_configs:
-                name_part = config.split('#')
-                node_name = name_part[1].strip() if len(name_part) > 1 else ""
-                
-                matched_country = None
-                for country, keywords in COUNTRY_KEYWORDS.items():
-                    for keyword in keywords:
-                        if keyword.lower() in node_name.lower() or keyword.lower() in config.lower():
-                            matched_country = country
-                            break
-                    if matched_country:
-                        break
-                
-                if matched_country and matched_country in final_configs_by_country:
-                    country_name_zh = None
-                    for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
-                        if en_name == matched_country:
-                            country_name_zh = zh_name
-                            config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
-                            final_configs_by_country[matched_country].add(config_with_country)
-                            fallback_classified = True
-                            break
+            # 将中文国家名添加到配置中（可选）
+            config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+            final_configs_by_country[matched_country].add(config_with_country)
 
     # 准备输出目录
     directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
@@ -370,7 +236,7 @@ async def main():
         save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
     
     # 保存协议分类到 protocols 目录和根目录
-    logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
+    logging.info(f"Preparing to save protocols to directory: {PROTOCOL_DIR}")
     for category, items in final_all_protocols.items():
         if items:
             save_to_file(PROTOCOLS_DIR, category, items)
@@ -393,7 +259,6 @@ async def main():
     # 检查是否有生成的国家文件
     if country_files_count == 0:
         logging.warning("没有生成任何国家文件！请检查分类逻辑是否正常工作。")
-        # 添加调试信息
         logging.info(f"Total valid configs: {len(all_valid_configs)}")
         logging.info(f"Configured countries: {list(final_configs_by_country.keys())}")
         if all_valid_configs:

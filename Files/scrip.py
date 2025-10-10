@@ -5,8 +5,6 @@ import aiohttp
 import os
 import shutil
 import re  # 添加缺失的re模块导入
-import base64
-import json
 
 # 配置参数
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -15,12 +13,6 @@ SUMMARY_DIR = os.path.join(OUTPUT_DIR, 'summary')
 PROTOCOLS_DIR = os.path.join(OUTPUT_DIR, 'protocols')
 COUNTRIES_DIR = os.path.join(OUTPUT_DIR, 'countries')
 URLS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'urls.txt')
-
-# IP测试API配置
-IP_TEST_API = 'https://api.vore.top/api/IPdata'
-IP_TEST_CONCURRENCY = 5  # IP测试的并发数
-IP_TEST_TIMEOUT = 5      # IP测试的超时时间
-USE_IP_TEST = True       # 是否使用IP测试功能
 
 # 确保日志目录存在
 os.makedirs(os.path.join(base_dir, 'logs'), exist_ok=True)
@@ -123,66 +115,6 @@ async def fetch_url(session, url, timeout=TIMEOUT):
         logging.error(f"Failed to fetch {url}: {e}")
         return url, ""
 
-async def test_ip_location(session, ip, timeout=IP_TEST_TIMEOUT):
-    """异步测试IP地址的地理位置"""
-    try:
-        url = f"{IP_TEST_API}?ip={ip}"
-        async with session.get(url, timeout=timeout) as response:
-            if response.status == 200:
-                data = await response.json()
-                # 解析返回的JSON数据
-                if isinstance(data, dict) and 'code' in data and data['code'] == 200 and 'data' in data:
-                    country_code = data['data'].get('country_code', '')
-                    return ip, country_code
-        return ip, None
-    except Exception as e:
-        logging.error(f"Failed to test IP {ip}: {e}")
-        return ip, None
-
-def extract_ip_from_config(config):
-    """从配置中提取IP地址"""
-    try:
-        # 处理不同协议的配置格式
-        if config.startswith('vmess://'):
-            # 解码vmess配置
-            encoded = config[8:]
-            # 确保base64解码正确处理
-            missing_padding = len(encoded) % 4
-            if missing_padding:
-                encoded += '=' * (4 - missing_padding)
-            decoded = base64.urlsafe_b64decode(encoded).decode('utf-8')
-            vmess_data = json.loads(decoded)
-            return vmess_data.get('add', '')
-        elif config.startswith('vless://'):
-            # 解析vless配置
-            match = re.search(r'@([^:]+):', config)
-            if match:
-                return match.group(1)
-        elif config.startswith('trojan://') or config.startswith('ss://'):
-            # 解析trojan和ss配置
-            match = re.search(r'@([^:]+):', config)
-            if match:
-                return match.group(1)
-        elif config.startswith('ssr://'):
-            # 解析ssr配置
-            encoded = config[6:]
-            missing_padding = len(encoded) % 4
-            if missing_padding:
-                encoded += '=' * (4 - missing_padding)
-            decoded = base64.urlsafe_b64decode(encoded).decode('utf-8')
-            match = re.search(r'([^:]+):', decoded)
-            if match:
-                return match.group(1)
-        # 通用IP提取
-        ip_pattern = re.compile(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b')
-        match = ip_pattern.search(config)
-        if match:
-            return match.group(0)
-        return None
-    except Exception as e:
-        logging.error(f"Error extracting IP from config: {e}")
-        return None
-
 def find_matches(text, patterns):
     """在文本中查找匹配的协议配置"""
     matches = {}  # 确保即使没有匹配项也返回空字典
@@ -250,18 +182,8 @@ def remove_duplicate_configs(configs):
     
     return unique_configs
 
-def classify_by_country(config, country_keywords, country_code_mapping, ip_country_map=None):
-    """根据关键词或IP测试结果对配置进行国家分类"""
-    # 优先使用IP测试结果
-    if ip_country_map:
-        ip = extract_ip_from_config(config)
-        if ip and ip in ip_country_map:
-            country_code = ip_country_map[ip]
-            if country_code in country_code_mapping:
-                country_name, country_name_zh = country_code_mapping[country_code]
-                config_with_country = f"# {country_name_zh}\n{config}"
-                return country_name, config_with_country
-                
+def classify_by_country(config, country_keywords, country_code_mapping):
+    """根据关键词对配置进行国家分类"""
     # 尝试从配置中提取节点名称
     name_part = config.split('#')
     node_name = name_part[1].strip() if len(name_part) > 1 else ""
@@ -340,6 +262,7 @@ async def main():
         logging.info(f"Total configs after deduplication: {len(all_valid_configs)}")
 
         # 按协议分类
+        # 按协议分类
         logging.info("Classifying configs by protocol...")
         for config in all_valid_configs:
             matched = False
@@ -360,42 +283,10 @@ async def main():
         for category, items in final_all_protocols.items():
             logging.info(f"{category}: {len(items)} items")
 
-        # 创建IP国家映射
-        ip_country_map = {}
-        if USE_IP_TEST and all_valid_configs:
-            logging.info("Testing IP locations...")
-            # 提取所有IP地址
-            ip_list = []
-            config_to_ip = {}
-            
-            for config in all_valid_configs:
-                ip = extract_ip_from_config(config)
-                if ip and ip not in ip_list:
-                    ip_list.append(ip)
-                    config_to_ip[ip] = config
-            
-            logging.info(f"Extracted {len(ip_list)} unique IPs for testing")
-            
-            # 并发测试IP
-            ip_sem = asyncio.Semaphore(IP_TEST_CONCURRENCY)
-            async def test_ip_with_sem(session, ip):
-                async with ip_sem:
-                    return await test_ip_location(session, ip)
-            
-            async with aiohttp.ClientSession() as session:
-                ip_test_results = await asyncio.gather(*[test_ip_with_sem(session, ip) for ip in ip_list])
-            
-            # 构建IP到国家的映射
-            for ip, country_code in ip_test_results:
-                if country_code:
-                    ip_country_map[ip] = country_code
-            
-            logging.info(f"Successfully tested {len(ip_country_map)} IP locations")
-
-        # 使用基于IP测试或名称关键词的国家分类方法
-        logging.info("Classifying nodes by IP test results and name keywords")
+        # 使用基于名称的国家分类方法
+        logging.info("Classifying nodes by name keywords")
         for config in all_valid_configs:
-            country, config_with_country = classify_by_country(config, COUNTRY_KEYWORDS, COUNTRY_CODE_MAPPING, ip_country_map)
+            country, config_with_country = classify_by_country(config, COUNTRY_KEYWORDS, COUNTRY_CODE_MAPPING)
             if country and country in final_configs_by_country:
                 final_configs_by_country[country].add(config_with_country)
 

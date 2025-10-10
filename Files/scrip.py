@@ -6,7 +6,6 @@ import logging
 import os
 import time
 import base64
-from urllib.parse import parse_qs, unquote
 import asyncio
 from logging.handlers import RotatingFileHandler
 from bs4 import BeautifulSoup
@@ -147,8 +146,6 @@ def decode_base64(data):
     except Exception:
         return None
 
-# 移除未使用的函数 get_vmess_name 和 get_ssr_name
-
 # 保留过滤和验证函数
 
 def should_filter_config(config):
@@ -220,78 +217,58 @@ def find_matches(text, categories_data):
                 logging.error(f"Regex error for '{pattern_str}' in category '{category}': {e}")
     return {k: v for k, v in matches.items() if v}
 
-def save_to_file(directory, category_name, items_set):
-    """Save items to file"""
-    if not items_set:
-        return False, 0
-    # 确保目录存在
-    os.makedirs(directory, exist_ok=True)
-    file_path = os.path.join(directory, f"{category_name}.txt")
-    count = len(items_set)
-    try:
-        # 对于所有文件都不排序，直接写入，大幅提升性能
-        with open(file_path, 'w', encoding='utf-8') as f:
-            for item in items_set:
-                f.write(f"{item}\n")
-        logging.info(f"Saved {count} items to {file_path}")
-        return True, count
-    except Exception as e:
-        logging.error(f"Failed to write file {file_path}: {e}")
-        return False, 0
-
-# 国家代码到国家名称的映射
+# 国家代码到国家名称的映射（英文和中文）
 COUNTRY_CODE_MAPPING = {
-    'US': 'USA',
-    'UK': 'UK',
-    'CN': 'China',
-    'JP': 'Japan',
-    'SG': 'Singapore',
-    'KR': 'SouthKorea',
-    'DE': 'Germany',
-    'FR': 'France',
-    'RU': 'Russia',
-    'AU': 'Australia',
-    'CA': 'Canada',
-    'IN': 'India',
-    'ID': 'Indonesia',
-    'TH': 'Thailand',
-    'VN': 'Vietnam',
-    'MY': 'Malaysia',
-    'BR': 'Brazil',
-    'IT': 'Italy',
-    'ES': 'Spain',
-    'NL': 'Netherlands',
-    'SE': 'Sweden',
-    'CH': 'Switzerland',
-    'AT': 'Austria',
-    'BE': 'Belgium',
-    'PL': 'Poland',
-    'RO': 'Romania',
-    'CZ': 'Czechia',
-    'HU': 'Hungary',
-    'FI': 'Finland',
-    'NO': 'Norway',
-    'PT': 'Portugal',
-    'IE': 'Ireland',
-    'IL': 'Israel',
-    'TR': 'Turkey',
-    'AE': 'UAE',
-    'IR': 'Iran',
-    'AR': 'Argentina',
-    'BG': 'Bulgaria',
-    'HR': 'Croatia',
-    'DK': 'Denmark',
-    'KZ': 'Kazakhstan',
-    'LT': 'Lithuania',
-    'LU': 'Luxembourg',
-    'MD': 'Moldova',
-    'ME': 'Montenegro',
-    'PY': 'Paraguay',
-    'RS': 'Russia',
-    'SM': 'Samoa',
-    'SI': 'Slovenia',
-    'TJ': 'Tajikistan'
-    # 可以根据需要添加更多国家代码映射
+    'US': ('USA', '美国'),
+    'UK': ('UK', '英国'),
+    'CN': ('China', '中国'),
+    'JP': ('Japan', '日本'),
+    'SG': ('Singapore', '新加坡'),
+    'KR': ('SouthKorea', '韩国'),
+    'DE': ('Germany', '德国'),
+    'FR': ('France', '法国'),
+    'RU': ('Russia', '俄罗斯'),
+    'AU': ('Australia', '澳大利亚'),
+    'CA': ('Canada', '加拿大'),
+    'IN': ('India', '印度'),
+    'ID': ('Indonesia', '印度尼西亚'),
+    'TH': ('Thailand', '泰国'),
+    'VN': ('Vietnam', '越南'),
+    'MY': ('Malaysia', '马来西亚'),
+    'BR': ('Brazil', '巴西'),
+    'IT': ('Italy', '意大利'),
+    'ES': ('Spain', '西班牙'),
+    'NL': ('Netherlands', '荷兰'),
+    'SE': ('Sweden', '瑞典'),
+    'CH': ('Switzerland', '瑞士'),
+    'AT': ('Austria', '奥地利'),
+    'BE': ('Belgium', '比利时'),
+    'PL': ('Poland', '波兰'),
+    'RO': ('Romania', '罗马尼亚'),
+    'CZ': ('Czechia', '捷克'),
+    'HU': ('Hungary', '匈牙利'),
+    'FI': ('Finland', '芬兰'),
+    'NO': ('Norway', '挪威'),
+    'PT': ('Portugal', '葡萄牙'),
+    'IE': ('Ireland', '爱尔兰'),
+    'IL': ('Israel', '以色列'),
+    'TR': ('Turkey', '土耳其'),
+    'AE': ('UAE', '阿联酋'),
+    'IR': ('Iran', '伊朗'),
+    'AR': ('Argentina', '阿根廷'),
+    'BG': ('Bulgaria', '保加利亚'),
+    'HR': ('Croatia', '克罗地亚'),
+    'DK': ('Denmark', '丹麦'),
+    'KZ': ('Kazakhstan', '哈萨克斯坦'),
+    'LT': ('Lithuania', '立陶宛'),
+    'LU': ('Luxembourg', '卢森堡'),
+    'MD': ('Moldova', '摩尔多瓦'),
+    'ME': ('Montenegro', '黑山'),
+    'PY': ('Paraguay', '巴拉圭'),
+    'RS': ('Russia', '俄罗斯'),
+    'SM': ('Samoa', '萨摩亚'),
+    'SI': ('Slovenia', '斯洛文尼亚'),
+    'TJ': ('Tajikistan', '塔吉克斯坦')
 }
 
 async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
@@ -384,13 +361,21 @@ async def main():
         
         async def get_country_with_sem(config):
             async with sem:
-                country_code = await tester.get_node_country(config)
-                if country_code and country_code in COUNTRY_CODE_MAPPING:
-                    country_name = COUNTRY_CODE_MAPPING[country_code]
-                    # 如果国家名称在我们的列表中，则添加到相应的集合
-                    if country_name in final_configs_by_country:
-                        final_configs_by_country[country_name].add(config)
-                        return country_name
+                try:
+                    country_code = await tester.get_node_country(config)
+                    if country_code and country_code in COUNTRY_CODE_MAPPING:
+                        country_info = COUNTRY_CODE_MAPPING[country_code]
+                        country_name_en = country_info[0]  # 英文名称，用于文件名
+                        country_name_zh = country_info[1]  # 中文名称，用于文件内容
+                        
+                        # 如果国家名称在我们的列表中，则添加到相应的集合
+                        if country_name_en in final_configs_by_country:
+                            # 将中文国家名添加到配置中
+                            config_with_country = f"# {country_name_zh}\n{config}"
+                            final_configs_by_country[country_name_en].add(config_with_country)
+                            return country_name_en
+                except Exception as e:
+                    logging.warning(f"Error getting country for config: {e}")
                 return None
         
         # 并发获取所有节点的国家信息
@@ -401,9 +386,48 @@ async def main():
         classified_count = sum(len(configs) for configs in final_configs_by_country.values())
         logging.info(f"Classified {classified_count} nodes by IP geolocation")
 
+    # 如果IP分类失败，回退到基于名称的分类方法
+    fallback_classified = False
+    if sum(len(configs) for configs in final_configs_by_country.values()) == 0:
+        logging.info("No nodes classified by IP geolocation, falling back to name-based classification")
+        # 使用节点名称进行国家分类
+        for config in all_valid_configs:
+            # 尝试从配置中提取节点名称
+            name_part = config.split('#')
+            node_name = name_part[1].strip() if len(name_part) > 1 else ""
+            
+            # 检查节点名称是否包含国家关键词
+            matched_country = None
+            for country, keywords in country_keywords.items():
+                for keyword in keywords:
+                    if keyword.lower() in node_name.lower():
+                        matched_country = country
+                        break
+                if matched_country:
+                    break
+            
+            if matched_country and matched_country in final_configs_by_country:
+                # 获取中文国家名
+                country_name_zh = None
+                # 查找对应的中文国家名
+                for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
+                    if en_name == matched_country:
+                        country_name_zh = zh_name
+                        break
+                
+                # 将中文国家名添加到配置中
+                config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+                final_configs_by_country[matched_country].add(config_with_country)
+                fallback_classified = True
+        
+        if fallback_classified:
+            classified_count = sum(len(configs) for configs in final_configs_by_country.values())
+            logging.info(f"Classified {classified_count} nodes by name-based fallback")
+
     # Prepare output directories
     directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
     for directory in directories:
+        # 确保目录存在
         os.makedirs(directory, exist_ok=True)
         # Clear existing files in directory
         for filename in os.listdir(directory):
@@ -414,7 +438,7 @@ async def main():
             except Exception as e:
                 logging.error(f"Failed to delete {file_path}: {e}")
     
-    # 保存总汇总节点
+    # 保存总汇总节点到summary目录
     logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
     if all_valid_configs:
         # 如果启用了测试，先测试汇总节点
@@ -425,17 +449,40 @@ async def main():
         else:
             save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
     
+    # 保存协议分类到protocols目录
     logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
-    # 保存协议分类到protocols文件夹
     for category, items in final_all_protocols.items():
         if items:
             await process_category(category, items, output_dir=PROTOCOLS_DIR)
     
+    # 保存国家分类到countries目录
     logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
-    # 保存国家分类到countries文件夹
     for category, items in final_configs_by_country.items():
         if items:
             await process_category(category, items, is_country=True, output_dir=COUNTRIES_DIR)
+    
+    # 同时保存一份到根目录（兼容性）
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+    
+    # 保存总汇总节点到根目录
+    if all_valid_configs:
+        if not SAVE_WITHOUT_TESTING:
+            from node_tester import deduplicate_and_test_configs
+            valid_summary_configs = await deduplicate_and_test_configs(all_valid_configs)
+            save_to_file(OUTPUT_DIR, "all_nodes", valid_summary_configs)
+        else:
+            save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
+    
+    # 保存协议分类到根目录
+    for category, items in final_all_protocols.items():
+        if items:
+            await process_category(category, items)
+    
+    # 保存国家分类到根目录
+    for category, items in final_configs_by_country.items():
+        if items:
+            await process_category(category, items, is_country=True)
     
     logging.info(f"--- Script Finished in {time.time() - start_time:.2f} seconds ---")
 

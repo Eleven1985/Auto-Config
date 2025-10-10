@@ -209,7 +209,6 @@ class NodeTester:
         
         try:
             # 使用ip-api.com免费API查询IP地理位置
-            import aiohttp
             url = f"http://ip-api.com/json/{ip_address}?fields=countryCode"
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=GEOIP_TIMEOUT) as response:

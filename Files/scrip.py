@@ -15,7 +15,10 @@ PROTOCOLS_DIR = os.path.join(OUTPUT_DIR, 'protocols')
 COUNTRIES_DIR = os.path.join(OUTPUT_DIR, 'countries')
 URLS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'urls.txt')
 
-# 配置日志
+# 确保日志目录存在 - 移到配置日志之前
+os.makedirs(os.path.join(base_dir, 'logs'), exist_ok=True)
+
+# 配置日志 - 现在日志目录已经存在
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
@@ -24,9 +27,6 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-
-# 确保日志目录存在
-os.makedirs(os.path.join(base_dir, 'logs'), exist_ok=True)
 
 # 协议模式配置
 PROTOCOL_PATTERNS = {

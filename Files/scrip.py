@@ -270,6 +270,61 @@ def save_to_file(directory, category_name, items_set):
         logging.error(f"Failed to write file {file_path}: {e}")
         return False, 0
 
+# 国家代码到国家名称的映射
+COUNTRY_CODE_MAPPING = {
+    'US': 'USA',
+    'UK': 'UK',
+    'CN': 'China',
+    'JP': 'Japan',
+    'SG': 'Singapore',
+    'KR': 'SouthKorea',
+    'DE': 'Germany',
+    'FR': 'France',
+    'RU': 'Russia',
+    'AU': 'Australia',
+    'CA': 'Canada',
+    'IN': 'India',
+    'ID': 'Indonesia',
+    'TH': 'Thailand',
+    'VN': 'Vietnam',
+    'MY': 'Malaysia',
+    'BR': 'Brazil',
+    'IT': 'Italy',
+    'ES': 'Spain',
+    'NL': 'Netherlands',
+    'SE': 'Sweden',
+    'CH': 'Switzerland',
+    'AT': 'Austria',
+    'BE': 'Belgium',
+    'PL': 'Poland',
+    'RO': 'Romania',
+    'CZ': 'Czechia',
+    'HU': 'Hungary',
+    'FI': 'Finland',
+    'NO': 'Norway',
+    'PT': 'Portugal',
+    'IE': 'Ireland',
+    'IL': 'Israel',
+    'TR': 'Turkey',
+    'AE': 'UAE',
+    'IR': 'Iran',
+    'AR': 'Argentina',
+    'BG': 'Bulgaria',
+    'HR': 'Croatia',
+    'DK': 'Denmark',
+    'KZ': 'Kazakhstan',
+    'LT': 'Lithuania',
+    'LU': 'Luxembourg',
+    'MD': 'Moldova',
+    'ME': 'Montenegro',
+    'PY': 'Paraguay',
+    'RS': 'Russia',
+    'SM': 'Samoa',
+    'SI': 'Slovenia',
+    'TJ': 'Tajikistan'
+    # 可以根据需要添加更多国家代码映射
+}
+
 async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
     """处理单个分类的配置，合并重复逻辑"""
     category_type = "country" if is_country else "category"
@@ -279,7 +334,7 @@ async def process_category(category, items, is_country=False, output_dir=OUTPUT_
         return save_to_file(output_dir, category, items)
         
     # 导入节点测试器（在函数内部导入以避免循环依赖）
-    from node_tester import deduplicate_and_test_configs
+    from node_tester import deduplicate_and_test_configs, tester
     
     # 采样测试 - 如果节点数量过多
     if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
@@ -346,58 +401,35 @@ async def main():
                     final_all_protocols[protocol_cat].add(config)
                     all_valid_configs.add(config)  # 添加到总汇总
 
-        # Categorize configs by country
-        for config in all_page_configs:
-            name_to_check = None
-            if '#' in config:
-                try:
-                    potential_name = config.split('#', 1)[1]
-                    name_to_check = unquote(potential_name).strip()
-                    if not name_to_check:
-                        name_to_check = None
-                except IndexError:
-                    pass
+        # 保存所有配置用于后续的IP国家分类
+        configs_with_country_info.extend(all_page_configs)
 
-            if not name_to_check:
-                if config.startswith('ssr://'):
-                    name_to_check = get_ssr_name(config)
-                elif config.startswith('vmess://'):
-                    name_to_check = get_vmess_name(config)
-
-            if not name_to_check:
-                continue
-
-            current_name = name_to_check if isinstance(name_to_check, str) else ""
-
-            # Check country keywords
-            for country_key, keywords_list in country_keywords.items():
-                text_keywords = []
-                if isinstance(keywords_list, list):
-                    # Filter out emojis and short codes
-                    for kw in keywords_list:
-                        if isinstance(kw, str):
-                            is_potential_emoji = (1 <= len(kw) <= 7) and not kw.isalnum()
-                            if not is_potential_emoji:
-                                text_keywords.append(kw)
-                
-                # Check for country matches
-                for keyword in text_keywords:
-                    if not isinstance(keyword, str):
-                        continue
-                    # Handle abbreviations differently
-                    is_abbr = (len(keyword) == 2 or len(keyword) == 3) and re.match(r'^[A-Z]+$', keyword)
-                    if is_abbr:
-                        pattern = r'\b' + re.escape(keyword) + r'\b'
-                        if re.search(pattern, current_name, re.IGNORECASE):
-                            final_configs_by_country[country_key].add(config)
-                            break
-                    else:
-                        if keyword.lower() in current_name.lower():
-                            final_configs_by_country[country_key].add(config)
-                            break
-                else:
-                    continue  # No match for this country, continue to next
-                break  # Found a match, break out of the loop
+    # 使用IP地址进行国家分类
+    if configs_with_country_info:
+        logging.info("Classifying nodes by IP geolocation...")
+        from node_tester import tester
+        
+        # 创建并发任务来获取每个节点的国家信息
+        sem = asyncio.Semaphore(50)  # 限制并发IP查询数量
+        
+        async def get_country_with_sem(config):
+            async with sem:
+                country_code = await tester.get_node_country(config)
+                if country_code and country_code in COUNTRY_CODE_MAPPING:
+                    country_name = COUNTRY_CODE_MAPPING[country_code]
+                    # 如果国家名称在我们的列表中，则添加到相应的集合
+                    if country_name in final_configs_by_country:
+                        final_configs_by_country[country_name].add(config)
+                        return country_name
+                return None
+        
+        # 并发获取所有节点的国家信息
+        tasks = [get_country_with_sem(config) for config in configs_with_country_info]
+        await asyncio.gather(*tasks)
+        
+        # 统计分类结果
+        classified_count = sum(len(configs) for configs in final_configs_by_country.values())
+        logging.info(f"Classified {classified_count} nodes by IP geolocation")
 
     # Prepare output directories
     directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]

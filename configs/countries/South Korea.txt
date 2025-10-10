@@ -1,49 +1,57 @@
-# South Korea - 23 items
-# Generated at 2025-10-10 08:21:05
+# South Korea - 27 items
+# Generated at 2025-10-10 08:26:22
 
-# 韩国
-vless://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#%3E%3E%40configV2rayNG%3A%3APL
-# 韩国
-vless://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=chrome&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&sid=2d46a79deebf50fd&type=tcp&headerType=none#%F0%9F%87%B5%F0%9F%87%B1PL_1%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs
-# 韩国
-ss://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%40Daily_Configs`
 # 韩国
 ss://ed97e008-2b8d-4415-94c7-3da4919d361a@yt.connect-iskra.ru:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#All-%40V2rayAlpha--8
 # 韩国
-ss://2e532561-7a61-4fdf-a534-706682c2e209@nl.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#👉🆔@v2ray_configs_pool📡🇳🇱®️The
+vless://6337837a-2b47-4e0d-a695-75c5a4a8ad51@92.112.22.117:443?encryption=none&security=reality&sni=icloud.cdn-apple.com&fp=chrome&pbk=xrmrZj9kRB-cO5Wfm1iXppN7z4oR77weAWRZFvE6cm8&sid=2d&spx=%2F&allowInsecure=1&type=xhttp&path=%2Flzjjjjj&mode=auto#%E6%96%B0%E5%8A%A0%E5%9D%A1
 # 韩国
-ss://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#%3E%3E%40configV2rayNG%3A%3APL
+vless://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=chrome&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&sid=2d46a79deebf50fd&type=tcp&headerType=none#%F0%9F%87%B5%F0%9F%87%B1PL_1%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs
 # 韩国
-vless://ed97e008-2b8d-4415-94c7-3da4919d361a@yt.connect-iskra.ru:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#All-%40V2rayAlpha--8
+ss://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@hybrid.arvancloud.online:44443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.speedtest.net&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&type=tcp&headerType=none#%E5%BE%B7%E5%9C%8B
+# 韩国
+ss://99210efd-1a49-4085-add3-d1d2e4fdd6c2@95.164.44.237:49790/?type=tcp&encryption=none&flow=&sni=yahoo.com&fp=chrome&security=reality&pbk=Xj6-HabAfXfu2dIz1orkRH5rAlbGMs0YMc7Zo4aARlU&sid=9d90d7ada8#%3E%3E%40DailyV2RY%3A%3AIE
+# 韩国
+ss://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%40Daily_Configs`
+# 韩国
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@hybrid.arvancloud.online:44443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.speedtest.net&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&type=tcp&headerType=none#%E5%BE%B7%E5%9C%8B
+# 韩国
+vless://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%40Daily_Configs`
 # 韩国
 vless://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%3E%3E%40configV2rayNG%3A%3AKR
 # 韩国
-ss://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%3E%3E%40configV2rayNG%3A%3AKR
+vless://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#🔓Config
 # 韩国
-ss://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=chrome&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&sid=2d46a79deebf50fd&type=tcp&headerType=none#%F0%9F%87%B5%F0%9F%87%B1PL_1%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs
+vless://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.21ms
+# 韩国
+vless://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#%3E%3E%40configV2rayNG%3A%3APL
+# 韩国
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpOMlZoTkRRMg%3D%3D@45.140.167.94:8388#🌐
+# 韩国
+vless://ed97e008-2b8d-4415-94c7-3da4919d361a@yt.connect-iskra.ru:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#All-%40V2rayAlpha--8
+# 韩国
+ss://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@193.151.135.21:44443?security=reality&encryption=none&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net#🌐
+# 韩国
+ss://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.21ms
+# 韩国
+ss://2e532561-7a61-4fdf-a534-706682c2e209@nl.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#🔓Config
+# 韩国
+ss://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#%3E%3E%40configV2rayNG%3A%3APL
 # 韩国
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@193.151.135.21:44443?security=reality&encryption=none&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net#🌐
 # 韩国
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@hybrid.arvancloud.online:44443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.speedtest.net&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&type=tcp&headerType=none#%E5%BE%B7%E5%9C%8B
+ss://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%3E%3E%40configV2rayNG%3A%3AKR
+# 韩国
+vless://2e532561-7a61-4fdf-a534-706682c2e209@nl.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#🔓Config
+# 韩国
+ss://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#🔓Config
+# 韩国
+ss://2e532561-7a61-4fdf-a534-706682c2e209@univovh.iskra-connect.xyz:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=chrome&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&sid=2d46a79deebf50fd&type=tcp&headerType=none#%F0%9F%87%B5%F0%9F%87%B1PL_1%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs
+# 韩国
+ss://6337837a-2b47-4e0d-a695-75c5a4a8ad51@92.112.22.117:443?encryption=none&security=reality&sni=icloud.cdn-apple.com&fp=chrome&pbk=xrmrZj9kRB-cO5Wfm1iXppN7z4oR77weAWRZFvE6cm8&sid=2d&spx=%2F&allowInsecure=1&type=xhttp&path=%2Flzjjjjj&mode=auto#%E6%96%B0%E5%8A%A0%E5%9D%A1
 # 韩国
 vless://2e532561-7a61-4fdf-a534-706682c2e209@nl.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#👉🆔@v2ray_configs_pool📡🇳🇱®️The
 # 韩国
 vless://99210efd-1a49-4085-add3-d1d2e4fdd6c2@95.164.44.237:49790/?type=tcp&encryption=none&flow=&sni=yahoo.com&fp=chrome&security=reality&pbk=Xj6-HabAfXfu2dIz1orkRH5rAlbGMs0YMc7Zo4aARlU&sid=9d90d7ada8#%3E%3E%40DailyV2RY%3A%3AIE
 # 韩国
-vless://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.21ms
-# 韩国
-ss://0667820d-f8a9-4652-a3b9-efadc06af433@162.159.152.155:443?path=%2Fsnippets%2Fip%3Dtp50000.kr.proxyip.fgfw.eu.org%3A50000&security=tls&alpn=h3&encryption=none&host=sni.aizrf.com&fp=random&type=ws&sni=sni.aizrf.com#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.21ms
-# 韩国
-vless://4f9e2051-1996-48b0-92d3-acb27b380e92@krcd-22dm-ncui-294m.51pl.tv:443?security=tls&encryption=none&type=ws&sni=krcd-22dm-ncui-294m.51pl.tv#%40Daily_Configs`
-# 韩国
-vless://6337837a-2b47-4e0d-a695-75c5a4a8ad51@92.112.22.117:443?encryption=none&security=reality&sni=icloud.cdn-apple.com&fp=chrome&pbk=xrmrZj9kRB-cO5Wfm1iXppN7z4oR77weAWRZFvE6cm8&sid=2d&spx=%2F&allowInsecure=1&type=xhttp&path=%2Flzjjjjj&mode=auto#%E6%96%B0%E5%8A%A0%E5%9D%A1
-# 韩国
-ss://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@193.151.135.21:44443?security=reality&encryption=none&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net#🌐
-# 韩国
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpOMlZoTkRRMg%3D%3D@45.140.167.94:8388#🌐
-# 韩国
-ss://99210efd-1a49-4085-add3-d1d2e4fdd6c2@95.164.44.237:49790/?type=tcp&encryption=none&flow=&sni=yahoo.com&fp=chrome&security=reality&pbk=Xj6-HabAfXfu2dIz1orkRH5rAlbGMs0YMc7Zo4aARlU&sid=9d90d7ada8#%3E%3E%40DailyV2RY%3A%3AIE
-# 韩国
-ss://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@hybrid.arvancloud.online:44443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.speedtest.net&fp=chrome&pbk=XHjKkrNBYXOaamOx8IUCrwX0zp5dAQRVErHiQ5bwAEQ&type=tcp&headerType=none#%E5%BE%B7%E5%9C%8B
-# 韩国
-ss://6337837a-2b47-4e0d-a695-75c5a4a8ad51@92.112.22.117:443?encryption=none&security=reality&sni=icloud.cdn-apple.com&fp=chrome&pbk=xrmrZj9kRB-cO5Wfm1iXppN7z4oR77weAWRZFvE6cm8&sid=2d&spx=%2F&allowInsecure=1&type=xhttp&path=%2Flzjjjjj&mode=auto#%E6%96%B0%E5%8A%A0%E5%9D%A1
+ss://2e532561-7a61-4fdf-a534-706682c2e209@nl.iskra-connect.xyz:443?security=reality&encryption=none&pbk=V6i1V9804ZfgT8nutUwDs5IDQdcY9pK5uO075SW4ml4&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=2d46a79deebf50fd#👉🆔@v2ray_configs_pool📡🇳🇱®️The

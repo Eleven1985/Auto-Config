@@ -1,51 +1,51 @@
 # Russia - 24 items
-# Generated at 2025-10-10 08:21:05
+# Generated at 2025-10-10 08:26:22
 
-# 俄罗斯
-ss://d4803c0d-c9f3-4c9c-a034-342a71ef03a0@91.98.47.45:443?path=%2Flinkws%3Fed&security=none&encryption=none&host=91.98.47.45&type=ws#nitru-%F0%9F%87%A9%F0%9F%87%AA%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C%20%D9%88%DB%8C%DA%98%D9%87%20%D9%88%20%D9%BE%D8%B1%D8%B3%D8%B1%D8%B9%D8%AA%20%40nitruConfing
-# 俄罗斯
-vless://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?encryption=none&security=tls&sni=jnir-cdn.javidnaman.com&type=ws&host=jnir-cdn.javidnaman.com&path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560#VL-0714-01
-# 俄罗斯
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpCb2cwRUxtTU05RFN4RGRR@157.175.135.28:443#🌐
-# 俄罗斯
-ss://4e1f0fc6-a7f8-4642-bd35-6a3aa0bb2fc8@104.17.227.60:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
-# 俄罗斯
-vless://e959d53c-91e9-459d-a332-d59ae89b3b4c@172.67.176.1:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
-# 俄罗斯
-vless://4e1f0fc6-a7f8-4642-bd35-6a3aa0bb2fc8@104.17.227.60:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
-# 俄罗斯
-ss://e18a6630-d4bd-4782-b18e-40d134ce3d73@www.speedtest.net:80?path=%2Fhajmi%3Fed%3D2050&security=&encryption=none&host=dbe661d5a761ff6c.s-5HU09JDF-97SHS.WWWrubika.irto.xn--ls8haaaaaaaaaaaaaaaaaa.la.which.xn--ls8haaaaaaaaaaaaaaaaaa.xn-ls8faaaaaaaaaa.speedtest.net.google.com.eu.ir.nl.aparat.com.komak.IR.Nb-En.85858569.xYz.&type=ws#🌐
-# 俄罗斯
-ss://e959d53c-91e9-459d-a332-d59ae89b3b4c@172.67.176.1:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
-# 俄罗斯
-ss://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560&security=tls&encryption=none&host=jnir-cdn.6006900.xyz&type=ws&sni=jnir-cdn.6006900.xyz#%3E%3E%40ShadowsocksM%3A%3AXX
-# 俄罗斯
-ss://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🔓Config
-# 俄罗斯
-vless://d4803c0d-c9f3-4c9c-a034-342a71ef03a0@91.98.47.45:443?path=%2Flinkws%3Fed&security=none&encryption=none&host=91.98.47.45&type=ws#nitru-%F0%9F%87%A9%F0%9F%87%AA%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C%20%D9%88%DB%8C%DA%98%D9%87%20%D9%88%20%D9%BE%D8%B1%D8%B3%D8%B1%D8%B9%D8%AA%20%40nitruConfing
-# 俄罗斯
-ss://eyJhZGQiOiIxMDQuMTkuMTUwLjEwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJtY2kubXRuLmlyLmNvbS5vcmcubmV0Lm9tLm11c2ljZmExMjMuaXIuIiwiaWQiOiI5NGYzMzJiMC1jNWQzLTQ1MzEtYTFkNi02ZTYzNThjYzZjNzIiLCJuZXQiOiJodHRwdXBncmFkZSIsInBhdGgiOiIvZDNkM0xtbHlZVzVvYjNOMExtTnZiUVx1MDAzZFx1MDAzZD9lZFx1MDAzZDI1NjAiLCJwb3J0IjoiMjA5NSIsInBzIjoiQFYycmF5TkczIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9#🌐
-# 俄罗斯
-vless://e18a6630-d4bd-4782-b18e-40d134ce3d73@www.speedtest.net:80?path=%2Fhajmi%3Fed%3D2050&security=&encryption=none&host=dbe661d5a761ff6c.s-5HU09JDF-97SHS.WWWrubika.irto.xn--ls8haaaaaaaaaaaaaaaaaa.la.which.xn--ls8haaaaaaaaaaaaaaaaaa.xn-ls8faaaaaaaaaa.speedtest.net.google.com.eu.ir.nl.aparat.com.komak.IR.Nb-En.85858569.xYz.&type=ws#🌐
-# 俄罗斯
-vless://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🔓Config
-# 俄罗斯
-ss://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🌐
-# 俄罗斯
-vless://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🌐
 # 俄罗斯
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpCb2cwRUxtTU05RFN4RGRR@16.24.166.103:443#🌐
 # 俄罗斯
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNjBlMjFkMjE5NzdkYzEx@45.139.24.24:57456#%3E%3E%40ShadowsocksM%3A%3ARU
-# 俄罗斯
-ss://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?encryption=none&security=tls&sni=jnir-cdn.javidnaman.com&type=ws&host=jnir-cdn.javidnaman.com&path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560#VL-0714-01
-# 俄罗斯
-vless://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560&security=tls&encryption=none&host=jnir-cdn.6006900.xyz&type=ws&sni=jnir-cdn.6006900.xyz#%3E%3E%40ShadowsocksM%3A%3AXX
-# 俄罗斯
 ss://YWVzLTI1Ni1jZmI6WG44aktkbURNMDBJZU8lIyQjZkpBTXRzRUFFVU9wSC9ZV1l0WXFERm5UMFNW@103.186.155.233:38388#%F0%9F%87%BB%F0%9F%87%B3%20%E8%B6%8A%E5%8D%97%7C%40ripaojiedian
 # 俄罗斯
-vless://8d9cfb4f-69a7-435f-86d7-79d8e62d72c9@83.147.216.173:8443?security=reality&encryption=none&pbk=etG7kidJiRb4A2LsNbRUJ3HGyrt2yX5YlZGoTgmpSyw&fp=chrome&type=grpc&serviceName=grpc&sni=www.cloudflare.com&sid=e624b964#%3E%3E%40configV2rayNG%3A%3AFI
+vless://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🌐
+# 俄罗斯
+ss://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🔓Config
+# 俄罗斯
+ss://4e1f0fc6-a7f8-4642-bd35-6a3aa0bb2fc8@104.17.227.60:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
+# 俄罗斯
+ss://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560&security=tls&encryption=none&host=jnir-cdn.6006900.xyz&type=ws&sni=jnir-cdn.6006900.xyz#%3E%3E%40ShadowsocksM%3A%3AXX
+# 俄罗斯
+ss://eyJhZGQiOiIxMDQuMTkuMTUwLjEwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJtY2kubXRuLmlyLmNvbS5vcmcubmV0Lm9tLm11c2ljZmExMjMuaXIuIiwiaWQiOiI5NGYzMzJiMC1jNWQzLTQ1MzEtYTFkNi02ZTYzNThjYzZjNzIiLCJuZXQiOiJodHRwdXBncmFkZSIsInBhdGgiOiIvZDNkM0xtbHlZVzVvYjNOMExtTnZiUVx1MDAzZFx1MDAzZD9lZFx1MDAzZDI1NjAiLCJwb3J0IjoiMjA5NSIsInBzIjoiQFYycmF5TkczIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9#🌐
+# 俄罗斯
+vless://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?encryption=none&security=tls&sni=jnir-cdn.javidnaman.com&type=ws&host=jnir-cdn.javidnaman.com&path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560#VL-0714-01
 # 俄罗斯
 ss://8d9cfb4f-69a7-435f-86d7-79d8e62d72c9@83.147.216.173:8443?security=reality&encryption=none&pbk=etG7kidJiRb4A2LsNbRUJ3HGyrt2yX5YlZGoTgmpSyw&fp=chrome&type=grpc&serviceName=grpc&sni=www.cloudflare.com&sid=e624b964#%3E%3E%40configV2rayNG%3A%3AFI
 # 俄罗斯
+vless://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🔓Config
+# 俄罗斯
+ss://e18a6630-d4bd-4782-b18e-40d134ce3d73@www.speedtest.net:80?path=%2Fhajmi%3Fed%3D2050&security=&encryption=none&host=dbe661d5a761ff6c.s-5HU09JDF-97SHS.WWWrubika.irto.xn--ls8haaaaaaaaaaaaaaaaaa.la.which.xn--ls8haaaaaaaaaaaaaaaaaa.xn-ls8faaaaaaaaaa.speedtest.net.google.com.eu.ir.nl.aparat.com.komak.IR.Nb-En.85858569.xYz.&type=ws#🌐
+# 俄罗斯
+ss://SVNTEAM@JOIN-SVNTEAM.RU:443/?type=tcp&security=reality&pbk=sNzQONYbGTHbI56Z12exjbx1cb7syIBdcf-jcPyX1RY&fp=chrome&sni=stackoverflow.com&sid=&spx=%2FSVNTEAM#🌐
+# 俄罗斯
+ss://e959d53c-91e9-459d-a332-d59ae89b3b4c@172.67.176.1:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
+# 俄罗斯
+ss://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?encryption=none&security=tls&sni=jnir-cdn.javidnaman.com&type=ws&host=jnir-cdn.javidnaman.com&path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560#VL-0714-01
+# 俄罗斯
+vless://e18a6630-d4bd-4782-b18e-40d134ce3d73@www.speedtest.net:80?path=%2Fhajmi%3Fed%3D2050&security=&encryption=none&host=dbe661d5a761ff6c.s-5HU09JDF-97SHS.WWWrubika.irto.xn--ls8haaaaaaaaaaaaaaaaaa.la.which.xn--ls8haaaaaaaaaaaaaaaaaa.xn-ls8faaaaaaaaaa.speedtest.net.google.com.eu.ir.nl.aparat.com.komak.IR.Nb-En.85858569.xYz.&type=ws#🌐
+# 俄罗斯
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNjBlMjFkMjE5NzdkYzEx@45.139.24.24:57456#%3E%3E%40ShadowsocksM%3A%3ARU
+# 俄罗斯
 vmess://eyJhZGQiOiIxMDQuMTkuMTUwLjEwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJtY2kubXRuLmlyLmNvbS5vcmcubmV0Lm9tLm11c2ljZmExMjMuaXIuIiwiaWQiOiI5NGYzMzJiMC1jNWQzLTQ1MzEtYTFkNi02ZTYzNThjYzZjNzIiLCJuZXQiOiJodHRwdXBncmFkZSIsInBhdGgiOiIvZDNkM0xtbHlZVzVvYjNOMExtTnZiUVx1MDAzZFx1MDAzZD9lZFx1MDAzZDI1NjAiLCJwb3J0IjoiMjA5NSIsInBzIjoiQFYycmF5TkczIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9#🌐
+# 俄罗斯
+ss://d4803c0d-c9f3-4c9c-a034-342a71ef03a0@91.98.47.45:443?path=%2Flinkws%3Fed&security=none&encryption=none&host=91.98.47.45&type=ws#nitru-%F0%9F%87%A9%F0%9F%87%AA%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C%20%D9%88%DB%8C%DA%98%D9%87%20%D9%88%20%D9%BE%D8%B1%D8%B3%D8%B1%D8%B9%D8%AA%20%40nitruConfing
+# 俄罗斯
+vless://8d9cfb4f-69a7-435f-86d7-79d8e62d72c9@83.147.216.173:8443?security=reality&encryption=none&pbk=etG7kidJiRb4A2LsNbRUJ3HGyrt2yX5YlZGoTgmpSyw&fp=chrome&type=grpc&serviceName=grpc&sni=www.cloudflare.com&sid=e624b964#%3E%3E%40configV2rayNG%3A%3AFI
+# 俄罗斯
+vless://5f89ac2a-b6d6-4c66-98d8-39c4d552138c@cc.cybsecguru.com:443?path=%2F%40JavidnamanIran%2FJavid-SHAH-KingRezaPahlavi%2F%3Fed%3D2560&security=tls&encryption=none&host=jnir-cdn.6006900.xyz&type=ws&sni=jnir-cdn.6006900.xyz#%3E%3E%40ShadowsocksM%3A%3AXX
+# 俄罗斯
+vless://e959d53c-91e9-459d-a332-d59ae89b3b4c@172.67.176.1:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐
+# 俄罗斯
+vless://d4803c0d-c9f3-4c9c-a034-342a71ef03a0@91.98.47.45:443?path=%2Flinkws%3Fed&security=none&encryption=none&host=91.98.47.45&type=ws#nitru-%F0%9F%87%A9%F0%9F%87%AA%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C%20%D9%88%DB%8C%DA%98%D9%87%20%D9%88%20%D9%BE%D8%B1%D8%B3%D8%B1%D8%B9%D8%AA%20%40nitruConfing
+# 俄罗斯
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpCb2cwRUxtTU05RFN4RGRR@157.175.135.28:443#🌐
+# 俄罗斯
+vless://4e1f0fc6-a7f8-4642-bd35-6a3aa0bb2fc8@104.17.227.60:443?path=%2FIyq035lnud9R8ruNNrqGxZZ2&security=tls&encryption=none&host=hdfynpv2c1.farvaharforever.com&fp=chrome&type=ws&sni=hdfynpv2c1.farvaharforever.com#🌐

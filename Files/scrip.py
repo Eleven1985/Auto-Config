@@ -321,8 +321,8 @@ async def process_category(category, items, is_country=False, output_dir=OUTPUT_
     category_type = "country" if is_country else "category"
     logging.info(f"Processing {category_type} {category}")
     
-    if SAVE_WITHOUT_TESTING:
-        return save_to_file(output_dir, category, items)
+    # 由于 SAVE_WITHOUT_TESTING=True，直接保存所有配置
+    return save_to_file(output_dir, category, items)
         
     # 导入节点测试器（在函数内部导入以避免循环依赖）
     from node_tester import deduplicate_and_test_configs
@@ -431,88 +431,127 @@ async def main():
         classified_count = sum(len(configs) for configs in final_configs_by_country.values())
         logging.info(f"Classified {classified_count} nodes by IP geolocation")
 
-    # 如果IP分类失败，回退到基于名称的分类方法
-    fallback_classified = False
-    if sum(len(configs) for configs in final_configs_by_country.values()) == 0:
-        logging.info("No nodes classified by IP geolocation, falling back to name-based classification")
-        # 使用节点名称进行国家分类
-        for config in all_valid_configs:
-            # 尝试从配置中提取节点名称
-            name_part = config.split('#')
-            node_name = name_part[1].strip() if len(name_part) > 1 else ""
-            
-            # 检查节点名称是否包含国家关键词
-            matched_country = None
-            for country, keywords in country_keywords.items():
-                for keyword in keywords:
-                    if keyword.lower() in node_name.lower():
-                        matched_country = country
-                        break
-                if matched_country:
-                    break
-            
-            if matched_country and matched_country in final_configs_by_country:
-                # 获取中文国家名
-                country_name_zh = None
-                # 查找对应的中文国家名
-                for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
-                    if en_name == matched_country:
-                        country_name_zh = zh_name
+    # 在 main 函数中，修改基于名称的国家分类逻辑
+    
+        # 如果IP分类失败，回退到基于名称的分类方法
+        fallback_classified = False
+        if sum(len(configs) for configs in final_configs_by_country.values()) == 0:
+            logging.info("No nodes classified by IP geolocation, falling back to name-based classification")
+            # 使用节点名称进行国家分类
+            for config in all_valid_configs:
+                # 尝试从配置中提取节点名称
+                name_part = config.split('#')
+                node_name = name_part[1].strip() if len(name_part) > 1 else ""
+                
+                # 检查节点名称是否包含国家关键词
+                matched_country = None
+                for country, keywords in country_keywords.items():
+                    for keyword in keywords:
+                        if keyword.lower() in node_name.lower():
+                            matched_country = country
+                            break
+                    if matched_country:
                         break
                 
-                # 将中文国家名添加到配置中
-                config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
-                final_configs_by_country[matched_country].add(config_with_country)
-                fallback_classified = True
-        
-        if fallback_classified:
-            classified_count = sum(len(configs) for configs in final_configs_by_country.values())
-            logging.info(f"Classified {classified_count} nodes by name-based fallback")
-
-    # Prepare output directories
-    directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
-    for directory in directories:
-        # 确保目录存在
-        os.makedirs(directory, exist_ok=True)
-        # Clear existing files in directory
-        for filename in os.listdir(directory):
-            file_path = os.path.join(directory, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.unlink(file_path)
-            except Exception as e:
-                logging.error(f"Failed to delete {file_path}: {e}")
-    
-    # 保存汇总节点到 summary 目录
-    logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
-    if all_valid_configs:
-        # 如果启用了测试，先测试汇总节点
-        if not SAVE_WITHOUT_TESTING:
-            from node_tester import deduplicate_and_test_configs
-            valid_summary_configs = await deduplicate_and_test_configs(all_valid_configs)
-            save_to_file(SUMMARY_DIR, "all_nodes", valid_summary_configs)
+                if matched_country and matched_country in final_configs_by_country:
+                    # 获取中文国家名
+                    country_name_zh = None
+                    # 查找对应的中文国家名
+                    for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
+                        if en_name == matched_country:
+                            country_name_zh = zh_name
+                            break
+                    
+                    # 将中文国家名添加到配置中
+                    config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+                    final_configs_by_country[matched_country].add(config_with_country)
+                    fallback_classified = True
+            
+            if fallback_classified:
+                classified_count = sum(len(configs) for configs in final_configs_by_country.values())
+                logging.info(f"Classified {classified_count} nodes by name-based fallback")
         else:
+            # 如果通过IP分类到了一些节点，为剩余节点尝试基于名称的分类
+            remaining_configs = set()
+            for config in all_valid_configs:
+                found = False
+                for country_configs in final_configs_by_country.values():
+                    for country_config in country_configs:
+                        if config in country_config or country_config.endswith(config):
+                            found = True
+                            break
+                        if found:
+                            break
+                    if not found:
+                        remaining_configs.add(config)
+                
+            if remaining_configs:
+                logging.info(f"Classifying {len(remaining_configs)} remaining nodes by name")
+                for config in remaining_configs:
+                    name_part = config.split('#')
+                    node_name = name_part[1].strip() if len(name_part) > 1 else ""
+                    
+                    matched_country = None
+                    for country, keywords in country_keywords.items():
+                        for keyword in keywords:
+                            if keyword.lower() in node_name.lower():
+                                matched_country = country
+                                break
+                        if matched_country:
+                            break
+                    
+                    if matched_country and matched_country in final_configs_by_country:
+                        country_name_zh = None
+                        for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
+                            if en_name == matched_country:
+                                country_name_zh = zh_name
+                                break
+                            config_with_country = f"# {country_name_zh}\n{config}" if country_name_zh else config
+                            final_configs_by_country[matched_country].add(config_with_country)
+                            fallback_classified = True
+
+    # 修改 main 函数中的保存逻辑部分
+    
+        # Prepare output directories
+        directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
+        for directory in directories:
+            # 确保目录存在
+            os.makedirs(directory, exist_ok=True)
+            # Clear existing files in directory
+            for filename in os.listdir(directory):
+                file_path = os.path.join(directory, filename)
+                try:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                except Exception as e:
+                    logging.error(f"Failed to delete {file_path}: {e}")
+            
+        # 保存汇总节点到 summary 目录
+        logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
+        if all_valid_configs:
             save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
-            # 由于 SAVE_WITHOUT_TESTING=True，同时保存到根目录一次即可
+            # 同时保存到根目录
             save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
-    
-    # 保存协议分类到 protocols 目录和根目录
-    logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
-    for category, items in final_all_protocols.items():
-        if items:
-            await process_category(category, items, output_dir=PROTOCOLS_DIR)
-            # 同样只保存一次到根目录
-            if SAVE_WITHOUT_TESTING:
+        
+        # 保存协议分类到 protocols 目录和根目录
+        logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
+        for category, items in final_all_protocols.items():
+            if items:
+                save_to_file(PROTOCOLS_DIR, category, items)
                 save_to_file(OUTPUT_DIR, category, items)
-    
-    # 保存国家分类到 countries 目录和根目录
-    logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
-    for category, items in final_configs_by_country.items():
-        if items:
-            await process_category(category, items, is_country=True, output_dir=COUNTRIES_DIR)
-            # 同样只保存一次到根目录
-            if SAVE_WITHOUT_TESTING:
+        
+        # 保存国家分类到 countries 目录和根目录
+        logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
+        for category, items in final_configs_by_country.items():
+            if items:
+                save_to_file(COUNTRIES_DIR, category, items)
                 save_to_file(OUTPUT_DIR, category, items)
+            else:
+                logging.info(f"No items for country {category}")
+        
+        # 统计生成的国家文件数量
+        country_files_count = sum(1 for items in final_configs_by_country.values() if items)
+        logging.info(f"Generated {country_files_count} country files")
 
     # 同时保存一份到根目录（兼容性）
     if not os.path.exists(OUTPUT_DIR):

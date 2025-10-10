@@ -1,4 +1,2 @@
 aiohttp
-beautifulsoup4
-pytz
-jdatetime
+# 注：re、os、shutil、asyncio、time、logging为Python标准库，不需要单独安装

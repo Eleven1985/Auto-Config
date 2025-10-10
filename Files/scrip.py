@@ -4,8 +4,7 @@ import json
 import re
 import logging
 import os
-import time  # 添加time模块导入
-import shutil
+import time
 import base64
 from urllib.parse import parse_qs, unquote
 import asyncio
@@ -14,7 +13,6 @@ from bs4 import BeautifulSoup
 
 # 配置参数 - 集中管理
 URLS_FILE = 'Files/urls.txt'
-KEYWORDS_FILE = 'Files/key.json'
 OUTPUT_DIR = 'configs'
 # 添加新的目录配置
 SUMMARY_DIR = os.path.join(OUTPUT_DIR, 'summary')
@@ -73,6 +71,70 @@ PROTOCOL_CATEGORIES = [
     "Vmess", "Vless", "Trojan", "ShadowSocks", "ShadowSocksR",
     "Tuic", "Hysteria2", "WireGuard"
 ]
+
+# 直接在代码中定义国家关键词配置
+COUNTRY_KEYWORDS = {
+    "Argentina": ["Argentina", "AR"],
+    "Australia": ["Australia", "AU"],
+    "Austria": ["Austria", "AT"],
+    "Belgium": ["Belgium", "BE"],
+    "Brazil": ["Brazil", "BR"],
+    "Bulgaria": ["Bulgaria", "BG"],
+    "Canada": ["Canada", "CA"],
+    "Croatia": ["Croatia", "HR"],
+    "Czechia": ["Czechia", "CZ", "Czech"],
+    "Denmark": ["Denmark", "DK"],
+    "Finland": ["Finland", "FI"],
+    "France": ["France", "FR"],
+    "Germany": ["Germany", "DE", "German"],
+    "Hungary": ["Hungary", "HU"],
+    "India": ["India", "IN"],
+    "Indonesia": ["Indonesia", "ID"],
+    "Iran": ["Iran", "IR"],
+    "Ireland": ["Ireland", "IE"],
+    "Israel": ["Israel", "IL"],
+    "Italy": ["Italy", "IT"],
+    "Japan": ["Japan", "JP"],
+    "Kazakhstan": ["Kazakhstan", "KZ"],
+    "Lithuania": ["Lithuania", "LT"],
+    "Luxembourg": ["Luxembourg", "LU"],
+    "Malaysia": ["Malaysia", "MY"],
+    "Moldova": ["Moldova", "MD"],
+    "Montenegro": ["Montenegro", "ME"],
+    "Netherlands": ["Netherlands", "NL", "Dutch"],
+    "Norway": ["Norway", "NO"],
+    "Paraguay": ["Paraguay", "PY"],
+    "Poland": ["Poland", "PL"],
+    "Portugal": ["Portugal", "PT"],
+    "Romania": ["Romania", "RO"],
+    "Russia": ["Russia", "RU"],
+    "Samoa": ["Samoa", "WS"],
+    "Singapore": ["Singapore", "SG"],
+    "Slovenia": ["Slovenia", "SI"],
+    "SouthKorea": ["South Korea", "KR", "Korea"],
+    "Spain": ["Spain", "ES"],
+    "Sweden": ["Sweden", "SE"],
+    "Switzerland": ["Switzerland", "CH", "Swiss"],
+    "Tajikistan": ["Tajikistan", "TJ"],
+    "Thailand": ["Thailand", "TH"],
+    "Turkey": ["Turkey", "TR"],
+    "UAE": ["UAE", "United Arab Emirates", "AE"],
+    "UK": ["UK", "United Kingdom", "GB"],
+    "USA": ["USA", "United States", "US", "America"],
+    "Vietnam": ["Vietnam", "VN"]
+}
+
+# 直接在代码中定义协议模式
+PROTOCOL_PATTERNS = {
+    "Vmess": [r"vmess://[A-Za-z0-9+/=]+"],
+    "Vless": [r"vless://[A-Za-z0-9+/=?&.-]+"] ,
+    "Trojan": [r"trojan://[A-Za-z0-9+/=?&.-]+"] ,
+    "ShadowSocks": [r"ss://[A-Za-z0-9+/=?&.-]+"] ,
+    "ShadowSocksR": [r"ssr://[A-Za-z0-9+/=?&.-]+"] ,
+    "Tuic": [r"tuic://[A-Za-z0-9+/=?&.-]+"] ,
+    "Hysteria2": [r"hysteria2://[A-Za-z0-9+/=?&.-]+"] ,
+    "WireGuard": [r"wg://[A-Za-z0-9+/=?&.-]+"]
+}
 
 def decode_base64(data):
     """Safely decode base64 data"""
@@ -190,7 +252,7 @@ def find_matches(text, categories_data):
     return {k: v for k, v in matches.items() if v}
 
 def save_to_file(directory, category_name, items_set):
-    """Save items to file - 优化版"""
+    """Save items to file"""
     if not items_set:
         return False, 0
     # 确保目录存在
@@ -238,26 +300,20 @@ async def main():
     start_time = time.time()
     
     # Check input files existence
-    if not os.path.exists(URLS_FILE) or not os.path.exists(KEYWORDS_FILE):
-        logging.critical("Input files not found.")
+    if not os.path.exists(URLS_FILE):
+        logging.critical("URLs file not found.")
         return
 
     # Load input data
     with open(URLS_FILE, 'r', encoding='utf-8') as f:
         urls = [line.strip() for line in f if line.strip()]
-    with open(KEYWORDS_FILE, 'r', encoding='utf-8') as f:
-        categories_data = json.load(f)
-
-    # Prepare data structures
-    protocol_patterns = {
-        cat: patterns for cat, patterns in categories_data.items() if cat in PROTOCOL_CATEGORIES
-    }
-    country_keywords = {
-        cat: patterns for cat, patterns in categories_data.items() if cat not in PROTOCOL_CATEGORIES
-    }
+    
+    # 使用直接定义在代码中的配置
+    protocol_patterns = PROTOCOL_PATTERNS
+    country_keywords = COUNTRY_KEYWORDS
     country_names = list(country_keywords.keys())
 
-    logging.info(f"Loaded {len(urls)} URLs and {len(categories_data)} total categories from key.json.")
+    logging.info(f"Loaded {len(urls)} URLs.")
 
     # Fetch URLs concurrently with rate limiting
     sem = asyncio.Semaphore(CONCURRENT_REQUESTS)
@@ -349,13 +405,12 @@ async def main():
         os.makedirs(directory, exist_ok=True)
         # Clear existing files in directory
         for filename in os.listdir(directory):
-            if filename != '.gitkeep':  # Preserve .gitkeep file
-                file_path = os.path.join(directory, filename)
-                try:
-                    if os.path.isfile(file_path):
-                        os.unlink(file_path)
-                except Exception as e:
-                    logging.error(f"Failed to delete {file_path}: {e}")
+            file_path = os.path.join(directory, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                logging.error(f"Failed to delete {file_path}: {e}")
     
     # 保存总汇总节点
     logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")

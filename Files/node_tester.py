@@ -8,7 +8,6 @@ import os
 from logging.handlers import RotatingFileHandler
 from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, Set, Tuple, Optional
-import asyncio
 
 # 创建logs目录
 if not os.path.exists('logs'):

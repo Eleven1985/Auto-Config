@@ -6,7 +6,6 @@ import logging
 import os
 import time
 import base64
-import asyncio
 from logging.handlers import RotatingFileHandler
 from bs4 import BeautifulSoup
 
@@ -148,7 +147,6 @@ def decode_base64(data):
         return None
 
 # 保留过滤和验证函数
-
 def should_filter_config(config):
     """Filter out invalid or suspicious configs"""
     if 'i_love_' in config.lower():
@@ -197,8 +195,6 @@ async def fetch_url(session, url):
     except Exception as e:
         logging.warning(f"Failed to fetch or process {url}: {e}")
         return url, None
-
-# 修复 find_matches 函数定义
 
 def find_matches(text, categories_data):
     """Find protocol matches in text content"""
@@ -274,8 +270,6 @@ COUNTRY_CODE_MAPPING = {
     'TJ': ('Tajikistan', '塔吉克斯坦')
 }
 
-# 添加save_to_file函数定义
-# 将C++风格注释 // 改为Python风格注释 #
 def save_to_file(directory, filename, items):
     """保存配置项到文件，确保目录存在"""
     try:
@@ -316,7 +310,6 @@ def save_to_file(directory, filename, items):
         logging.error(f"Failed to save items to {os.path.join(directory, filename)}.txt: {e}")
         return False
 
-# 修复process_category函数，移除提前返回语句
 async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
     """处理单个分类的配置，合并重复逻辑"""
     category_type = "country" if is_country else "category"
@@ -325,27 +318,8 @@ async def process_category(category, items, is_country=False, output_dir=OUTPUT_
     # 由于 SAVE_WITHOUT_TESTING=True，直接保存所有配置
     result = save_to_file(output_dir, category, items)
     
-    # 以下代码被注释掉，因为SAVE_WITHOUT_TESTING=True
-    # 导入节点测试器（在函数内部导入以避免循环依赖）
-    # from node_tester import deduplicate_and_test_configs
-    # 
-    # 采样测试 - 如果节点数量过多
-    # if ENABLE_SAMPLING and len(items) > MAX_TEST_PER_CATEGORY:
-    #     # 随机采样部分节点进行测试
-    #     import random
-    #     sampled_items = set(random.sample(list(items), MAX_TEST_PER_CATEGORY))
-    #     logging.info(f"Sampling {len(sampled_items)} nodes out of {len(items)} for testing")
-    #     valid_configs = await deduplicate_and_test_configs(sampled_items)
-    #     # 合并未测试但有效的节点（基于协议格式验证）
-    #     valid_configs.update([item for item in items if item not in sampled_items and is_config_format_valid(item)])
-    # else:
-    #     valid_configs = await deduplicate_and_test_configs(items)
-    # 
-    # return save_to_file(output_dir, category, valid_configs)
-    
     return result
 
-# 修复main函数中的保存逻辑，确保正确缩进和调用顺序
 async def main():
     """Main entry point"""
     start_time = time.time()
@@ -379,7 +353,7 @@ async def main():
     final_configs_by_country = {cat: set() for cat in country_names}
     final_all_protocols = {cat: set() for cat in PROTOCOL_CATEGORIES}
     all_valid_configs = set()  # 汇总所有有效节点
-    configs_with_country_info = []  # 存储带国家信息的节点，确保这里正确定义
+    configs_with_country_info = []  # 存储带国家信息的节点
 
     logging.info("Processing pages for config name association...")
     for url, text in fetched_pages:
@@ -555,6 +529,10 @@ async def main():
     # 统计生成的国家文件数量
     logging.info(f"Generated {country_files_count} country files")
     
+    # 检查是否有生成的国家文件
+    if country_files_count == 0:
+        logging.warning("没有生成任何国家文件！请检查分类逻辑是否正常工作。")
+
     logging.info(f"--- Script Finished in {time.time() - start_time:.2f} seconds ---")
 
 if __name__ == "__main__":

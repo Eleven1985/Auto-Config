@@ -271,6 +271,47 @@ COUNTRY_CODE_MAPPING = {
     'TJ': ('Tajikistan', '塔吉克斯坦')
 }
 
+// 添加save_to_file函数定义
+def save_to_file(directory, filename, items):
+    """保存配置项到文件，确保目录存在"""
+    try:
+        # 确保目录存在
+        os.makedirs(directory, exist_ok=True)
+        
+        # 构建完整的文件路径
+        file_path = os.path.join(directory, f"{filename}.txt")
+        
+        # 获取文件名对应的中文国家名
+        country_name_zh = None
+        for code, (en_name, zh_name) in COUNTRY_CODE_MAPPING.items():
+            if en_name == filename:
+                country_name_zh = zh_name
+                break
+        
+        # 准备文件内容
+        file_content = []
+        # 如果是国家分类文件，添加中文国家名注释
+        if country_name_zh:
+            file_content.append(f"# {country_name_zh}")
+        
+        # 添加节点数量统计
+        file_content.append(f"# 节点数量: {len(items)}")
+        file_content.append(f"# 更新时间: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+        file_content.append("")  # 添加空行
+        
+        # 添加所有配置项
+        file_content.extend(items)
+        
+        # 写入文件
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(file_content))
+        
+        logging.info(f"Successfully saved {len(items)} items to {file_path}")
+        return True
+    except Exception as e:
+        logging.error(f"Failed to save items to {os.path.join(directory, filename)}.txt: {e}")
+        return False
+
 async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
     """处理单个分类的配置，合并重复逻辑"""
     category_type = "country" if is_country else "category"

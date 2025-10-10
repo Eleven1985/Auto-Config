@@ -271,7 +271,8 @@ COUNTRY_CODE_MAPPING = {
     'TJ': ('Tajikistan', '塔吉克斯坦')
 }
 
-// 添加save_to_file函数定义
+# 添加save_to_file函数定义
+# 将C++风格注释 // 改为Python风格注释 #
 def save_to_file(directory, filename, items):
     """保存配置项到文件，确保目录存在"""
     try:

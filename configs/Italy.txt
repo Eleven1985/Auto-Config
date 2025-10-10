@@ -1,5 +1,15 @@
-# Italy - 1 items
-# Generated at 2025-10-10 07:44:36
+# Italy - 6 items
+# Generated at 2025-10-10 07:47:49
 
+# 意大利
+vless://568db765-6970-40c8-8087-83ea9ba2429e@bitpay.com
+# 意大利
+ss://7e346122-2ee0-406e-b964-a8ee665f1814@digitalocean.com
+# 意大利
+vless://7e346122-2ee0-406e-b964-a8ee665f1814@digitalocean.com
+# 意大利
+ss://568db765-6970-40c8-8087-83ea9ba2429e@bitpay.com
+# 意大利
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@196.196.192.58
 # 意大利
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ

@@ -1,11 +1,37 @@
-# France - 4 items
-# Generated at 2025-10-10 07:44:36
+# France - 17 items
+# Generated at 2025-10-10 07:47:49
 
 # 法国
-trojan://redfree8
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSRkszOENnN0FQbmVTQjVjV0RjcGJt@switcher-nick-croquet.freesocks.work
+# 法国
+ss://8c9a7ef4-b692-41ee-90ca-669b04990ac5@fr.pixvpn.app
+# 法国
+ss://563e4ed0-9473-4d66-aca8-e23c641042a6@free.miladiran1.shop
+# 法国
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.157
+# 法国
+trojan://redfree8@104.17.148.22
+# 法国
+ss://4f9e2051-1996-48b0-92d3-acb27b380e92@frw2-12dx-cei3-2dxx.51mj.tv
+# 法国
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.167
+# 法国
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpVM0lsZ0l2Z0FrQWthQkNuMFNVQXNY@77.239.117.121
+# 法国
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.166
+# 法国
+vless://4f9e2051-1996-48b0-92d3-acb27b380e92@frw2-12dx-cei3-2dxx.51mj.tv
 # 法国
 ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206NUNYNWRGUnpRMjlYMUNUeEhDL3ZzQjM1aTdsTGU4MkhlbG9aM0xCQmJSdz06bFZXRDVqd0swWjJyN1NvZFBYNDFnaXViUGFEaTRJcmdrVGZRK2VqVWFGdz0
 # 法国
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpVM0lsZ0l2Z0FrQWthQkNuMFNVQXNY
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.181
 # 法国
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwNzhuYUNmMkVmT2xSU0xUWDB3RlZ4@pupas-shirting-unsung.freesocks.work
+# 法国
+vless://563e4ed0-9473-4d66-aca8-e23c641042a6@free.miladiran1.shop
+# 法国
+vless://8c9a7ef4-b692-41ee-90ca-669b04990ac5@fr.pixvpn.app
+# 法国
+ss://32849afc-1632-4273-9db6-833dc02a7af7@free.miladiran1.shop
+# 法国
+vless://32849afc-1632-4273-9db6-833dc02a7af7@free.miladiran1.shop

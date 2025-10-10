@@ -236,7 +236,7 @@ async def main():
         save_to_file(OUTPUT_DIR, "all_nodes", all_valid_configs)
     
     # 保存协议分类到 protocols 目录和根目录
-    logging.info(f"Preparing to save protocols to directory: {PROTOCOL_DIR}")
+    logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
     for category, items in final_all_protocols.items():
         if items:
             save_to_file(PROTOCOLS_DIR, category, items)

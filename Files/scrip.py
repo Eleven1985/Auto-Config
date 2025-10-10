@@ -29,11 +29,11 @@ logging.basicConfig(
 
 # 协议模式配置
 PROTOCOL_PATTERNS = {
-    'vmess': re.compile(r'vmess://[A-Za-z0-9+/=]+'),
-    'vless': re.compile(r'vless://[A-Za-z0-9+/=]+'),
-    'trojan': re.compile(r'trojan://[A-Za-z0-9+/=]+'),
-    'shadowsocks': re.compile(r'ss://[A-Za-z0-9+/=]+'),
-    'hysteria2': re.compile(r'hy2://[A-Za-z0-9+/=]+')
+    'vmess': re.compile(r'vmess://[A-Za-z0-9+/=._~@-]+'),
+    'vless': re.compile(r'vless://[A-Za-z0-9+/=._~@-]+'),
+    'trojan': re.compile(r'trojan://[A-Za-z0-9+/=._~@-]+'),
+    'shadowsocks': re.compile(r'ss://[A-Za-z0-9+/=._~@-]+'),
+    'hysteria2': re.compile(r'hy2://[A-Za-z0-9+/=._~@-]+')
 }
 
 # 协议分类映射

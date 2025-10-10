@@ -27,13 +27,21 @@ logging.basicConfig(
     ]
 )
 
-# 改进的协议模式配置 - 能捕获更完整的节点配置
+# 改进的协议模式配置 - 支持更多协议格式
 PROTOCOL_PATTERNS = {
     'vmess': re.compile(r'vmess://[^\s,]+'),
     'vless': re.compile(r'vless://[^\s,]+'),
     'trojan': re.compile(r'trojan://[^\s,]+'),
     'shadowsocks': re.compile(r'ss://[^\s,]+'),
-    'hysteria2': re.compile(r'hy2://[^\s,]+')
+    'hysteria2': re.compile(r'hy2://[^\s,]+'),
+    # 添加更多常见协议格式
+    'ssr': re.compile(r'ssr://[^\s,]+'),  # ShadowsocksR
+    'hysteria': re.compile(r'hysteria://[^\s,]+'),  # Hysteria 1.x
+    'tuic': re.compile(r'tuic://[^\s,]+'),  # TUIC 协议
+    'wireguard': re.compile(r'wireguard://[^\s,]+'),  # WireGuard
+    'naiveproxy': re.compile(r'naive://[^\s,]+'),  # NaiveProxy
+    'socks5': re.compile(r'socks5://[^\s,]+'),  # SOCKS5
+    'http': re.compile(r'http://[^\s,]+')  # HTTP 代理
 }
 
 # 协议分类映射
@@ -42,7 +50,15 @@ PROTOCOL_CATEGORIES = {
     'vless': 'Vless',
     'trojan': 'Trojan',
     'shadowsocks': 'ShadowSocks',
-    'hysteria2': 'Hysteria2'
+    'hysteria2': 'Hysteria2',
+    # 为新添加的协议添加映射
+    'ssr': 'ShadowSocksR',
+    'hysteria': 'Hysteria',
+    'tuic': 'TUIC',
+    'wireguard': 'WireGuard',
+    'naiveproxy': 'NaiveProxy',
+    'socks5': 'SOCKS5',
+    'http': 'HTTP'
 }
 
 # 国家关键词配置
@@ -101,12 +117,17 @@ async def fetch_url(session, url, timeout=TIMEOUT):
 
 def find_matches(text, patterns):
     """在文本中查找匹配的协议配置"""
-    matches = {}
+    matches = {}  # 确保即使没有匹配项也返回空字典
+    
     for protocol, pattern in patterns.items():
-        found = pattern.findall(text)
-        if found:
-            matches[protocol] = found
-            logging.info(f"Found {len(found)} {protocol} configurations")
+        try:
+            found = pattern.findall(text)
+            if found:
+                matches[protocol] = found
+                logging.info(f"Found {len(found)} {protocol} configurations")
+        except Exception as e:
+            logging.error(f"Error matching {protocol} patterns: {e}")
+    
     return matches
 
 def save_to_file(directory, filename, items):
@@ -241,13 +262,26 @@ async def main():
         logging.info(f"Total configs after deduplication: {len(all_valid_configs)}")
 
         # 按协议分类
+        # 按协议分类
+        logging.info("Classifying configs by protocol...")
         for config in all_valid_configs:
+            matched = False
             for protocol in PROTOCOL_PATTERNS.keys():
                 if config.startswith(f"{protocol}://"):
                     if protocol in PROTOCOL_CATEGORIES:
                         category = PROTOCOL_CATEGORIES[protocol]
                         final_all_protocols[category].add(config)
+                        matched = True
                     break
+            
+            # 记录未匹配的协议格式，用于调试
+            if not matched:
+                # 只记录前50个字符以避免日志过长
+                logging.debug(f"Unmatched protocol format: {config[:50]}...")
+        
+        # 记录各协议分类的配置数量
+        for category, items in final_all_protocols.items():
+            logging.info(f"{category}: {len(items)} items")
 
         # 使用基于名称的国家分类方法
         logging.info("Classifying nodes by name keywords")

@@ -12,3 +12,4 @@ https://raw.githubusercontent.com/lennon81280/NixAI-Free-V2ray-Tested/refs/heads
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/yudou66.txt
 https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/blues.txt
+https://goclash.topmarco.tech/sb

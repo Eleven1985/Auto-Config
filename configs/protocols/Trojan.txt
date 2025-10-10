@@ -1,27 +1,26 @@
-# 节点数量: 24
-# 更新时间: 2025-10-10 07:21:07
+# Trojan - 23 items
+# Generated at 2025-10-10 07:32:47
 
-trojan://utF6JLQd2x
-trojan://FiSo7J6vfS
-trojan://eG92F3gh09
-trojan://Pooria
-trojan://babacac-aabc-aabc-abcd-bbcacaaacbbc
-trojan://AXpQXM4vNh
-trojan://biOrJGlcfX
-trojan://redfree8
-trojan://telegram-id-v2rayvpnchannel
 trojan://wb6368
-trojan://da86c6b5-a130-4bb8-a6ef-00b77b85b9e7
-trojan://e4cbe8b8-37db-4aaa-8469-b84f34c51ebc
-trojan://amclubs
-trojan://telegram-id-privatevpns
-trojan://iwangjie
+trojan://redfree8
+trojan://tg
 trojan://02XtoczO7V
-trojan://f93d5ecc-752e-4f7a-9f15-8196b9be1f9a
-trojan://auto
-trojan://tg-dns68
-trojan://f282b878-8711-45a1-8c69-5564172123c1
-trojan://YwuvGJk36B
-trojan://253bc477d4e43c209f2d427272968280
+trojan://babacac
 trojan://hZ7JkYVAfB
-trojan://2ee85121-31de-4581-a492-eb00f606e392
+trojan://YwuvGJk36B
+trojan://telegram
+trojan://f282b878
+trojan://Pooria
+trojan://auto
+trojan://253bc477d4e43c209f2d427272968280
+trojan://e4cbe8b8
+trojan://da86c6b5
+trojan://AXpQXM4vNh
+trojan://FiSo7J6vfS
+trojan://utF6JLQd2x
+trojan://f93d5ecc
+trojan://biOrJGlcfX
+trojan://iwangjie
+trojan://eG92F3gh09
+trojan://amclubs
+trojan://2ee85121

@@ -16,11 +16,15 @@ from bs4 import BeautifulSoup
 URLS_FILE = 'Files/urls.txt'
 KEYWORDS_FILE = 'Files/key.json'
 OUTPUT_DIR = 'configs'
-REQUEST_TIMEOUT = 10  # 降低请求超时时间
-CONCURRENT_REQUESTS = 15  # 增加并发请求数
+# 添加新的目录配置
+SUMMARY_DIR = os.path.join(OUTPUT_DIR, 'summary')
+PROTOCOLS_DIR = os.path.join(OUTPUT_DIR, 'protocols')
+COUNTRIES_DIR = os.path.join(OUTPUT_DIR, 'countries')
+REQUEST_TIMEOUT = 10  # 请求超时时间
+CONCURRENT_REQUESTS = 15  # 并发请求数
 MAX_CONFIG_LENGTH = 1500
 MIN_PERCENT25_COUNT = 15
-MAX_TEST_PER_CATEGORY = 200  # 降低每个分类测试的节点数
+MAX_TEST_PER_CATEGORY = 200  # 每个分类测试的节点数
 ENABLE_SAMPLING = True       # 启用采样测试
 SAVE_WITHOUT_TESTING = False  # 是否直接保存不测试（最快但不保证有效性）
 
@@ -189,6 +193,8 @@ def save_to_file(directory, category_name, items_set):
     """Save items to file - 优化版"""
     if not items_set:
         return False, 0
+    # 确保目录存在
+    os.makedirs(directory, exist_ok=True)
     file_path = os.path.join(directory, f"{category_name}.txt")
     count = len(items_set)
     try:
@@ -202,13 +208,13 @@ def save_to_file(directory, category_name, items_set):
         logging.error(f"Failed to write file {file_path}: {e}")
         return False, 0
 
-async def process_category(category, items, is_country=False):
+async def process_category(category, items, is_country=False, output_dir=OUTPUT_DIR):
     """处理单个分类的配置，合并重复逻辑"""
     category_type = "country" if is_country else "category"
     logging.info(f"Processing {category_type} {category}")
     
     if SAVE_WITHOUT_TESTING:
-        return save_to_file(OUTPUT_DIR, category, items)
+        return save_to_file(output_dir, category, items)
         
     # 导入节点测试器（在函数内部导入以避免循环依赖）
     from node_tester import deduplicate_and_test_configs
@@ -225,7 +231,7 @@ async def process_category(category, items, is_country=False):
     else:
         valid_configs = await deduplicate_and_test_configs(items)
         
-    return save_to_file(OUTPUT_DIR, category, valid_configs)
+    return save_to_file(output_dir, category, valid_configs)
 
 async def main():
     """Main entry point"""
@@ -265,6 +271,7 @@ async def main():
     # Initialize result structures
     final_configs_by_country = {cat: set() for cat in country_names}
     final_all_protocols = {cat: set() for cat in PROTOCOL_CATEGORIES}
+    all_valid_configs = set()  # 汇总所有有效节点
 
     logging.info("Processing pages for config name association...")
     for url, text in fetched_pages:
@@ -281,6 +288,7 @@ async def main():
                         continue
                     all_page_configs.add(config)
                     final_all_protocols[protocol_cat].add(config)
+                    all_valid_configs.add(config)  # 添加到总汇总
 
         # Categorize configs by country
         for config in all_page_configs:
@@ -335,28 +343,42 @@ async def main():
                     continue  # No match for this country, continue to next
                 break  # Found a match, break out of the loop
 
-    # Prepare output directory
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    # Clear existing files in configs directory
-    for filename in os.listdir(OUTPUT_DIR):
-        if filename != '.gitkeep':  # Preserve .gitkeep file
-            file_path = os.path.join(OUTPUT_DIR, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.unlink(file_path)
-            except Exception as e:
-                logging.error(f"Failed to delete {file_path}: {e}")
-    logging.info(f"Preparing to save files to directory: {OUTPUT_DIR}")
-
-    # 先保存协议分类
+    # Prepare output directories
+    directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
+    for directory in directories:
+        os.makedirs(directory, exist_ok=True)
+        # Clear existing files in directory
+        for filename in os.listdir(directory):
+            if filename != '.gitkeep':  # Preserve .gitkeep file
+                file_path = os.path.join(directory, filename)
+                try:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                except Exception as e:
+                    logging.error(f"Failed to delete {file_path}: {e}")
+    
+    # 保存总汇总节点
+    logging.info(f"Preparing to save summary to directory: {SUMMARY_DIR}")
+    if all_valid_configs:
+        # 如果启用了测试，先测试汇总节点
+        if not SAVE_WITHOUT_TESTING:
+            from node_tester import deduplicate_and_test_configs
+            valid_summary_configs = await deduplicate_and_test_configs(all_valid_configs)
+            save_to_file(SUMMARY_DIR, "all_nodes", valid_summary_configs)
+        else:
+            save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
+    
+    logging.info(f"Preparing to save protocols to directory: {PROTOCOLS_DIR}")
+    # 保存协议分类到protocols文件夹
     for category, items in final_all_protocols.items():
         if items:
-            await process_category(category, items)
+            await process_category(category, items, output_dir=PROTOCOLS_DIR)
     
-    # 然后保存国家分类
+    logging.info(f"Preparing to save countries to directory: {COUNTRIES_DIR}")
+    # 保存国家分类到countries文件夹
     for category, items in final_configs_by_country.items():
         if items:
-            await process_category(category, items, is_country=True)
+            await process_category(category, items, is_country=True, output_dir=COUNTRIES_DIR)
     
     logging.info(f"--- Script Finished in {time.time() - start_time:.2f} seconds ---")
 

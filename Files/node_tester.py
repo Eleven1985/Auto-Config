@@ -14,7 +14,7 @@ import asyncio
 if not os.path.exists('logs'):
     os.makedirs('logs')
 
-# 配置日志 - 移到文件顶部
+# 配置日志
 logger = logging.getLogger('node_tester')
 logger.setLevel(logging.INFO)
 
@@ -50,31 +50,17 @@ logger.addHandler(error_handler)
 # 重命名logging为logger以便后续使用
 logging = logger
 
-# 优化的配置参数 - 只保留一组最优配置
-TEST_TIMEOUT = 1.5  # 进一步降低超时时间，提升速度
-MAX_CONCURRENT_TESTS = 150  # 最大化并发测试数量
-CONNECTION_RETRIES = 0  # 移除重试，加快测试速度
-MIN_VALID_DELAY = 5  # 稍微提高最小有效延迟阈值(ms)
+# 配置参数
+TEST_TIMEOUT = 1.5  # 超时时间
+MAX_CONCURRENT_TESTS = 150  # 并发测试数量
+MIN_VALID_DELAY = 5  # 最小有效延迟阈值(ms)
 
 class NodeTester:
     def __init__(self):
         """初始化节点测试器"""
-        self.test_results = {}
         self.node_identifiers = set()
-        # 减少线程池工作线程数量
+        # 线程池工作线程数量
         self.executor = ThreadPoolExecutor(max_workers=5)
-
-    async def resolve_hostname(self, hostname: str) -> Optional[str]:
-        """异步解析主机名到IP地址"""
-        try:
-            loop = asyncio.get_event_loop()
-            return await loop.run_in_executor(
-                self.executor,
-                socket.gethostbyname,
-                hostname
-            )
-        except socket.gaierror:
-            return None
 
     def extract_node_info(self, config_line: str) -> Dict[str, str]:
         """提取节点信息用于去重和测试"""
@@ -110,12 +96,7 @@ class NodeTester:
         start_time = time.time()
         
         try:
-            # 简化主机名解析逻辑，减少DNS查询时间
-            if not re.match(r'^\d+\.\d+\.\d+\.\d+$', host):
-                # 直接使用主机名而不解析IP，让操作系统处理DNS缓存
-                pass
-            
-            # 测试TCP连接，使用更短的超时时间
+            # 测试TCP连接，使用超时时间
             reader, writer = await asyncio.wait_for(
                 asyncio.open_connection(host, port),
                 timeout=TEST_TIMEOUT
@@ -147,12 +128,9 @@ class NodeTester:
         return deduplicated
 
     async def batch_test_configs(self, configs: Set[str]) -> Dict[str, Dict]:
-        """批量测试配置有效性 - 优化版"""
+        """批量测试配置有效性"""
         if not configs:
             return {}
-        
-        # 重置测试结果
-        self.test_results.clear()
         
         # 大幅提高并发量
         sem = asyncio.Semaphore(MAX_CONCURRENT_TESTS)
@@ -193,7 +171,7 @@ class NodeTester:
         return {config for config, result in test_results.items() if result['is_valid'] and result['delay'] >= MIN_VALID_DELAY}
 
     async def process_configs(self, configs: Set[str]) -> Set[str]:
-        """简化的配置处理流程：去重和测试有效性"""
+        """配置处理流程：去重和测试有效性"""
         # 首先去重
         deduplicated = await self.deduplicate_configs(configs)
         

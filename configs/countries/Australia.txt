@@ -1,17 +1,19 @@
-# Australia - 7 items
-# Generated at 2025-10-10 12:35:10
+# Australia - 8 items
+# Generated at 2025-10-11 01:12:22
 
 # 澳大利亚
-ss://eyJhZGQiOiI4NS4xOTUuMTAxLjEyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJmM2Q0MTY3ZS1iMTVlLTRlNDYtODJlOS05Mjg2ZWY5M2ZkYTciLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQwODc4IiwicHMiOiJXaUZpLUBWMnJheUFscGhhLS0xOCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+ss://35edd316-09cd-4e1f-a6a6-d91dfea28a52@170.64.182.57:443?security=tls&sni=zula.ir&allowInsecure=1&fp=chrome&type=ws&path=/ws&encryption=none#Rayan%20-%20RVP%20-%20AU%20-%20I%20-%20%F0%9F%9F%A3%20t.me/Rayan_Config
+# 澳大利亚
+ss://21e731fb-6f76-4a90-8330-420fba7552ba@95.134.130.138:3477?encryption=none&security=none&type=grpc&authority=&serviceName=%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn#👉🆔@v2ray_configs_pool📡🇹🇷®️Turkey©️Pendik🅿️ping:76.03ms
 # 澳大利亚
 ss://eyJhZGQiOiIyMDAxOmJjODozMmQ3OjMwMjo6MTAiLCJhaWQiOiIwIiwiaG9zdCI6IiIsImlkIjoiOGUzNGUxNzAtMTNhZS00ODkyLTlkMjAtMDU5NjJhY2M5Zjg0IiwibmV0Ijoid3MiLCJwYXRoIjoiIiwicG9ydCI6IjQ0NTc5IiwicHMiOiJAUmF5YW5fQ29uZmlnIDIyNCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
 # 澳大利亚
-vmess://eyJhZGQiOiI4NS4xOTUuMTAxLjEyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJmM2Q0MTY3ZS1iMTVlLTRlNDYtODJlOS05Mjg2ZWY5M2ZkYTciLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQwODc4IiwicHMiOiJXaUZpLUBWMnJheUFscGhhLS0xOCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-# 澳大利亚
-vmess://eyJhZGQiOiIxNS4yMDQuMjM0LjIwMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJjN2YxNjlhMy0yZTlhLTQ4OTQtYmE1My03YjJmYTZmZDA4YjQiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQxMTAwIiwicHMiOiJXaUZpLUBWMnJheUFscGhhLS0xOSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+vless://21e731fb-6f76-4a90-8330-420fba7552ba@95.134.130.138:3477?encryption=none&security=none&type=grpc&authority=&serviceName=%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn#👉🆔@v2ray_configs_pool📡🇹🇷®️Turkey©️Pendik🅿️ping:76.03ms
 # 澳大利亚
 vmess://eyJhZGQiOiIyMDAxOmJjODozMmQ3OjMwMjo6MTAiLCJhaWQiOiIwIiwiaG9zdCI6IiIsImlkIjoiOGUzNGUxNzAtMTNhZS00ODkyLTlkMjAtMDU5NjJhY2M5Zjg0IiwibmV0Ijoid3MiLCJwYXRoIjoiIiwicG9ydCI6IjQ0NTc5IiwicHMiOiJAUmF5YW5fQ29uZmlnIDIyNCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
 # 澳大利亚
-ss://eyJhZGQiOiIxNS4yMDQuMjM0LjIwMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJjN2YxNjlhMy0yZTlhLTQ4OTQtYmE1My03YjJmYTZmZDA4YjQiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQxMTAwIiwicHMiOiJXaUZpLUBWMnJheUFscGhhLS0xOSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+ss://21e731fb-6f76-4a90-8330-420fba7552ba@95.134.130.138:3477?encryption=none&security=none&type=grpc&authority=&serviceName=%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bot----%40Evay_vpn_bo#👉🆔@v2ray_configs_pool📡🇹🇷®️Turkey©️Pendik🅿️ping:76.03ms
 # 澳大利亚
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTppdzhHb040MmRjaU54REJkMFJ3QWRM@193.46.56.185:6683#🌐
+# 澳大利亚
+vless://35edd316-09cd-4e1f-a6a6-d91dfea28a52@170.64.182.57:443?security=tls&sni=zula.ir&allowInsecure=1&fp=chrome&type=ws&path=/ws&encryption=none#Rayan%20-%20RVP%20-%20AU%20-%20I%20-%20%F0%9F%9F%A3%20t.me/Rayan_Config

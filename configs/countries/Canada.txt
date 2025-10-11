@@ -1,657 +1,713 @@
-# Canada - 327 items
-# Generated at 2025-10-10 12:35:10
+# Canada - 355 items
+# Generated at 2025-10-11 01:12:22
 
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.228:8880?encryption=none&security=none&type=grpc#VL-0714-015
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%E2%9C%85%D8%B3%D8%B1%D9%88%D8%B1%D9%87%D8%A7%DB%8C%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%D8%AF%D8%B1%DA%A9%D8%A7%D9%86%D8%A7%D9%84%3Aprrofile_purple%40%E2%9C%85
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2033
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@91.228.10.89:8880?encryption=none&security=none&type=grpc#VL-0714-041
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
+vless://ccff34b1-44fd-478d-bc0e-5111cb11f5be@ns1.cloudflare.com:443?path=%2FTelegram%40V2ray_Alpha%2F%3Fed%3D2550&security=tls&encryption=none&host=cr7.medicaldream.ir&fp=chrome&type=ws&sni=cr7.medicaldream.ir#🌐
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?encryption=none&security=none&type=grpc#VL-0714-017
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937994136550920.prague-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2057
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.87:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2061
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638951859202353992.amsterdam-prx-dnraacs.info:8880?encryption=none&security=none&type=grpc#VL-0714-067
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.205:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20126
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.195:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-vmess://eyJhZGQiOiAiMTUuMjA0LjY0LjIxMSIsICJ2IjogIjIiLCAicHMiOiAiVW5pdGVkIFN0YXRlcyIsICJwb3J0IjogNDQzLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIxIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogImthbXBvbmcub3JnIiwgInBhdGgiOiAibGlua3Z3cyIsICJ0bHMiOiAidGxzIn0=
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@37.156.45.229:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%D8%AC%D9%88%DB%8C%D9%86%20%D9%86%D8%B2%D9%86%DB%8C%20%D8%A2%D9%81%20%D9%85%DB%8C%D8%B4%D9%87
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.141:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20150
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638937994136550920.prague-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2022
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024898748.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20117
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20121
 # 加拿大
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@142.4.216.225:80#%3E%3E%40shadowproxy66%3A%3ACA
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.154:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20118
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20130
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@103.231.75.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20136
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.45:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20123
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20130
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?encryption=none&security=none&type=grpc#NixAI
+ss://fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf@141.193.213.81:80?encryption=none&security=none&type=ws&host=cs.laoyoutiao.link&path=%2Ftelegram%F0%9F%87%A8%F0%9F%87%B3+@mxlshare%2B@wangcai2%2B%2F%3Fed%3D2560#🌐
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880/?type=grpc&encryption=none&flow=#NixAI
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.209.153.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2024
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.235:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.253:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20128
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?encryption=none&security=none&type=grpc#VL-0714-042
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638950889657513683.tabriz-prx-dnraacr.info:8880?encryption=none&security=none&type=grpc#VL-0714-048
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.26:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20112
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2050
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%E2%9C%85%D8%B3%D8%B1%D9%88%D8%B1%D9%87%D8%A7%DB%8C%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%D8%AF%D8%B1%DA%A9%D8%A7%D9%86%D8%A7%D9%84%3Aprrofile_purple%40%E2%9C%85
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638951859202353992.amsterdam-prx-dnraacs.info:8880?encryption=none&security=none&type=grpc#VL-0714-067
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2010
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2058
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.165:8880?encryption=none&security=none&type=grpc#VL-0714-039
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2028
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.154:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20118
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?encryption=none&security=none&type=grpc#VL-0714-058
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMTQxLjE5My4yMTMuMTM1IiwKICAicG9ydCI6ICI4NDQzIiwKICAiaWQiOiAiNjIxNTE0ZDAtNDZkZS00N2VhLTkwNjMtMjFlYWVhMDk5OWM3IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAiYnBjYTIuY2F0aW1lY3Nnby54eXoiLAogICJwYXRoIjogIi9oa3o3aGVhM3hpYWNvMmovY2ExIiwKICAidGxzIjogInRscyIsCiAgInNuaSI6ICJicGNhMi5jYXRpbWVjc2dvLnh5eiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
 # 加拿大
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.224:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20145
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#🔓Config
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?encryption=none&security=none&type=grpc#VL-0714-049
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024910159.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ANL
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937994136550920.prague-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%205
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2025
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20120
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.195:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20119
+ss://eyJ2IjogIjIiLCAiYWRkIjogIjU3LjEyOS4yNC4xMjQiLCAicG9ydCI6IDQ0MywgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICJ0bHMiLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgInNuaSI6ICJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwgImhvc3QiOiAiYXZlaXJvci5jb20iLCAicGF0aCI6ICIvbGlua3Z3cyIsICJwcyI6ICJcdWQ4M2RcdWRjNDlcdWQ4M2NcdWRkOTRAdjJyYXlfY29uZmlnc19wb29sXHVkODNkXHVkY2UxXHVkODNjXHVkZGU5XHVkODNjXHVkZGVhXHUwMGFlXHVmZTBmR2VybWFueVx1MDBhOVx1ZmUwZkxpbWJ1cmcgYW4gZGVyIExhaG5cdWQ4M2NcdWRkN2ZcdWZlMGZwaW5nOjU0Ljc3bXMifQ==#🌐
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2046
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.245:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20137
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.43:8880?encryption=none&security=none&type=grpc#VL-0714-053
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2015
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.183:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20127
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?encryption=none&security=none&type=grpc#VL-0714-028
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.67:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2039
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638943040460374197.qazvin-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#VL-0707-044
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20141
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2045
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%40V2rayNGVPN%20%3C%3D%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@37.156.45.229:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%D8%AC%D9%88%DB%8C%D9%86%20%D9%86%D8%B2%D9%86%DB%8C%20%D8%A2%D9%81%20%D9%85%DB%8C%D8%B4%D9%87
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.32.191.215:8880?security=&type=grpc&encryption=none#🌐
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20143
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950889657513683.tabriz-prx-dnraacr.info:8880?encryption=none&security=none&type=grpc#VL-0714-048
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20124
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.92:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2043
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?encryption=none&security=none&type=ws&host=filimo.com&path=%2F#👉🆔@v2ray_configs_pool📡🇦🇪®️United
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2033
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.250:8880?encryption=none&security=none&type=grpc#VL-0714-056
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-045
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3ABG
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3ABG
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.247:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20154
+# 加拿大
+vless://2-TEL-ID--JKVPN--%40JKVPN@www.speedtest.net:2086?path=%2FTELEGRAM--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN%3Fed%3D2048&security=none&encryption=none&host=jokervip.ahang-alpha.ir&type=ws#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.05ms
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.253:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20128
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84%F0%9F%A5%80%E2%9D%A4
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ATR
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-024
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%E2%9C%85%D8%B3%D8%B1%D9%88%D8%B1%D9%87%D8%A7%DB%8C%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%D8%AF%D8%B1%DA%A9%D8%A7%D9%86%D8%A7%D9%84%3Aprrofile_purple%40%E2%9C%85
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.209.153.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2024
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.128:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20122
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?encryption=none&security=none&type=grpc#VL-0714-019
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2030
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2056
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.122.221:8880?encryption=none&security=none&type=grpc#VL-0714-043
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2038
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.105:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20152
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.245:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20137
 # 加拿大
-ss://fc3d2ca2-0f38-48dc-8938-688b78c403f2@46.62.206.155:32000?type=ws&security=none#%3E%3E%40V2rayNG3%3A%3AFI
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.92:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2043
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?encryption=none&security=none&type=grpc#VL-0714-040
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2029
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.48:8880?encryption=none&security=none&type=grpc#VL-0714-033
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?encryption=none&security=none&type=grpc#NixAI
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84%F0%9F%A5%80%E2%9D%A4
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2028
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.45:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20123
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2053
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?encryption=none&security=none&type=grpc#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20119
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.47:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20149
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.128:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20122
+# 加拿大
+ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAidjguaGVkdWlhbi5saW5rIiwKICAicG9ydCI6ICIzMDgwOCIsCiAgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsCiAgImFpZCI6ICIyIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogInY4LmhlZHVpYW4ubGluayIsCiAgInBhdGgiOiAiL29vb28iLAogICJ0bHMiOiAiIiwKICAic25pIjogIiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?encryption=none&security=none&type=grpc#VL-0714-049
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?encryption=none&security=none&type=grpc#VL-0714-050
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.224:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20145
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.248:8880?encryption=none&security=none&type=grpc#VL-0714-046
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.142.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20144
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2010
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.5:8880?encryption=none&security=none&type=grpc#VL-0714-020
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.120.178.9:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2037
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.88.186:8880?encryption=none&security=none&type=grpc#VL-0714-070
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2022
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20134
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20130
+# 加拿大
+vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAidjguaGVkdWlhbi5saW5rIiwKICAicG9ydCI6ICIzMDgwOCIsCiAgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsCiAgImFpZCI6ICIyIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogInY4LmhlZHVpYW4ubGluayIsCiAgInBhdGgiOiAiL29vb28iLAogICJ0bHMiOiAiIiwKICAic25pIjogIiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.105:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20152
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2055
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?encryption=none&security=none&type=grpc#VL-0714-017
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2046
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.224:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20145
+# 加拿大
+ss://41bd1a4c-855e-4ebc-85ce-9c927840fa82@iranserver.com:2095?path=@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet&encryption=none&security=none&type=ws&host=www.myket.ir.www.cafebazaar.ir.%E5%83%8F%E9%B8%9F%E4%B8%80%E6%A0%B7%E8%87%AA%E7%94%B1.online.#🌐
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880/?type=grpc&encryption=none&flow=#NixAI
+# 加拿大
+ss://eyJ2IjogIjIiLCAicHMiOiAi6aaZ5rivNXxAcmlwYW9qaWVkaWFuIiwgImFkZCI6ICJrZjV1aGdzY3JkbDcza21paHY4Yy5hcHBzd29ybGQuc2hvcCIsICJwb3J0IjogIjIxNzkxIiwgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiM2IxNGJhNmUtNzg2Zi0zYjg2LThiY2UtMjgwM2VhMTliOGNjIiwgInNuaSI6ICIiLCAiaG9zdCI6ICJ3d3cuYmFpZHUuY29tIiwgInBhdGgiOiAiL2NiZjdmNmFjYWJkMGRkZTRiZWYwNjc1ODBjMTI2ZmVkNzdhMDBkZTcifQ==
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.253:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20128
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.228:8880?encryption=none&security=none&type=grpc#VL-0714-015
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.18.181:8880?encryption=none&security=none&type=grpc#VL-0714-026
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060330315.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024910159.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ANL
 # 加拿大
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.88.186:8880?encryption=none&security=none&type=grpc#VL-0714-070
 # 加拿大
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.213:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20155
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2053
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?encryption=none&security=none&type=grpc#VL-0714-049
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.250:8880?encryption=none&security=none&type=grpc#VL-0714-056
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMTQxLjE5My4yMTMuMTM1IiwKICAicG9ydCI6ICI4NDQzIiwKICAiaWQiOiAiNjIxNTE0ZDAtNDZkZS00N2VhLTkwNjMtMjFlYWVhMDk5OWM3IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAiYnBjYTIuY2F0aW1lY3Nnby54eXoiLAogICJwYXRoIjogIi9oa3o3aGVhM3hpYWNvMmovY2ExIiwKICAidGxzIjogInRscyIsCiAgInNuaSI6ICJicGNhMi5jYXRpbWVjc2dvLnh5eiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20147
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20143
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638940926058844815.stockholm-prx-dnraacm.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2054
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?encryption=none&security=none&type=grpc#VL-0714-058
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.18.181:8880?encryption=none&security=none&type=grpc#VL-0714-026
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2016
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.128:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20122
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20117
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2015
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.248:8880?encryption=none&security=none&type=grpc#VL-0714-046
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946366858945512.rome-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://f6bd2c47-99da-4bca-bf70-7186aa9e7e06@104.21.1.12:443?path=%2Ftelegram%40V2ray_Alpha%2F%3Fed%3D2560&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&host=photographipictureai.ir&fp=randomized&type=ws&sni=pHOTOgrApHipiCTureaI.IR#🌐
-# 加拿大
-ss://f61a4285-7264-4d07-9408-7b9ba1922c26@188.42.145.253:2096?path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%20%2F%3Fed%3D2560&security=tls&encryption=none&host=gaosir.unfeeling.sbs&type=ws&sni=gaosir.unfeeling.sbs#%40V2rayNGVPN%20%3C%3D%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20119
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2026
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880/?type=grpc&encryption=none&flow=#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&encryption=none&type=grpc&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.122.221:8880?encryption=none&security=none&type=grpc#VL-0714-043
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&type=grpc#VL-0714-057
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.235:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.67:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2039
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20141
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzozMDI6OjEwIiwKICAicG9ydCI6ICI0NDU3OSIsCiAgImlkIjogIjhlMzRlMTcwLTEzYWUtNDg5Mi05ZDIwLTA1OTYyYWNjOWY4NCIsCiAgImFpZCI6ICIwIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638951859202353992.amsterdam-prx-dnraacs.info:8880?encryption=none&security=none&type=grpc#VL-0714-067
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?encryption=none&security=none&type=grpc#VL-0714-040
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937544595891094.madrid-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&type=grpc#VL-0714-023
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2038
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880?encryption=none&security=none&type=grpc#VL-0714-031
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-045
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20124
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.186:8880?encryption=none&security=none&type=grpc#%40Daily_Configs
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024898748.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.181:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2017
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2050
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.165:8880?encryption=none&security=none&type=grpc#VL-0714-039
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?encryption=none&security=none&type=grpc#VL-0714-042
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20121
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?note=---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---&flow=&type=grpc#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20141
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2010
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2056
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2045
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.250:8880?encryption=none&security=none&type=grpc#VL-0714-056
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20120
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950330462892661.neyshabur-prx-dnraacr.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.144.28.5:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20140
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.128:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20122
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?encryption=none&security=none&type=grpc#VL-0714-028
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-024
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.247:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20154
-# 加拿大
-ss://ccff34b1-44fd-478d-bc0e-5111cb11f5be@ns1.cloudflare.com:443?path=%2FTelegram%40V2ray_Alpha%2F%3Fed%3D2550&security=tls&encryption=none&host=cr7.medicaldream.ir&fp=chrome&type=ws&sni=cr7.medicaldream.ir#🌐
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&type=grpc#VL-0714-057
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.186:8880?encryption=none&security=none&type=grpc#%40Daily_Configs
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.183:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20127
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024910159.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.45:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20123
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2048
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20143
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2057
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20124
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2030
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2053
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20148
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638937544595891094.madrid-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946131660460360.berlin-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20142
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2025
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.253:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20128
-# 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2048
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2022
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-024
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.67:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2039
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2026
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638944900760751746.hamedan-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://4f9e2051-1996-48b0-92d3-acb27b380e92@spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click:443?security=tls&encryption=none&type=ws&sni=spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click#%3E%3E%40configV2rayNG%3A%3AIN
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@103.231.75.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20136
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@91.228.10.89:8880?encryption=none&security=none&type=grpc#VL-0714-041
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2056
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?note=---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---Telegram---@NetifyVPN---&flow=&type=grpc#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638950889657513683.tabriz-prx-dnraacr.info:8880?encryption=none&security=none&type=grpc#VL-0714-048
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%205
 # 加拿大
-ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAidjguaGVkdWlhbi5saW5rIiwKICAicG9ydCI6ICIzMDgwOCIsCiAgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsCiAgImFpZCI6ICIyIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogInY4LmhlZHVpYW4ubGluayIsCiAgInBhdGgiOiAiL29vb28iLAogICJ0bHMiOiAiIiwKICAic25pIjogIiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&encryption=none&type=grpc&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---#NixAI
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946366858945512.rome-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.250:8880?encryption=none&security=none&type=grpc#VL-0714-056
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?encryption=none&security=none&type=grpc#NixAI
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2026
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.209.153.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2024
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#%3E%3E%40DailyV2RY%3A%3ATR
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&encryption=none&type=grpc&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2028
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.120.178.9:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2037
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.125:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20151
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.154:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20118
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.43:8880?encryption=none&security=none&type=grpc#VL-0714-053
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.142.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20144
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20117
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?encryption=none&security=none&type=grpc#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2028
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950889657513683.tabriz-prx-dnraacr.info:8880?encryption=none&security=none&type=grpc#VL-0714-048
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20134
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.16:8880?encryption=none&security=none&type=grpc#VL-0714-054
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2052
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzozMDI6OjEwIiwKICAicG9ydCI6ICI0NDU3OSIsCiAgImlkIjogIjhlMzRlMTcwLTEzYWUtNDg5Mi05ZDIwLTA1OTYyYWNjOWY4NCIsCiAgImFpZCI6ICIwIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024910159.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20148
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.48:8880?encryption=none&security=none&type=grpc#VL-0714-033
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://4f9e2051-1996-48b0-92d3-acb27b380e92@spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click:443?security=tls&encryption=none&type=ws&sni=spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click#%3E%3E%40configV2rayNG%3A%3AIN
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.26:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20112
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2055
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?encryption=none&security=none&type=grpc#VL-0714-019
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20147
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2016
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-045
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060335589.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2058
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.101:8880?encryption=none&security=none&type=grpc#VL-0714-066
-# 加拿大
-vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMTQxLjE5My4yMTMuMTM1IiwKICAicG9ydCI6ICI4NDQzIiwKICAiaWQiOiAiNjIxNTE0ZDAtNDZkZS00N2VhLTkwNjMtMjFlYWVhMDk5OWM3IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAiYnBjYTIuY2F0aW1lY3Nnby54eXoiLAogICJwYXRoIjogIi9oa3o3aGVhM3hpYWNvMmovY2ExIiwKICAidGxzIjogInRscyIsCiAgInNuaSI6ICJicGNhMi5jYXRpbWVjc2dvLnh5eiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2057
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%208
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946131660460360.berlin-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?encryption=none&security=none&type=grpc#VL-0714-042
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2052
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.48:8880?encryption=none&security=none&type=grpc#VL-0714-033
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.92:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2043
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.92:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2043
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.4:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.101:8880?encryption=none&security=none&type=grpc#VL-0714-066
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2015
-# 加拿大
-vless://f61a4285-7264-4d07-9408-7b9ba1922c26@188.42.145.253:2096?path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%20%40WangCai2%20%2F%3Fed%3D2560&security=tls&encryption=none&host=gaosir.unfeeling.sbs&type=ws&sni=gaosir.unfeeling.sbs#%40V2rayNGVPN%20%3C%3D%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.181:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2017
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.164:8880?encryption=none&security=none&type=grpc#VL-0714-032
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?encryption=none&security=none&type=grpc#VL-0714-050
-# 加拿大
-vless://fc3d2ca2-0f38-48dc-8938-688b78c403f2@46.62.206.155:32000?type=ws&security=none#%3E%3E%40V2rayNG3%3A%3AFI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@5.199.169.208:8880?security=&type=grpc&encryption=none#🌐
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638951859202353992.amsterdam-prx-dnraacs.info:8880?encryption=none&security=none&type=grpc#VL-0714-067
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://ccff34b1-44fd-478d-bc0e-5111cb11f5be@ns1.cloudflare.com:443?path=%2FTelegram%40V2ray_Alpha%2F%3Fed%3D2550&security=tls&encryption=none&host=cr7.medicaldream.ir&fp=chrome&type=ws&sni=cr7.medicaldream.ir#🌐
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.4:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2045
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.32.191.215:8880?security=&type=grpc&encryption=none#🌐
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2046
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2049
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638944900760751746.hamedan-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20138
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880/?type=grpc&encryption=none&flow=#%E2%99%A6%EF%B8%8F22%40oneclickvpnkeys
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?encryption=none&security=none&type=grpc#VL-0714-050
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.142.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20144
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.154:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20118
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638943040460374197.qazvin-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#VL-0707-044
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.144.28.5:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20140
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943040460374197.qazvin-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#VL-0707-044
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.213:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20155
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.228:8880?encryption=none&security=none&type=grpc#VL-0714-015
-# 加拿大
-vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLliqDmi7/lpKciLAogICJhZGQiOiAiNzQuNDguMTk0LjciLAogICJwb3J0IjogIjI3NjkxIiwKICAiaWQiOiAiNTY1MjBmMGQtMmJiYy00YjhiLWY0MzgtODJlMTUxZDY2Zjk2IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ0Y3AiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
-# 加拿大
-vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAidjguaGVkdWlhbi5saW5rIiwKICAicG9ydCI6ICIzMDgwOCIsCiAgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsCiAgImFpZCI6ICIyIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogInY4LmhlZHVpYW4ubGluayIsCiAgInBhdGgiOiAiL29vb28iLAogICJ0bHMiOiAiIiwKICAic25pIjogIiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.5:8880?encryption=none&security=none&type=grpc#VL-0714-020
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?encryption=none&security=none&type=grpc#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060330315.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.163:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2018
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20142
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.224:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20145
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://41bd1a4c-855e-4ebc-85ce-9c927840fa82@iranserver.com:2095?path=@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet&encryption=none&security=none&type=ws&host=www.myket.ir.www.cafebazaar.ir.%E5%83%8F%E9%B8%9F%E4%B8%80%E6%A0%B7%E8%87%AA%E7%94%B1.online.#🌐
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.183:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20127
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880?encryption=none&security=none&type=grpc#VL-0714-031
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060330315.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?encryption=none&security=none&type=grpc#VL-0714-028
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.5:8880?encryption=none&security=none&type=grpc#VL-0714-020
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638940926058844815.stockholm-prx-dnraacm.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?encryption=none&security=none&type=grpc#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-vless://f6bd2c47-99da-4bca-bf70-7186aa9e7e06@104.21.1.12:443?path=%2Ftelegram%40V2ray_Alpha%2F%3Fed%3D2560&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&host=photographipictureai.ir&fp=randomized&type=ws&sni=pHOTOgrApHipiCTureaI.IR#🌐
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638941610438943596.copenhagen-prx-dnraacm.info:8880/?type=grpc&encryption=none#%3E%3E%40DailyV2RY%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880/?type=grpc&encryption=none&flow=#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2038
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20129
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
 # 加拿大
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20129
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&type=grpc#VL-0714-023
+vless://d49ffd05-c1dc-4bcb-b788-dbbece8860b0@mstr.fastly80.hosting-ip.com:80?encryption=none&security=none&type=ws&host=Gn8656.io&path=%2Fadmin#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Montreal🅿️ping:7.34ms
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2054
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20148
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2030
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943040460374197.qazvin-prx-dnraacm.info:8880?encryption=none&security=none&type=grpc#VL-0707-044
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2055
+ss://d447f445-8ac8-46ad-8f93-474a8c57c738@172.66.40.99:8880?path=%2F%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420%3Fed%3D2048&security=none&encryption=none&host=s6.inFo.laLezaRanegomaNandish.suB420-mohaMad.online.&type=ws#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.23ms
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2010
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?encryption=none&security=none&type=grpc#VL-0714-017
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.32.191.215:8880?security=&type=grpc&encryption=none#🌐
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.47:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20149
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060335589.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@5.199.169.208:8880?security=&type=grpc&encryption=none#🌐
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.105:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20152
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880/?type=grpc&encryption=none&flow=#%E2%99%A6%EF%B8%8F22%40oneclickvpnkeys
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.105:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20152
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.47:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20149
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.164:8880?encryption=none&security=none&type=grpc#VL-0714-032
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20130
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20138
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.245:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20137
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.165:8880?encryption=none&security=none&type=grpc#VL-0714-039
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@103.231.75.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20136
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.205:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20126
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2029
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20134
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.247:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20154
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%205
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.88.186:8880?encryption=none&security=none&type=grpc#VL-0714-070
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.163:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2018
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.87:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2061
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2058
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%209
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.26:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20112
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2033
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?encryption=none&security=none&type=grpc#VL-0714-058
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.141:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20150
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.248:8880?encryption=none&security=none&type=grpc#VL-0714-046
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.235:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@91.228.10.89:8880?encryption=none&security=none&type=grpc#VL-0714-041
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.120.178.9:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2037
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638937994136550920.prague-prx-dnraacl.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024898748.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
-# 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?encryption=none&security=none&type=grpc#VL-0714-040
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%209
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638950330462892661.neyshabur-prx-dnraacr.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AXX
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.18.181:8880?encryption=none&security=none&type=grpc#VL-0714-026
+ss://cbaacba-aabc-baca-bcad-abbcccacabab@127.0.0.1:8080?security=tls&type=tcp#👉🆔@v2ray_configs_pool📡🤷‍♀️®️🤷‍♀©️🤷‍♀🅿️ping:5.8ms
 # 加拿大
-ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLliqDmi7/lpKciLAogICJhZGQiOiAiNzQuNDguMTk0LjciLAogICJwb3J0IjogIjI3NjkxIiwKICAiaWQiOiAiNTY1MjBmMGQtMmJiYy00YjhiLWY0MzgtODJlMTUxZDY2Zjk2IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ0Y3AiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20148
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@91.228.10.89:8880?encryption=none&security=none&type=grpc#VL-0714-041
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2029
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20143
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.15:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2021
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.122.221:8880?encryption=none&security=none&type=grpc#VL-0714-043
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.122.221:8880?encryption=none&security=none&type=grpc#VL-0714-043
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880?encryption=none&security=none&type=grpc#VL-0714-031
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%F0%9F%90%A2%F0%9F%A6%8B%F0%9F%90%8C5
+# 加拿大
+vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzozMDI6OjEwIiwKICAicG9ydCI6ICI0NDU3OSIsCiAgImlkIjogIjhlMzRlMTcwLTEzYWUtNDg5Mi05ZDIwLTA1OTYyYWNjOWY4NCIsCiAgImFpZCI6ICIwIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@5.199.169.208:8880?security=&type=grpc&encryption=none#🌐
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.45:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20123
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.209.153.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2024
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%208
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.125:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20151
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+vless://d447f445-8ac8-46ad-8f93-474a8c57c738@172.66.40.99:8880?path=%2F%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420----%40EXPRESSVPN_420%3Fed%3D2048&security=none&encryption=none&host=s6.inFo.laLezaRanegomaNandish.suB420-mohaMad.online.&type=ws#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.23ms
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2050
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?encryption=none&security=none&type=grpc#VL-0714-019
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?encryption=none&security=none&type=grpc#VL-0714-019
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?encryption=none&security=none&type=grpc#VL-0714-049
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%40V2rayNGVPN%20%3C%3D%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf@141.193.213.81:80?encryption=none&security=none&type=ws&host=cs.laoyoutiao.link&path=%2Ftelegram%F0%9F%87%A8%F0%9F%87%B3+@mxlshare%2B@wangcai2%2B%2F%3Fed%3D2560#🌐
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20138
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20142
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.228:8880?encryption=none&security=none&type=grpc#VL-0714-015
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%F0%9F%90%A2%F0%9F%A6%8B%F0%9F%90%8C6
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICLliqDmi7/lpKciLAogICJhZGQiOiAiNzQuNDguMTk0LjciLAogICJwb3J0IjogIjI3NjkxIiwKICAiaWQiOiAiNTY1MjBmMGQtMmJiYy00YjhiLWY0MzgtODJlMTUxZDY2Zjk2IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ0Y3AiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.217:8880?encryption=none&security=none&type=grpc#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84%F0%9F%A5%80%E2%9D%A4
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.15:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2021
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=none&encryption=none&host=filimo.com&type=ws#%F0%9F%90%A2%F0%9F%A6%8B%F0%9F%90%8C5
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.144.28.5:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20140
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.69:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20134
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.125:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20151
+# 加拿大
+ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMjAwMTpiYzg6MzJkNzozMDI6OjEwIiwKICAicG9ydCI6ICI0NDU3OSIsCiAgImlkIjogIjhlMzRlMTcwLTEzYWUtNDg5Mi05ZDIwLTA1OTYyYWNjOWY4NCIsCiAgImFpZCI6ICIwIiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
+# 加拿大
+ss://d49ffd05-c1dc-4bcb-b788-dbbece8860b0@mstr.fastly80.hosting-ip.com:80?encryption=none&security=none&type=ws&host=Gn8656.io&path=%2Fadmin#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Montreal🅿️ping:7.34ms
+# 加拿大
+vmess://eyJ2IjogIjIiLCAicHMiOiAi6aaZ5rivNXxAcmlwYW9qaWVkaWFuIiwgImFkZCI6ICJrZjV1aGdzY3JkbDcza21paHY4Yy5hcHBzd29ybGQuc2hvcCIsICJwb3J0IjogIjIxNzkxIiwgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICIiLCAiaWQiOiAiM2IxNGJhNmUtNzg2Zi0zYjg2LThiY2UtMjgwM2VhMTliOGNjIiwgInNuaSI6ICIiLCAiaG9zdCI6ICJ3d3cuYmFpZHUuY29tIiwgInBhdGgiOiAiL2NiZjdmNmFjYWJkMGRkZTRiZWYwNjc1ODBjMTI2ZmVkNzdhMDBkZTcifQ==
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.183:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20127
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.101:8880?encryption=none&security=none&type=grpc#VL-0714-066
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2016
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?encryption=none&security=none&type=grpc#VL-0714-040
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#🔓Config
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860201969.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-024
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#%3E%3E%40DailyV2RY%3A%3ATR
+# 加拿大
+vless://fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf@141.193.213.81:80?encryption=none&security=none&type=ws&host=cs.laoyoutiao.link&path=%2Ftelegram%F0%9F%87%A8%F0%9F%87%B3+@mxlshare%2B@wangcai2%2B%2F%3Fed%3D2560#🔓Config
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.67:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2039
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20147
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20142
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20138
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&type=grpc#VL-0714-057
+# 加拿大
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@142.4.216.225:80#%3E%3E%40shadowproxy66%3A%3ACA
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2022
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2057
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@103.231.75.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20136
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&type=grpc#VL-0714-023
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.87:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2061
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.101:8880?encryption=none&security=none&type=grpc#VL-0714-066
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@188.132.141.58:7035?path=%2F&security=&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84%F0%9F%A5%80%E2%9D%A4
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.141:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20150
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2016
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2015
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20120
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.248:8880?encryption=none&security=none&type=grpc#VL-0714-046
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vmess://eyJ2IjogIjIiLCAiYWRkIjogIjU3LjEyOS4yNC4xMjQiLCAicG9ydCI6IDQ0MywgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICJ0bHMiLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgInNuaSI6ICJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwgImhvc3QiOiAiYXZlaXJvci5jb20iLCAicGF0aCI6ICIvbGlua3Z3cyIsICJwcyI6ICJcdWQ4M2RcdWRjNDlcdWQ4M2NcdWRkOTRAdjJyYXlfY29uZmlnc19wb29sXHVkODNkXHVkY2UxXHVkODNjXHVkZGU5XHVkODNjXHVkZGVhXHUwMGFlXHVmZTBmR2VybWFueVx1MDBhOVx1ZmUwZkxpbWJ1cmcgYW4gZGVyIExhaG5cdWQ4M2NcdWRkN2ZcdWZlMGZwaW5nOjU0Ljc3bXMifQ==#🌐
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.43:8880?encryption=none&security=none&type=grpc#VL-0714-053
+# 加拿大
+vmess://eyJ2IjogIjIiLCAiYWRkIjogIjU3LjEyOS4yNC4xMjQiLCAicG9ydCI6IDQ0MywgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICJ0bHMiLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgInNuaSI6ICJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwgImhvc3QiOiAiYXZlaXJvci5jb20iLCAicGF0aCI6ICIvbGlua3Z3cyIsICJwcyI6ICJcdWQ4M2RcdWRjNDlcdWQ4M2NcdWRkOTRAdjJyYXlfY29uZmlnc19wb29sXHVkODNkXHVkY2UxXHVkODNjXHVkZGU5XHVkODNjXHVkZGVhXHUwMGFlXHVmZTBmR2VybWFueVx1MDBhOVx1ZmUwZkxpbWJ1cmcgYW4gZGVyIExhaG5cdWQ4M2NcdWRkN2ZcdWZlMGZwaW5nOjU0Ljc3bXMifQ==#🔓Config
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.137:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2058
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ATR
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2052
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2025
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.213:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20155
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.91:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20147
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.186:8880?encryption=none&security=none&type=grpc#%40Daily_Configs
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2025
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.242:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.142:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20121
+# 加拿大
+vless://4f9e2051-1996-48b0-92d3-acb27b380e92@spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click:443?security=tls&encryption=none&type=ws&sni=spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click#%3E%3E%40configV2rayNG%3A%3AIN
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%E2%9C%85%D8%B3%D8%B1%D9%88%D8%B1%D9%87%D8%A7%DB%8C%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%D8%AF%D8%B1%DA%A9%D8%A7%D9%86%D8%A7%D9%84%3Aprrofile_purple%40%E2%9C%85
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.205:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20126
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%F0%9F%90%A2%F0%9F%A6%8B%F0%9F%90%8C6
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.48:8880?encryption=none&security=none&type=grpc#VL-0714-033
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.164:8880?encryption=none&security=none&type=grpc#VL-0714-032
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.207:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?encryption=none&security=none&type=grpc#VL-0714-050
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.186:8880?encryption=none&security=none&type=grpc#%40Daily_Configs
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@5.199.169.208:8880?security=&type=grpc&encryption=none#🌐
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?encryption=none&security=none&type=grpc#NixAI
 # 加拿大
 vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.16:8880?encryption=none&security=none&type=grpc#VL-0714-054
 # 加拿大
 ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2049
 # 加拿大
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.15:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2021
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2030
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.127:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2048
+# 加拿大
+ss://f6bd2c47-99da-4bca-bf70-7186aa9e7e06@104.21.1.12:443?path=%2Ftelegram%40V2ray_Alpha%2F%3Fed%3D2560&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&host=photographipictureai.ir&fp=randomized&type=ws&sni=pHOTOgrApHipiCTureaI.IR#🌐
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.155:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.164:8880?encryption=none&security=none&type=grpc#VL-0714-032
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2045
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.43:8880?encryption=none&security=none&type=grpc#VL-0714-053
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2054
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.181:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2017
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?encryption=none&security=none&type=grpc#VL-0714-057
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.5:8880?encryption=none&security=none&type=grpc#VL-0714-020
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.128.54.6:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.115:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2049
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.130.190:8880?encryption=none&security=none&type=grpc#VL-0714-031
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.193:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://f6bd2c47-99da-4bca-bf70-7186aa9e7e06@104.21.1.12:443?path=%2Ftelegram%40V2ray_Alpha%2F%3Fed%3D2560&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&host=photographipictureai.ir&fp=randomized&type=ws&sni=pHOTOgrApHipiCTureaI.IR#🌐
+# 加拿大
+ss://2-TEL-ID--JKVPN--%40JKVPN@www.speedtest.net:2086?path=%2FTELEGRAM--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN--@JKVPN%3Fed%3D2048&security=none&encryption=none&host=jokervip.ahang-alpha.ir&type=ws#👉🆔@v2ray_configs_pool📡🇨🇦®️Canada©️Toronto🅿️ping:28.05ms
+# 加拿大
+ss://eyJ2IjogIjIiLCAiYWRkIjogIjU3LjEyOS4yNC4xMjQiLCAicG9ydCI6IDQ0MywgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAid3MiLCAidHlwZSI6ICJub25lIiwgInRscyI6ICJ0bHMiLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgInNuaSI6ICJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwgImhvc3QiOiAiYXZlaXJvci5jb20iLCAicGF0aCI6ICIvbGlua3Z3cyIsICJwcyI6ICJcdWQ4M2RcdWRjNDlcdWQ4M2NcdWRkOTRAdjJyYXlfY29uZmlnc19wb29sXHVkODNkXHVkY2UxXHVkODNjXHVkZGU5XHVkODNjXHVkZGVhXHUwMGFlXHVmZTBmR2VybWFueVx1MDBhOVx1ZmUwZkxpbWJ1cmcgYW4gZGVyIExhaG5cdWQ4M2NcdWRkN2ZcdWZlMGZwaW5nOjU0Ljc3bXMifQ==#🔓Config
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?encryption=none&security=none&fp=chrome&type=grpc#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.107:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2033
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?encryption=none&security=none&type=ws&host=filimo.com&path=%2F#👉🆔@v2ray_configs_pool📡🇦🇪®️United
+# 加拿大
+ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLnvo7lm70iLAogICJhZGQiOiAiMTQxLjE5My4yMTMuMTM1IiwKICAicG9ydCI6ICI4NDQzIiwKICAiaWQiOiAiNjIxNTE0ZDAtNDZkZS00N2VhLTkwNjMtMjFlYWVhMDk5OWM3IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAiYnBjYTIuY2F0aW1lY3Nnby54eXoiLAogICJwYXRoIjogIi9oa3o3aGVhM3hpYWNvMmovY2ExIiwKICAidGxzIjogInRscyIsCiAgInNuaSI6ICJicGNhMi5jYXRpbWVjc2dvLnh5eiIsCiAgImFscG4iOiAiIiwKICAiZnAiOiAiIgp9
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?security=&encryption=none&type=grpc&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---#NixAI
 # 加拿大
 vless://41bd1a4c-855e-4ebc-85ce-9c927840fa82@iranserver.com:2095?path=@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet--@Maznet&encryption=none&security=none&type=ws&host=www.myket.ir.www.cafebazaar.ir.%E5%83%8F%E9%B8%9F%E4%B8%80%E6%A0%B7%E8%87%AA%E7%94%B1.online.#🌐
 # 加拿大
-ss://eyJhZGQiOiAiMTUuMjA0LjY0LjIxMSIsICJ2IjogIjIiLCAicHMiOiAiVW5pdGVkIFN0YXRlcyIsICJwb3J0IjogNDQzLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIxIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogImthbXBvbmcub3JnIiwgInBhdGgiOiAibGlua3Z3cyIsICJ0bHMiOiAidGxzIn0=
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638945271259127439.yasuj-prx-dnraacp.info:8880?encryption=none&security=none&type=grpc#VL-0714-042
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?encryption=none&security=none&type=grpc#VL-0714-017
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2046
 # 加拿大
-ss://df0680ca-e43c-498d-ed86-8e196eedd012@638941610438943596.copenhagen-prx-dnraacm.info:8880/?type=grpc&encryption=none#%3E%3E%40DailyV2RY%3A%3AXX
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.165:8880?encryption=none&security=none&type=grpc#VL-0714-039
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@uaeemaray.vtuix.ir:7035?security=none&encryption=none&host=filimo.com&type=ws#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.15:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2021
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.120.178.9:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2037
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.14.195:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20119
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638930287805772573.helsinki-drc-dcrabj.info:8880?encryption=none&security=none&type=grpc#VL-0714-058
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@37.156.45.229:7035?path=%2F&security=&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%D8%AC%D9%88%DB%8C%D9%86%20%D9%86%D8%B2%D9%86%DB%8C%20%D8%A2%D9%81%20%D9%85%DB%8C%D8%B4%D9%87
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?encryption=none&security=none&type=grpc#VL-0714-028
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.144.28.5:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20140
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.74:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20141
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.155:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20124
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.97:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2038
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2054
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.217:8880?encryption=none&security=none&type=grpc#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.247:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20154
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.141:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20150
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://4f9e2051-1996-48b0-92d3-acb27b380e92@spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click:443?security=tls&encryption=none&type=ws&sni=spoken-superman-drinking-booing-wizard-summers-ally-webber.91-cdascas-23928csmc2-msc1v1mow-sic2p2a-gfx3n3am-swi-xn-cdc-ox1.click#%3E%3E%40configV2rayNG%3A%3AIN
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.235:8880?encryption=none&security=none&type=grpc#%D8%B9%D8%B6%D9%88%20%D8%B4%D9%88%20%3A%20%40zibanabz
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%208
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.40:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2050
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.18.181:8880?encryption=none&security=none&type=grpc#VL-0714-026
+# 加拿大
+ss://ewogICJ2IjogIjIiLAogICJwcyI6ICLliqDmi7/lpKciLAogICJhZGQiOiAiNzQuNDguMTk0LjciLAogICJwb3J0IjogIjI3NjkxIiwKICAiaWQiOiAiNTY1MjBmMGQtMmJiYy00YjhiLWY0MzgtODJlMTUxZDY2Zjk2IiwKICAiYWlkIjogIjAiLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ0Y3AiLAogICJ0eXBlIjogIm5vbmUiLAogICJob3N0IjogIiIsCiAgInBhdGgiOiAiIiwKICAidGxzIjogIiIsCiAgInNuaSI6ICIiLAogICJhbHBuIjogIiIsCiAgImZwIjogIiIKfQ==
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880/?type=grpc&encryption=none&flow=#%E2%99%A6%EF%B8%8F22%40oneclickvpnkeys
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638943929060330315.warsaw-prx-dnraacp.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@84.32.191.215:8880?security=&type=grpc&encryption=none#🌐
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.66.76:8880?encryption=none&security=none&type=grpc#VL-0714-023
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2055
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.118.98:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20120
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.220:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@38.180.26.251:7035?security=none&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%F0%9F%91%88%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB%D8%B3%D8%B1%D9%88%D8%B1%D8%AC%D8%AF%DB%8C%D8%AF%20%D8%AF%D8%A7%D8%AE%D9%84%20%DA%86%D9%86%D9%84
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.163:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2018
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638942912656604786.malayer-prx-dnraacm.info:8880/?type=grpc&encryption=none&flow=#%E2%99%A6%EF%B8%8F22%40oneclickvpnkeys
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.142.89:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20144
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.82:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3AMD
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.181:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2017
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@84.246.85.62:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2026
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.222:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2053
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.149:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%209
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?encryption=none&security=none&type=grpc#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@80.92.206.19:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20129
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.26:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20112
+# 加拿大
+vless://cbaacba-aabc-baca-bcad-abbcccacabab@127.0.0.1:8080?security=tls&type=tcp#👉🆔@v2ray_configs_pool📡🤷‍♀️®️🤷‍♀©️🤷‍♀🅿️ping:5.8ms
+# 加拿大
+ss://9b1b61ca-2b67-4091-a777-5baa7a8f741f@37.156.45.229:7035?path=%2F&security=&encryption=none&host=filimo.com&type=ws#%40NETMelliAnti%20%D8%AC%D9%88%DB%8C%D9%86%20%D9%86%D8%B2%D9%86%DB%8C%20%D8%A2%D9%81%20%D9%85%DB%8C%D8%B4%D9%87
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.13.163:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2018
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.125:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20151
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.226:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2052
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024898748.lisbon-drc-dcrabj.info:8880?security=&encryption=none&type=grpc#%3E%3E%40configV2rayNG%3A%3ALT
+# 加拿大
+vless://9b1b61ca-2b67-4091-a777-5baa7a8f741f@uaeemaray.vtuix.ir:7035?security=none&encryption=none&host=filimo.com&type=ws#NixAI
+# 加拿大
+ss://ccff34b1-44fd-478d-bc0e-5111cb11f5be@ns1.cloudflare.com:443?path=%2FTelegram%40V2ray_Alpha%2F%3Fed%3D2550&security=tls&encryption=none&host=cr7.medicaldream.ir&fp=chrome&type=ws&sni=cr7.medicaldream.ir#🌐
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.38:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.47:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20149
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.107.241:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2029
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.156:8880?security=&fp=chrome&type=grpc&encryption=none#NixAI
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.72:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2056
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.242.87.160:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20117
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@85.208.110.205:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%20126
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@185.234.64.87:8880?security=&fp=chrome&type=grpc&encryption=none#@Rayan_Config%2061
+# 加拿大
+ss://df0680ca-e43c-498d-ed86-8e196eedd012@194.4.49.16:8880?encryption=none&security=none&type=grpc#VL-0714-054
+# 加拿大
+ss://fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf@141.193.213.81:80?encryption=none&security=none&type=ws&host=cs.laoyoutiao.link&path=%2Ftelegram%F0%9F%87%A8%F0%9F%87%B3+@mxlshare%2B@wangcai2%2B%2F%3Fed%3D2560#🔓Config
+# 加拿大
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638946555860213179.lisbon-prx-dnraacq.info:8880?encryption=none&security=none&type=grpc#VL-0714-045

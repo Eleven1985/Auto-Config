@@ -1,2 +1,2 @@
-aiohttp
-# 注：re、os、shutil、asyncio、time、logging为Python标准库，不需要单独安装
+aiohttp>=3.8.0
+# 注：re、os、shutil、asyncio、time、logging、hashlib为Python标准库，不需要单独安装

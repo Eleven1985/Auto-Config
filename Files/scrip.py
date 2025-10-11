@@ -5,6 +5,7 @@ import aiohttp
 import os
 import shutil
 import re  # 添加缺失的re模块导入
+import hashlib  # 添加hashlib模块用于实现缓存功能
 
 # 配置参数
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -13,9 +14,11 @@ SUMMARY_DIR = os.path.join(OUTPUT_DIR, 'summary')
 PROTOCOLS_DIR = os.path.join(OUTPUT_DIR, 'protocols')
 COUNTRIES_DIR = os.path.join(OUTPUT_DIR, 'countries')
 URLS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'urls.txt')
+CACHE_DIR = os.path.join(base_dir, 'cache')
 
-# 确保日志目录存在
+# 确保必要目录存在
 os.makedirs(os.path.join(base_dir, 'logs'), exist_ok=True)
+os.makedirs(CACHE_DIR, exist_ok=True)
 
 # 配置日志
 logging.basicConfig(
@@ -102,19 +105,93 @@ COUNTRY_CODE_MAPPING = {
 # 请求设置
 CONCURRENT_REQUESTS = 10
 TIMEOUT = 30
+CACHE_EXPIRY = 3600  # 缓存过期时间(秒)
 
+# 创建目录准备函数
+def prepare_directory(directory, clean_existing=True):
+    """准备输出目录，可选择清理现有文件"""
+    try:
+        os.makedirs(directory, exist_ok=True)
+        if clean_existing:
+            for filename in os.listdir(directory):
+                file_path = os.path.join(directory, filename)
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+        logging.info(f"Directory prepared: {directory}")
+        return True
+    except Exception as e:
+        logging.error(f"Failed to prepare directory {directory}: {e}")
+        return False
+
+# 获取URL的缓存文件名
+def get_cache_filename(url):
+    """根据URL生成缓存文件名"""
+    url_hash = hashlib.md5(url.encode()).hexdigest()
+    return os.path.join(CACHE_DIR, f"{url_hash}.cache")
+
+# 从缓存获取响应
+def get_cached_response(url):
+    """从缓存获取URL响应内容"""
+    cache_file = get_cache_filename(url)
+    try:
+        if os.path.exists(cache_file):
+            # 检查缓存是否过期
+            cache_time = os.path.getmtime(cache_file)
+            if time.time() - cache_time < CACHE_EXPIRY:
+                with open(cache_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                logging.info(f"Loaded cached response for {url}")
+                return content
+            else:
+                logging.info(f"Cache expired for {url}")
+    except Exception as e:
+        logging.error(f"Error reading cache for {url}: {e}")
+    return None
+
+# 保存响应到缓存
+def save_response_to_cache(url, content):
+    """将URL响应内容保存到缓存"""
+    cache_file = get_cache_filename(url)
+    try:
+        with open(cache_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+        logging.info(f"Saved response to cache for {url}")
+    except Exception as e:
+        logging.error(f"Failed to save cache for {url}: {e}")
+
+# 验证配置的有效性
+def validate_config(config):
+    """验证配置是否有效"""
+    # 基本验证逻辑，可以根据需要扩展
+    if not config or len(config) < 10:
+        return False
+    # 检查是否包含有效的协议前缀
+    for protocol in PROTOCOL_PATTERNS.keys():
+        if config.startswith(f"{protocol}://"):
+            return True
+    return False
+
+# 异步获取URL内容，带缓存支持
 async def fetch_url(session, url, timeout=TIMEOUT):
     """异步获取URL内容"""
+    # 先尝试从缓存获取
+    cached_content = get_cached_response(url)
+    if cached_content is not None:
+        return url, cached_content
+    
     try:
         async with session.get(url, timeout=timeout) as response:
             response.raise_for_status()
             text = await response.text()
+            # 保存到缓存
+            save_response_to_cache(url, text)
             logging.info(f"Successfully fetched {url}")
             return url, text
     except Exception as e:
         logging.error(f"Failed to fetch {url}: {e}")
         return url, ""
 
+# 在文本中查找匹配的协议配置
 def find_matches(text, patterns):
     """在文本中查找匹配的协议配置"""
     matches = {}  # 确保即使没有匹配项也返回空字典
@@ -130,6 +207,7 @@ def find_matches(text, patterns):
     
     return matches
 
+# 保存配置项到文件
 def save_to_file(directory, filename, items):
     """保存配置项到文件"""
     try:
@@ -157,7 +235,7 @@ def save_to_file(directory, filename, items):
         logging.error(f"Failed to save items to {os.path.join(directory, filename)}.txt: {e}")
         return False
 
-# 添加一个函数来复制文件，减少代码重复
+# 复制文件从源目录到目标目录
 def copy_file(source_dir, target_dir, filename):
     """复制文件从源目录到目标目录"""
     source_path = os.path.join(source_dir, f"{filename}.txt")
@@ -171,17 +249,19 @@ def copy_file(source_dir, target_dir, filename):
             logging.error(f"Failed to copy {filename} file: {e}")
     return False
 
+# 去除重复的节点配置
 def remove_duplicate_configs(configs):
     """去除重复的节点配置"""
-    original_count = len(configs)
-    unique_configs = set(configs)
-    removed_count = original_count - len(unique_configs)
+    # 使用集合推导式提高去重效率
+    unique_configs = {config for config in configs if validate_config(config)}
+    removed_count = len(configs) - len(unique_configs)
     
     if removed_count > 0:
-        logging.info(f"Removed {removed_count} duplicate configs")
+        logging.info(f"Removed {removed_count} duplicate or invalid configs")
     
     return unique_configs
 
+# 根据关键词对配置进行国家分类
 def classify_by_country(config, country_keywords, country_code_mapping):
     """根据关键词对配置进行国家分类"""
     # 尝试从配置中提取节点名称
@@ -212,6 +292,38 @@ def classify_by_country(config, country_keywords, country_code_mapping):
     
     return None, config
 
+# 分类并保存配置
+def classify_and_save(configs, final_configs_by_country, final_all_protocols):
+    """统一处理配置的分类逻辑"""
+    # 按协议分类
+    logging.info("Classifying configs by protocol...")
+    for config in configs:
+        matched = False
+        for protocol in PROTOCOL_PATTERNS.keys():
+            if config.startswith(f"{protocol}://"):
+                if protocol in PROTOCOL_CATEGORIES:
+                    category = PROTOCOL_CATEGORIES[protocol]
+                    final_all_protocols[category].add(config)
+                    matched = True
+                break
+        
+        # 记录未匹配的协议格式，用于调试
+        if not matched:
+            # 只记录前50个字符以避免日志过长
+            logging.debug(f"Unmatched protocol format: {config[:50]}...")
+    
+    # 记录各协议分类的配置数量
+    for category, items in final_all_protocols.items():
+        logging.info(f"{category}: {len(items)} items")
+    
+    # 使用基于名称的国家分类方法
+    logging.info("Classifying nodes by name keywords")
+    for config in configs:
+        country, config_with_country = classify_by_country(config, COUNTRY_KEYWORDS, COUNTRY_CODE_MAPPING)
+        if country and country in final_configs_by_country:
+            final_configs_by_country[country].add(config_with_country)
+
+# 主函数
 async def main():
     """Main entry point"""
     start_time = time.time()
@@ -261,47 +373,13 @@ async def main():
         all_valid_configs = unique_configs  # 直接使用去重后的配置
         logging.info(f"Total configs after deduplication: {len(all_valid_configs)}")
 
-        # 按协议分类
-        # 按协议分类
-        logging.info("Classifying configs by protocol...")
-        for config in all_valid_configs:
-            matched = False
-            for protocol in PROTOCOL_PATTERNS.keys():
-                if config.startswith(f"{protocol}://"):
-                    if protocol in PROTOCOL_CATEGORIES:
-                        category = PROTOCOL_CATEGORIES[protocol]
-                        final_all_protocols[category].add(config)
-                        matched = True
-                    break
-            
-            # 记录未匹配的协议格式，用于调试
-            if not matched:
-                # 只记录前50个字符以避免日志过长
-                logging.debug(f"Unmatched protocol format: {config[:50]}...")
-        
-        # 记录各协议分类的配置数量
-        for category, items in final_all_protocols.items():
-            logging.info(f"{category}: {len(items)} items")
-
-        # 使用基于名称的国家分类方法
-        logging.info("Classifying nodes by name keywords")
-        for config in all_valid_configs:
-            country, config_with_country = classify_by_country(config, COUNTRY_KEYWORDS, COUNTRY_CODE_MAPPING)
-            if country and country in final_configs_by_country:
-                final_configs_by_country[country].add(config_with_country)
+        # 统一处理分类逻辑
+        classify_and_save(all_valid_configs, final_configs_by_country, final_all_protocols)
 
         # 准备输出目录
         directories = [OUTPUT_DIR, SUMMARY_DIR, PROTOCOLS_DIR, COUNTRIES_DIR]
         for directory in directories:
-            os.makedirs(directory, exist_ok=True)
-            # 清理目录中的现有文件
-            try:
-                for filename in os.listdir(directory):
-                    file_path = os.path.join(directory, filename)
-                    if os.path.isfile(file_path):
-                        os.unlink(file_path)
-            except Exception as e:
-                logging.error(f"Failed to clean directory {directory}: {e}")
+            prepare_directory(directory)
         
         # 保存配置到相应目录
         # 保存汇总节点到 summary 目录
@@ -309,9 +387,11 @@ async def main():
             save_to_file(SUMMARY_DIR, "all_nodes", all_valid_configs)
         
         # 保存协议分类到 protocols 目录
+        protocol_files_count = 0
         for category, items in final_all_protocols.items():
             if items:
                 save_to_file(PROTOCOLS_DIR, category, items)
+                protocol_files_count += 1
         
         # 保存国家分类到 countries 目录
         country_files_count = 0
@@ -320,7 +400,7 @@ async def main():
                 save_to_file(COUNTRIES_DIR, category, items)
                 country_files_count += 1
         
-        # 同时创建根目录的快捷方式或引用
+        # 复制重要文件到根目录
         # 复制汇总文件到根目录
         if all_valid_configs:
             copy_file(SUMMARY_DIR, OUTPUT_DIR, "all_nodes")
@@ -333,8 +413,8 @@ async def main():
         for country in final_configs_by_country:
             copy_file(COUNTRIES_DIR, OUTPUT_DIR, country)
         
-        # 统计生成的国家文件数量
-        logging.info(f"Generated {country_files_count} country files")
+        # 统计生成的文件数量
+        logging.info(f"Generated {country_files_count} country files and {protocol_files_count} protocol files")
         
         # 检查是否有生成的国家文件
         if country_files_count == 0:

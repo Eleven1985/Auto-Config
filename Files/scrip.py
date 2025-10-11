@@ -1,11 +1,11 @@
 import asyncio
 import time
 import logging
-import aiohttp
 import os
-import shutil
 import re
 import hashlib
+
+import aiohttp
 
 # 配置参数
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,145 +38,37 @@ logging.basicConfig(
 
 # 协议配置 - 统一管理协议前缀、正则和类别
 PROTOCOLS = {
-    'vmess': {
-        'prefix': 'vmess://',
-        'pattern': re.compile(r'vmess://[^\s,]+'),
-        'category': 'Vmess'
-    },
-    'vless': {
-        'prefix': 'vless://',
-        'pattern': re.compile(r'vless://[^\s,]+'),
-        'category': 'Vless'
-    },
-    'trojan': {
-        'prefix': 'trojan://',
-        'pattern': re.compile(r'trojan://[^\s,]+'),
-        'category': 'Trojan'
-    },
-    'shadowsocks': {
-        'prefix': 'ss://',
-        'pattern': re.compile(r'ss://[^\s,]+'),
-        'category': 'ShadowSocks'
-    },
-    'hysteria2': {
-        'prefix': 'hy2://',
-        'pattern': re.compile(r'hy2://[^\s,]+'),
-        'category': 'Hysteria2'
-    },
-    'ssr': {
-        'prefix': 'ssr://',
-        'pattern': re.compile(r'ssr://[^\s,]+'),
-        'category': 'ShadowSocksR'
-    },
-    'hysteria': {
-        'prefix': 'hysteria://',
-        'pattern': re.compile(r'hysteria://[^\s,]+'),
-        'category': 'Hysteria'
-    },
-    'tuic': {
-        'prefix': 'tuic://',
-        'pattern': re.compile(r'tuic://[^\s,]+'),
-        'category': 'TUIC'
-    },
-    'wireguard': {
-        'prefix': 'wireguard://',
-        'pattern': re.compile(r'wireguard://[^\s,]+'),
-        'category': 'WireGuard'
-    },
-    'naiveproxy': {
-        'prefix': 'naive://',
-        'pattern': re.compile(r'naive://[^\s,]+'),
-        'category': 'NaiveProxy'
-    },
-    'socks5': {
-        'prefix': 'socks5://',
-        'pattern': re.compile(r'socks5://[^\s,]+'),
-        'category': 'SOCKS5'
-    },
-    'http': {
-        'prefix': 'http://',
-        'pattern': re.compile(r'http://[^\s,]+'),
-        'category': 'HTTP'
-    }
+    'vmess': {'prefix': 'vmess://', 'pattern': re.compile(r'vmess://[^\s,]+'), 'category': 'Vmess'},
+    'vless': {'prefix': 'vless://', 'pattern': re.compile(r'vless://[^\s,]+'), 'category': 'Vless'},
+    'trojan': {'prefix': 'trojan://', 'pattern': re.compile(r'trojan://[^\s,]+'), 'category': 'Trojan'},
+    'shadowsocks': {'prefix': 'ss://', 'pattern': re.compile(r'ss://[^\s,]+'), 'category': 'ShadowSocks'},
+    'hysteria2': {'prefix': 'hy2://', 'pattern': re.compile(r'hy2://[^\s,]+'), 'category': 'Hysteria2'},
+    'ssr': {'prefix': 'ssr://', 'pattern': re.compile(r'ssr://[^\s,]+'), 'category': 'ShadowSocksR'},
+    'hysteria': {'prefix': 'hysteria://', 'pattern': re.compile(r'hysteria://[^\s,]+'), 'category': 'Hysteria'},
+    'tuic': {'prefix': 'tuic://', 'pattern': re.compile(r'tuic://[^\s,]+'), 'category': 'TUIC'},
+    'wireguard': {'prefix': 'wireguard://', 'pattern': re.compile(r'wireguard://[^\s,]+'), 'category': 'WireGuard'},
+    'naiveproxy': {'prefix': 'naive://', 'pattern': re.compile(r'naive://[^\s,]+'), 'category': 'NaiveProxy'},
+    'socks5': {'prefix': 'socks5://', 'pattern': re.compile(r'socks5://[^\s,]+'), 'category': 'SOCKS5'},
+    'http': {'prefix': 'http://', 'pattern': re.compile(r'http://[^\s,]+'), 'category': 'HTTP'}
 }
 
 # 国家配置
 COUNTRY_CONFIG = {
-    'United States': {
-        'keywords': ['us', 'usa', 'america', 'united states'],
-        'code': 'US',
-        'name_zh': '美国'
-    },
-    'China': {
-        'keywords': ['cn', 'china', 'beijing', 'shanghai'],
-        'code': 'CN',
-        'name_zh': '中国'
-    },
-    'Japan': {
-        'keywords': ['jp', 'japan', 'tokyo', 'osaka'],
-        'code': 'JP',
-        'name_zh': '日本'
-    },
-    'Singapore': {
-        'keywords': ['sg', 'singapore'],
-        'code': 'SG',
-        'name_zh': '新加坡'
-    },
-    'Hong Kong': {
-        'keywords': ['hk', 'hong kong'],
-        'code': 'HK',
-        'name_zh': '香港'
-    },
-    'South Korea': {
-        'keywords': ['kr', 'korea', 'south korea', 'seoul'],
-        'code': 'KR',
-        'name_zh': '韩国'
-    },
-    'Germany': {
-        'keywords': ['de', 'germany'],
-        'code': 'DE',
-        'name_zh': '德国'
-    },
-    'United Kingdom': {
-        'keywords': ['uk', 'britain', 'united kingdom'],
-        'code': 'GB',
-        'name_zh': '英国'
-    },
-    'France': {
-        'keywords': ['fr', 'france'],
-        'code': 'FR',
-        'name_zh': '法国'
-    },
-    'Canada': {
-        'keywords': ['ca', 'canada'],
-        'code': 'CA',
-        'name_zh': '加拿大'
-    },
-    'Australia': {
-        'keywords': ['au', 'australia'],
-        'code': 'AU',
-        'name_zh': '澳大利亚'
-    },
-    'Russia': {
-        'keywords': ['ru', 'russia'],
-        'code': 'RU',
-        'name_zh': '俄罗斯'
-    },
-    'Netherlands': {
-        'keywords': ['nl', 'netherlands'],
-        'code': 'NL',
-        'name_zh': '荷兰'
-    },
-    'Switzerland': {
-        'keywords': ['ch', 'switzerland'],
-        'code': 'CH',
-        'name_zh': '瑞士'
-    },
-    'Italy': {
-        'keywords': ['it', 'italy'],
-        'code': 'IT',
-        'name_zh': '意大利'
-    }
+    'United States': {'keywords': ['us', 'usa', 'america', 'united states'], 'code': 'US', 'name_zh': '美国'},
+    'China': {'keywords': ['cn', 'china', 'beijing', 'shanghai'], 'code': 'CN', 'name_zh': '中国'},
+    'Japan': {'keywords': ['jp', 'japan', 'tokyo', 'osaka'], 'code': 'JP', 'name_zh': '日本'},
+    'Singapore': {'keywords': ['sg', 'singapore'], 'code': 'SG', 'name_zh': '新加坡'},
+    'Hong Kong': {'keywords': ['hk', 'hong kong'], 'code': 'HK', 'name_zh': '香港'},
+    'South Korea': {'keywords': ['kr', 'korea', 'south korea', 'seoul'], 'code': 'KR', 'name_zh': '韩国'},
+    'Germany': {'keywords': ['de', 'germany'], 'code': 'DE', 'name_zh': '德国'},
+    'United Kingdom': {'keywords': ['uk', 'britain', 'united kingdom'], 'code': 'GB', 'name_zh': '英国'},
+    'France': {'keywords': ['fr', 'france'], 'code': 'FR', 'name_zh': '法国'},
+    'Canada': {'keywords': ['ca', 'canada'], 'code': 'CA', 'name_zh': '加拿大'},
+    'Australia': {'keywords': ['au', 'australia'], 'code': 'AU', 'name_zh': '澳大利亚'},
+    'Russia': {'keywords': ['ru', 'russia'], 'code': 'RU', 'name_zh': '俄罗斯'},
+    'Netherlands': {'keywords': ['nl', 'netherlands'], 'code': 'NL', 'name_zh': '荷兰'},
+    'Switzerland': {'keywords': ['ch', 'switzerland'], 'code': 'CH', 'name_zh': '瑞士'},
+    'Italy': {'keywords': ['it', 'italy'], 'code': 'IT', 'name_zh': '意大利'}
 }
 
 # 创建目录准备函数
@@ -189,11 +81,9 @@ def prepare_directory(directory, clean_existing=True):
                 file_path = os.path.join(directory, filename)
                 if os.path.isfile(file_path):
                     os.unlink(file_path)
-        logging.info(f"Directory prepared: {directory}")
-        return True
+        logging.debug(f"Directory prepared: {directory}")
     except Exception as e:
         logging.error(f"Failed to prepare directory {directory}: {e}")
-        return False
 
 # 获取URL的缓存文件名
 def get_cache_filename(url):
@@ -214,8 +104,6 @@ def get_cached_response(url):
                     content = f.read()
                 logging.debug(f"Loaded cached response for {url}")
                 return content
-            else:
-                logging.debug(f"Cache expired for {url}")
     except Exception as e:
         logging.error(f"Error reading cache for {url}: {e}")
     return None
@@ -234,14 +122,9 @@ def save_response_to_cache(url, content):
 # 验证配置的有效性
 def validate_config(config):
     """验证配置是否有效"""
-    # 基本验证逻辑，可以根据需要扩展
     if not config or len(config) < 10:
         return False
-    # 检查是否包含有效的协议前缀
-    for protocol in PROTOCOLS.values():
-        if config.startswith(protocol['prefix']):
-            return True
-    return False
+    return any(config.startswith(protocol['prefix']) for protocol in PROTOCOLS.values())
 
 # 异步获取URL内容，带缓存支持
 async def fetch_url_with_retry(session, url, timeout=TIMEOUT, retries=RETRY_COUNT):
@@ -270,7 +153,7 @@ async def fetch_url_with_retry(session, url, timeout=TIMEOUT, retries=RETRY_COUN
 # 在文本中查找匹配的协议配置
 def find_matches(text):
     """在文本中查找匹配的协议配置"""
-    matches = {}  # 确保即使没有匹配项也返回空字典
+    matches = {}
     
     for protocol_name, protocol_config in PROTOCOLS.items():
         try:
@@ -291,12 +174,11 @@ def save_to_file(directory, filename, items):
         os.makedirs(directory, exist_ok=True)
         
         file_path = os.path.join(directory, f"{filename}.txt")
-        file_content = []
-        
-        # 添加文件头信息
-        file_content.append(f"# {filename} - {len(items)} items")
-        file_content.append(f"# Generated at {time.strftime('%Y-%m-%d %H:%M:%S')}")
-        file_content.append("")
+        file_content = [
+            f"# {filename} - {len(items)} items",
+            f"# Generated at {time.strftime('%Y-%m-%d %H:%M:%S')}",
+            ""
+        ]
         
         # 添加配置项
         file_content.extend(items)
@@ -310,20 +192,6 @@ def save_to_file(directory, filename, items):
     except Exception as e:
         logging.error(f"Failed to save items to {os.path.join(directory, filename)}.txt: {e}")
         return False
-
-# 复制文件从源目录到目标目录
-def copy_file(source_dir, target_dir, filename):
-    """复制文件从源目录到目标目录"""
-    source_path = os.path.join(source_dir, f"{filename}.txt")
-    target_path = os.path.join(target_dir, f"{filename}.txt")
-    if os.path.exists(source_path):
-        try:
-            shutil.copy2(source_path, target_path)
-            logging.debug(f"Copied {filename} file to {target_dir}")
-            return True
-        except Exception as e:
-            logging.error(f"Failed to copy {filename} file: {e}")
-    return False
 
 # 去除重复的节点配置
 def remove_duplicate_configs(configs):
@@ -367,16 +235,12 @@ def classify_and_save(configs, final_configs_by_country, final_all_protocols):
     # 按协议分类
     logging.info("Classifying configs by protocol...")
     for config in configs:
-        matched = False
         # 使用协议前缀直接匹配
         for protocol in PROTOCOLS.values():
             if config.startswith(protocol['prefix']):
                 final_all_protocols[protocol['category']].add(config)
-                matched = True
                 break
-        
-        # 记录未匹配的协议格式，用于调试
-        if not matched:
+        else:
             # 只记录前50个字符以避免日志过长
             logging.debug(f"Unmatched protocol format: {config[:50]}...")
     
@@ -410,12 +274,13 @@ async def main():
 
         # 并发获取URL内容
         sem = asyncio.Semaphore(CONCURRENT_REQUESTS)
-        async def fetch_with_sem(session, url):
+        
+        async def bounded_fetch(session, url):
             async with sem:
                 return await fetch_url_with_retry(session, url)
         
         async with aiohttp.ClientSession() as session:
-            fetched_pages = await asyncio.gather(*[fetch_with_sem(session, u) for u in urls])
+            fetched_pages = await asyncio.gather(*[bounded_fetch(session, u) for u in urls], return_exceptions=True)
 
         # 初始化结果结构
         country_names = list(COUNTRY_CONFIG.keys())
@@ -425,10 +290,15 @@ async def main():
         all_configs = []  # 先收集所有配置，之后再进行去重
 
         logging.info("Processing pages for configs...")
-        for url, text in fetched_pages:
+        for result in fetched_pages:
+            if isinstance(result, Exception):
+                logging.error(f"URL fetch failed with exception: {result}")
+                continue
+            
+            url, text = result
             if not text:
                 continue
-
+            
             # 查找协议匹配
             page_protocol_matches = find_matches(text)
             for protocol_name, configs_found in page_protocol_matches.items():
@@ -449,8 +319,7 @@ async def main():
         
         # 保存配置到相应目录
         # 保存汇总节点到 summary 目录
-        if unique_configs:
-            save_to_file(SUMMARY_DIR, "all_nodes", unique_configs)
+        save_to_file(SUMMARY_DIR, "all_nodes", unique_configs)
         
         # 保存协议分类到 protocols 目录
         protocol_files_count = 0
@@ -465,19 +334,6 @@ async def main():
             if items:
                 save_to_file(COUNTRIES_DIR, category, items)
                 country_files_count += 1
-        
-        # 复制重要文件到根目录
-        # 复制汇总文件到根目录
-        if unique_configs:
-            copy_file(SUMMARY_DIR, OUTPUT_DIR, "all_nodes")
-        
-        # 复制协议分类文件到根目录
-        for category in protocol_categories:
-            copy_file(PROTOCOLS_DIR, OUTPUT_DIR, category)
-        
-        # 复制国家分类文件到根目录
-        for country in country_names:
-            copy_file(COUNTRIES_DIR, OUTPUT_DIR, country)
         
         # 统计生成的文件数量
         logging.info(f"Generated {country_files_count} country files and {protocol_files_count} protocol files")

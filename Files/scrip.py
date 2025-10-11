@@ -293,18 +293,34 @@ def classify_by_country(config, country_keywords, country_code_mapping):
     return None, config
 
 # 分类并保存配置
+# 在文件顶部添加协议前缀到类别的映射
+PROTOCOL_PREFIX_TO_CATEGORY = {
+    'vmess://': 'Vmess',
+    'vless://': 'Vless',
+    'trojan://': 'Trojan',
+    'ss://': 'ShadowSocks',
+    'hy2://': 'Hysteria2',  # 直接使用实际前缀
+    'ssr://': 'ShadowSocksR',
+    'hysteria://': 'Hysteria',
+    'tuic://': 'TUIC',
+    'wireguard://': 'WireGuard',
+    'naive://': 'NaiveProxy',
+    'socks5://': 'SOCKS5',
+    'http://': 'HTTP'
+}
+
+# 然后修改classify_and_save函数
 def classify_and_save(configs, final_configs_by_country, final_all_protocols):
     """统一处理配置的分类逻辑"""
     # 按协议分类
     logging.info("Classifying configs by protocol...")
     for config in configs:
         matched = False
-        for protocol in PROTOCOL_PATTERNS.keys():
-            if config.startswith(f"{protocol}://"):
-                if protocol in PROTOCOL_CATEGORIES:
-                    category = PROTOCOL_CATEGORIES[protocol]
-                    final_all_protocols[category].add(config)
-                    matched = True
+        # 使用协议前缀直接匹配
+        for prefix, category in PROTOCOL_PREFIX_TO_CATEGORY.items():
+            if config.startswith(prefix):
+                final_all_protocols[category].add(config)
+                matched = True
                 break
         
         # 记录未匹配的协议格式，用于调试

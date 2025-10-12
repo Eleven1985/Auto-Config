@@ -1,4 +1,0 @@
-# Hysteria - 1 items
-# Generated at 2025-10-12 08:26:50
-
-hysteria://62.210.127.217:35511/?insecure=1&peer=apple.com&auth=dongtaiwang.com&upmbps=11&downmbps=55&alpn=h3#%F0%9F%8C%903%40oneclickvpnkeys

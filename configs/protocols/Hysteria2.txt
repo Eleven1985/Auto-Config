@@ -1,5 +1,5 @@
 # Hysteria2 - 2 items
-# Generated at 2025-10-17 08:32:10
+# Generated at 2025-10-17 16:29:11
 
-hy2://dongtaiwang.com@208.87.243.187:22222/?insecure=1&sni=🔒
 hy2://5CBqBh6MeDq6GajcilBiDg%3D%3D@192.227.152.86:61001/?insecure=1&sni=🔒
+hy2://dongtaiwang.com@208.87.243.187:22222/?insecure=1&sni=🔒

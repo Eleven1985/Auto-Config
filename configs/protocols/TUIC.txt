@@ -1,4 +1,4 @@
 # TUIC - 1 items
-# Generated at 2025-10-17 16:29:11
+# Generated at 2025-10-18 01:42:57
 
 tuic://10822856-7452-43ec-b35b-6f24ea33530f:10822856-7452-43ec-b35b-6f24ea33530f@chervhill.hajalii.com:23887?congestion_control=cubic&udp_relay_mode=native&alpn=h3&sni=chervhill.hajalii.com&insecure=0#@Mr_Config_Group✌️
